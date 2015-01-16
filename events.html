@@ -1,0 +1,323 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<!-- Mirrored from laravel.com/docs/4.2/events by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 12 Oct 2014 07:36:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Laravel - The PHP framework for web artisans.</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="Taylor Otwell">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <script src="js/source-sans-pro-n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="js/source-code-pro.js"></script>
+
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css"><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+
+    
+</head>
+
+<body id="index" class="page">
+
+    <!--[if lt IE 7]>
+        <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    <![endif]-->
+
+    <div id="wrapper">
+
+    <header id="header" role="header">
+    <div class="boxed">
+        <div id="tagline">
+            <h1>LaraDocs</h1>
+        </div>
+
+        <div id="version">
+            <ul class="nolist">
+                    <li class="current">
+                        <a href="index.html" title="4.2">4.2</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<nav id="primary">
+    <div class="boxed">
+        <div id="logo-head">
+            <a href="index.html"><img src="img/logo-head.png" alt="Laravel"></a>
+        </div>
+        <ul class="primary-nav-ul">
+            <li><a href="about.html">About</a></li>
+            <li class="current-item"><a href="index.html" title="Documentation">Documentation</a></li>
+        </ul>
+        <a href="#" class="show-primary-nav">Menu</a>
+    </div>
+</nav>
+
+<div id="content">
+
+    <section id="documentation">
+        <article class="boxed">
+
+            <ul class="version-picker--mobile nolist">
+                <li class="current">
+                    <a href="index.html" title="4.2">4.2</a>
+                </li>
+            </ul>
+            <a href="#" class="docs-show" data-show-text="Navigate" data-hide-text="Close">Navigate</a>
+
+            <nav id="docs">
+                <ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+            </nav>
+
+            <div id="docs-content">
+                <h1>Events</h1>
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#wildcard-listeners">Wildcard Listeners</a></li>
+<li><a href="#using-classes-as-listeners">Using Classes As Listeners</a></li>
+<li><a href="#queued-events">Queued Events</a></li>
+<li><a href="#event-subscribers">Event Subscribers</a></li>
+</ul>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p>The Laravel <code>Event</code> class provides a simple observer implementation, allowing you to subscribe and listen for events in your application.</p>
+<h4>Subscribing To An Event</h4>
+<pre><code>Event::listen('auth.login', function($user)
+{
+    $user-&gt;last_login = new DateTime;
+
+    $user-&gt;save();
+});</code></pre>
+<h4>Firing An Event</h4>
+<pre><code>$event = Event::fire('auth.login', array($user));</code></pre>
+<h4>Subscribing To Events With Priority</h4>
+<p>You may also specify a priority when subscribing to events. Listeners with higher priority will be run first, while listeners that have the same priority will be run in order of subscription.</p>
+<pre><code>Event::listen('auth.login', 'LoginHandler', 10);
+
+Event::listen('auth.login', 'OtherHandler', 5);</code></pre>
+<h4>Stopping The Propagation Of An Event</h4>
+<p>Sometimes, you may wish to stop the propagation of an event to other listeners. You may do so using by returning <code>false</code> from your listener:</p>
+<pre><code>Event::listen('auth.login', function($event)
+{
+    // Handle the event...
+
+    return false;
+});</code></pre>
+<h3>Where To Register Events</h3>
+<p>So, you know how to register events, but you may be wondering <em>where</em> to register them. Don't worry, this is a common question. Unfortunately, it's a hard question to answer because you can register an event almost anywhere! But, here are some tips. Again, like most other bootstrapping code, you may register events in one of your <code>start</code> files such as <code>app/start/global.php</code>.</p>
+<p>If your <code>start</code> files are getting too crowded, you could create a separate <code>app/events.php</code> file that is included from a <code>start</code> file. This is a simple solution that keeps your event registration cleanly separated from the rest of your bootstrapping. If you prefer a class based approach, you may register your events in a <a href="ioc.html#service-providers">service provider</a>. Since none of these approaches is inherently "correct", choose an approach you feel comfortable with based on the size of your application.</p>
+<p><a name="wildcard-listeners"></a></p>
+<h2>Wildcard Listeners</h2>
+<h4>Registering Wildcard Event Listeners</h4>
+<p>When registering an event listener, you may use asterisks to specify wildcard listeners:</p>
+<pre><code>Event::listen('foo.*', function($param)
+{
+    // Handle the event...
+});</code></pre>
+<p>This listener will handle all events that begin with <code>foo.</code>.</p>
+<p>You may use the <code>Event::firing</code> method to determine exactly which event was fired:</p>
+<pre><code>Event::listen('foo.*', function($param)
+{
+    if (Event::firing() == 'foo.bar')
+    {
+        //
+    }
+});</code></pre>
+<p><a name="using-classes-as-listeners"></a></p>
+<h2>Using Classes As Listeners</h2>
+<p>In some cases, you may wish to use a class to handle an event rather than a Closure. Class event listeners will be resolved out of the <a href="ioc.html">Laravel IoC container</a>, providing you the full power of dependency injection on your listeners.</p>
+<h4>Registering A Class Listener</h4>
+<pre><code>Event::listen('auth.login', 'LoginHandler');</code></pre>
+<h4>Defining An Event Listener Class</h4>
+<p>By default, the <code>handle</code> method on the <code>LoginHandler</code> class will be called:</p>
+<pre><code>class LoginHandler {
+
+    public function handle($data)
+    {
+        //
+    }
+
+}</code></pre>
+<h4>Specifying Which Method To Subscribe</h4>
+<p>If you do not wish to use the default <code>handle</code> method, you may specify the method that should be subscribed:</p>
+<pre><code>Event::listen('auth.login', 'LoginHandler@onLogin');</code></pre>
+<p><a name="queued-events"></a></p>
+<h2>Queued Events</h2>
+<h4>Registering A Queued Event</h4>
+<p>Using the <code>queue</code> and <code>flush</code> methods, you may "queue" an event for firing, but not fire it immediately:</p>
+<pre><code>Event::queue('foo', array($user));</code></pre>
+<p>You may run the "flusher" and flush all queued events using the <code>flush</code> method:</p>
+<pre><code>Event::flush('foo');</code></pre>
+<p><a name="event-subscribers"></a></p>
+<h2>Event Subscribers</h2>
+<h4>Defining An Event Subscriber</h4>
+<p>Event subscribers are classes that may subscribe to multiple events from within the class itself. Subscribers should define a <code>subscribe</code> method, which will be passed an event dispatcher instance:</p>
+<pre><code>class UserEventHandler {
+
+    /**
+     * Handle user login events.
+     */
+    public function onUserLogin($event)
+    {
+        //
+    }
+
+    /**
+     * Handle user logout events.
+     */
+    public function onUserLogout($event)
+    {
+        //
+    }
+
+    /**
+     * Register the listeners for the subscriber.
+     *
+     * @param  Illuminate\Events\Dispatcher  $events
+     * @return array
+     */
+    public function subscribe($events)
+    {
+        $events-&gt;listen('auth.login', 'UserEventHandler@onUserLogin');
+
+        $events-&gt;listen('auth.logout', 'UserEventHandler@onUserLogout');
+    }
+
+}</code></pre>
+<h4>Registering An Event Subscriber</h4>
+<p>Once the subscriber has been defined, it may be registered with the <code>Event</code> class.</p>
+<pre><code>$subscriber = new UserEventHandler;
+
+Event::subscribe($subscriber);</code></pre>
+<p>You may also use the <a href="ioc.html">Laravel IoC container</a> to resolve your subscriber. To do so, simply pass the name of your subscriber to the <code>subscribe</code> method:</p>
+<pre><code>Event::subscribe('UserEventHandler');</code></pre>
+            </div>
+
+        </article>
+    </section>
+
+</div>
+
+<footer id="foot" class="textcenter">
+    <div class="boxed">
+
+        <nav id="secondary">
+            <div id="logo-foot">
+                <a href="index.html"><img src="img/logo-foot.png" alt="Laravel"></a>
+            </div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="current-item"><a href="index.html" title="Documentation">Documentation</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</footer>
+
+<!--
+<div id="top">
+    <a href="#index" title="Back to the top">
+        <i class="icon-chevron-up"></i>
+    </a>
+</div>
+-->
+
+
+    </div>
+
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">
+                Laravel is a trademark of Taylor Otwell.<br class="br-mobile--footer">
+                Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>.<br class="br-mobile--footer">
+                Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>;<br class="br-mobile--footer">
+                responsive by <a href="http://tighten.co/" title="Tighten Co." target="_blank">Tighten Co.</a><br>
+                Mirrored by <a href="http://www.miftahafina.com?source=laradocs" target="_blank">Miftah Afina</a> 
+                (<a href="http://www.tanyapedia.com?source=laradocs" target="_blank">Tanyapedia</a>) with Httrack
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bundle.js"></script>
+
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/events by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 12 Oct 2014 07:36:50 GMT -->
+</html>

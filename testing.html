@@ -1,0 +1,362 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<!-- Mirrored from laravel.com/docs/4.2/testing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 12 Oct 2014 07:36:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Laravel - The PHP framework for web artisans.</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta name="author" content="Taylor Otwell">
+    <meta name="description" content="Laravel - The PHP framework for web artisans.">
+    <meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- fonts -->
+    <script src="js/source-sans-pro-n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+    <script src="js/source-code-pro.js"></script>
+
+    <!--[if IE]><link href="assets/css/ie.css" rel="stylesheet" type="text/css"><![endif]-->
+
+    <!-- HTML5 elements in less than IE9, yes please! -->
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- If less than IE8 add some JS for the webfont icons -->
+    <!--[if lt IE 8]><script src="assets/js/ie_font.js"></script><![endif]-->
+
+
+    
+</head>
+
+<body id="index" class="page">
+
+    <!--[if lt IE 7]>
+        <p>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+    <![endif]-->
+
+    <div id="wrapper">
+
+    <header id="header" role="header">
+    <div class="boxed">
+        <div id="tagline">
+            <h1>LaraDocs</h1>
+        </div>
+
+        <div id="version">
+            <ul class="nolist">
+                    <li class="current">
+                        <a href="index.html" title="4.2">4.2</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<nav id="primary">
+    <div class="boxed">
+        <div id="logo-head">
+            <a href="index.html"><img src="img/logo-head.png" alt="Laravel"></a>
+        </div>
+        <ul class="primary-nav-ul">
+            <li><a href="about.html">About</a></li>
+            <li class="current-item"><a href="index.html" title="Documentation">Documentation</a></li>
+        </ul>
+        <a href="#" class="show-primary-nav">Menu</a>
+    </div>
+</nav>
+
+<div id="content">
+
+    <section id="documentation">
+        <article class="boxed">
+
+            <ul class="version-picker--mobile nolist">
+                <li class="current">
+                    <a href="index.html" title="4.2">4.2</a>
+                </li>
+            </ul>
+            <a href="#" class="docs-show" data-show-text="Navigate" data-hide-text="Close">Navigate</a>
+
+            <nav id="docs">
+                <ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+            </nav>
+
+            <div id="docs-content">
+                <h1>Testing</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#defining-and-running-tests">Defining &amp; Running Tests</a></li>
+<li><a href="#test-environment">Test Environment</a></li>
+<li><a href="#calling-routes-from-tests">Calling Routes From Tests</a></li>
+<li><a href="#mocking-facades">Mocking Facades</a></li>
+<li><a href="#framework-assertions">Framework Assertions</a></li>
+<li><a href="#helper-methods">Helper Methods</a></li>
+<li><a href="#refreshing-the-application">Refreshing The Application</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel is built with unit testing in mind. In fact, support for testing with PHPUnit is included out of the box, and a <code>phpunit.xml</code> file is already setup for your application. In addition to PHPUnit, Laravel also utilizes the Symfony HttpKernel, DomCrawler, and BrowserKit components to allow you to inspect and manipulate your views while testing, allowing to simulate a web browser.</p>
+<p>An example test file is provided in the <code>app/tests</code> directory. After installing a new Laravel application, simply run <code>phpunit</code> on the command line to run your tests.</p>
+<p><a name="defining-and-running-tests"></a></p>
+<h2>Defining &amp; Running Tests</h2>
+<p>To create a test case, simply create a new test file in the <code>app/tests</code> directory. The test class should extend <code>TestCase</code>. You may then define test methods as you normally would when using PHPUnit.</p>
+<h4>An Example Test Class</h4>
+<pre><code>class FooTest extends TestCase {
+
+    public function testSomethingIsTrue()
+    {
+        $this-&gt;assertTrue(true);
+    }
+
+}</code></pre>
+<p>You may run all of the tests for your application by executing the <code>phpunit</code> command from your terminal.</p>
+<blockquote>
+<p><strong>Note:</strong> If you define your own <code>setUp</code> method, be sure to call <code>parent::setUp</code>.</p>
+</blockquote>
+<p><a name="test-environment"></a></p>
+<h2>Test Environment</h2>
+<p>When running unit tests, Laravel will automatically set the configuration environment to <code>testing</code>. Also, Laravel includes configuration files for <code>session</code> and <code>cache</code> in the test environment. Both of these drivers are set to <code>array</code> while in the test environment, meaning no session or cache data will be persisted while testing. You are free to create other testing environment configurations as necessary.</p>
+<p><a name="calling-routes-from-tests"></a></p>
+<h2>Calling Routes From Tests</h2>
+<h4>Calling A Route From A Test</h4>
+<p>You may easily call one of your routes for a test using the <code>call</code> method:</p>
+<pre><code>$response = $this-&gt;call('GET', 'user/profile');
+
+$response = $this-&gt;call($method, $uri, $parameters, $files, $server, $content);</code></pre>
+<p>You may then inspect the <code>Illuminate\Http\Response</code> object:</p>
+<pre><code>$this-&gt;assertEquals('Hello World', $response-&gt;getContent());</code></pre>
+<h4>Calling A Controller From A Test</h4>
+<p>You may also call a controller from a test:</p>
+<pre><code>$response = $this-&gt;action('GET', 'HomeController@index');
+
+$response = $this-&gt;action('GET', 'UserController@profile', array('user' =&gt; 1));</code></pre>
+<p>The <code>getContent</code> method will return the evaluated string contents of the response. If your route returns a <code>View</code>, you may access it using the <code>original</code> property:</p>
+<pre><code>$view = $response-&gt;original;
+
+$this-&gt;assertEquals('John', $view['name']);</code></pre>
+<p>To call a HTTPS route, you may use the <code>callSecure</code> method:</p>
+<pre><code>$response = $this-&gt;callSecure('GET', 'foo/bar');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Route filters are disabled when in the testing environment. To enable them, add <code>Route::enableFilters()</code> to your test.</p>
+</blockquote>
+<h3>DOM Crawler</h3>
+<p>You may also call a route and receive a DOM Crawler instance that you may use to inspect the content:</p>
+<pre><code>$crawler = $this-&gt;client-&gt;request('GET', '/');
+
+$this-&gt;assertTrue($this-&gt;client-&gt;getResponse()-&gt;isOk());
+
+$this-&gt;assertCount(1, $crawler-&gt;filter('h1:contains("Hello World!")'));</code></pre>
+<p>For more information on how to use the crawler, refer to its <a href="http://symfony.com/doc/master/components/dom_crawler.html">official documentation</a>.</p>
+<p><a name="mocking-facades"></a></p>
+<h2>Mocking Facades</h2>
+<p>When testing, you may often want to mock a call to a Laravel static facade. For example, consider the following controller action:</p>
+<pre><code>public function getIndex()
+{
+    Event::fire('foo', array('name' =&gt; 'Dayle'));
+
+    return 'All done!';
+}</code></pre>
+<p>We can mock the call to the <code>Event</code> class by using the <code>shouldReceive</code> method on the facade, which will return an instance of a <a href="https://github.com/padraic/mockery">Mockery</a> mock.</p>
+<h4>Mocking A Facade</h4>
+<pre><code>public function testGetIndex()
+{
+    Event::shouldReceive('fire')-&gt;once()-&gt;with('foo', array('name' =&gt; 'Dayle'));
+
+    $this-&gt;call('GET', '/');
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You should not mock the <code>Request</code> facade. Instead, pass the input you desire into the <code>call</code> method when running your test.</p>
+</blockquote>
+<p><a name="framework-assertions"></a></p>
+<h2>Framework Assertions</h2>
+<p>Laravel ships with several <code>assert</code> methods to make testing a little easier:</p>
+<h4>Asserting Responses Are OK</h4>
+<pre><code>public function testMethod()
+{
+    $this-&gt;call('GET', '/');
+
+    $this-&gt;assertResponseOk();
+}</code></pre>
+<h4>Asserting Response Statuses</h4>
+<pre><code>$this-&gt;assertResponseStatus(403);</code></pre>
+<h4>Asserting Responses Are Redirects</h4>
+<pre><code>$this-&gt;assertRedirectedTo('foo');
+
+$this-&gt;assertRedirectedToRoute('route.name');
+
+$this-&gt;assertRedirectedToAction('Controller@method');</code></pre>
+<h4>Asserting A View Has Some Data</h4>
+<pre><code>public function testMethod()
+{
+    $this-&gt;call('GET', '/');
+
+    $this-&gt;assertViewHas('name');
+    $this-&gt;assertViewHas('age', $value);
+}</code></pre>
+<h4>Asserting The Session Has Some Data</h4>
+<pre><code>public function testMethod()
+{
+    $this-&gt;call('GET', '/');
+
+    $this-&gt;assertSessionHas('name');
+    $this-&gt;assertSessionHas('age', $value);
+}</code></pre>
+<h4>Asserting The Session Has Errors</h4>
+<pre><code>public function testMethod()
+{
+    $this-&gt;call('GET', '/');
+
+    $this-&gt;assertSessionHasErrors();
+
+    // Asserting the session has errors for a given key...
+    $this-&gt;assertSessionHasErrors('name');
+
+    // Asserting the session has errors for several keys...
+    $this-&gt;assertSessionHasErrors(array('name', 'age'));
+}</code></pre>
+<h4>Asserting Old Input Has Some Data</h4>
+<pre><code>public function testMethod()
+{
+    $this-&gt;call('GET', '/');
+
+    $this-&gt;assertHasOldInput();
+}</code></pre>
+<p><a name="helper-methods"></a></p>
+<h2>Helper Methods</h2>
+<p>The <code>TestCase</code> class contains several helper methods to make testing your application easier.</p>
+<h4>Setting And Flushing Sessions From Tests</h4>
+<pre><code>$this-&gt;session(['foo' =&gt; 'bar']);
+
+$this-&gt;flushSession();</code></pre>
+<h4>Setting The Currently Authenticated User</h4>
+<p>You may set the currently authenticated user using the <code>be</code> method:</p>
+<pre><code>$user = new User(array('name' =&gt; 'John'));
+
+$this-&gt;be($user);</code></pre>
+<p>You may re-seed your database from a test using the <code>seed</code> method:</p>
+<h4>Re-Seeding Database From Tests</h4>
+<pre><code>$this-&gt;seed();
+
+$this-&gt;seed($connection);</code></pre>
+<p>More information on creating seeds may be found in the <a href="migrations.html#database-seeding">migrations and seeding</a> section of the documentation.</p>
+<p><a name="refreshing-the-application"></a></p>
+<h2>Refreshing The Application</h2>
+<p>As you may already know, you can access your Laravel <code>Application</code> / IoC Container via <code>$this-&gt;app</code> from any test method. This Application instance is refreshed for each test class. If you wish to manually force the Application to be refreshed for a given method, you may use the <code>refreshApplication</code> method from your test method. This will reset any extra bindings, such as mocks, that have been placed in the IoC container since the test case started running.</p>
+            </div>
+
+        </article>
+    </section>
+
+</div>
+
+<footer id="foot" class="textcenter">
+    <div class="boxed">
+
+        <nav id="secondary">
+            <div id="logo-foot">
+                <a href="index.html"><img src="img/logo-foot.png" alt="Laravel"></a>
+            </div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="current-item"><a href="index.html" title="Documentation">Documentation</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</footer>
+
+<!--
+<div id="top">
+    <a href="#index" title="Back to the top">
+        <i class="icon-chevron-up"></i>
+    </a>
+</div>
+-->
+
+
+    </div>
+
+    <section id="copyright" class="textcenter">
+        <div class="boxed">
+            <div class="animated slideInLeft">
+                Laravel is a trademark of Taylor Otwell.<br class="br-mobile--footer">
+                Copyright &copy; <a href="http://twitter.com/taylorotwell" title="Taylor Otwell" target="_blank">Taylor Otwell</a>.<br class="br-mobile--footer">
+                Website built with &hearts; <a href="http://ikreativ.com/" title="iKreativ" target="_blank">iKreativ</a>;<br class="br-mobile--footer">
+                responsive by <a href="http://tighten.co/" title="Tighten Co." target="_blank">Tighten Co.</a><br>
+                Mirrored by <a href="http://www.miftahafina.com?source=laradocs" target="_blank">Miftah Afina</a> 
+                (<a href="http://www.tanyapedia.com?source=laradocs" target="_blank">Tanyapedia</a>) with Httrack
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bundle.js"></script>
+
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/testing by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 12 Oct 2014 07:36:50 GMT -->
+</html>
