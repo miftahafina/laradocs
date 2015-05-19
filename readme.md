@@ -1,5 +1,5 @@
 # LaraDocs
-LaraDocs adalah aplikasi Android (kedepan akan dibuat juga extension untuk Chrome, insya Allah) yang berisi dokumentasi offline Laravel yang diambil dari situs resminya, laravel.com/docs. Penyalinan dokumentasi ini dimaksudkan untuk mempermudah dan mempercepat akses dokumentasi Laravel.
+LaraDocs adalah aplikasi Android dan Chrome Extension yang berisi dokumentasi offline Laravel yang diambil dari situs resminya, laravel.com/docs. Penyalinan dokumentasi ini dimaksudkan untuk mempermudah dan mempercepat akses dokumentasi Laravel.
 
 Meskipun dapat berjalan secara offline, namun beberapa komponen (seperti: font) masih memerlukan koneksi Internet untuk memanggilnya. Oleh karenanya, sangat disarankan untuk terhubung dengan koneksi Internet pada saat aplikasi baru pertama kali dijalankan, dan/atau ketika tampilan halaman tidak sesuai dengan yang diharapkan.
 
@@ -14,5 +14,5 @@ Punya pertanyaan seputar Laravel? Jangan malu-malu tanya saja ke grup facebook b
 - [Laravel PHP Indonesia](https://www.facebook.com/groups/laravel/)
 
 # Versi Terbaru LaraDocs
-Versi terbaru LaraDocs dapat Anda download melalui link berikut:
+Versi terbaru LaraDocs baik untuk Android maupun Chrome dapat Anda download melalui link berikut:
 - [laradocs.miftahafina.com](http://laradocs.miftahafina.com)
