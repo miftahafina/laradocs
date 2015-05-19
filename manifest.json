@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "LaraDocs",
+  "version": "2.0",
+  "description": "Laravel Offline Documentation for Chrome",
+  "icons": { "128": "icon-small.png" },
+  "background": {
+      "scripts": ["index.js"]
+    },
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon-small.png"
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
