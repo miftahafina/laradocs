@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/cache by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Cache - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="cache.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/cache.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/cache.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/cache.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/cache.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Cache</h1>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#accessing-the-cache">Accessing The Cache</a></li>
+<li><a href="#cache-usage">Cache Usage</a></li>
+<li><a href="#accessing-multiple-cache-stores">Accessing Multiple Cache Stores</a></li>
+<li><a href="#adding-custom-cache-drivers">Adding Custom Cache Drivers</a></li>
+</ul>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<p>Laravel provides a unified API for various caching systems. The cache configuration is located at <code>config/cache.php</code>. In this file you may specify which cache driver you would like used by default throughout your application. Laravel supports popular caching backends like <a href="http://memcached.org/">Memcached</a> and <a href="http://redis.io/">Redis</a> out of the box.</p>
+<p>The cache configuration file also contains various other options, which are documented within the file, so make sure to read over these options. By default, Laravel is configured to use the <code>file</code> cache driver, which stores the serialized, cached objects in the filesystem. For larger applications, it is recommended that you use an in-memory cache such as Memcached or APC. You may even configure multiple cache configurations for the same driver.</p>
+<h3>Cache Prerequisites</h3>
+<h4>Database</h4>
+<p>When using the <code>database</code> cache driver, you will need to setup a table to contain the cache items. You'll find an example <code>Schema</code> declaration for the table below:</p>
+<pre><code>Schema::create('cache', function($table) {
+    $table-&gt;string('key')-&gt;unique();
+    $table-&gt;text('value');
+    $table-&gt;integer('expiration');
+});</code></pre>
+<h4>Memcached</h4>
+<p>Using the Memcached cache requires the <a href="http://pecl.php.net/package/memcached">Memcached PECL package</a> to be installed.</p>
+<p>The default <a href="#configuration">configuration</a> uses TCP/IP based on <a href="http://php.net/manual/en/memcached.addserver.php">Memcached::addServer</a>:</p>
+<pre><code>'memcached' =&gt; [
+    [
+        'host' =&gt; '127.0.0.1',
+        'port' =&gt; 11211,
+        'weight' =&gt; 100
+    ],
+],</code></pre>
+<p>You may also set the <code>host</code> option to a UNIX socket path. If you do this, the <code>port</code> option should be set to <code>0</code>:</p>
+<pre><code>'memcached' =&gt; [
+    [
+        'host' =&gt; '/var/run/memcached/memcached.sock',
+        'port' =&gt; 0,
+        'weight' =&gt; 100
+    ],
+],</code></pre>
+<h4>Redis</h4>
+<p>Before using a Redis cache with Laravel, you will need to install the <code>predis/predis</code> package (~1.0) via Composer.</p>
+<p>For more information on configuring Redis, consult its <a href="redis.html#configuration">Laravel documentation page</a>.</p>
+<p><a name="accessing-the-cache"></a></p>
+<h2>Accessing The Cache</h2>
+<p>The <code>Illuminate\Contracts\Cache\Factory</code> and <code>Illuminate\Contracts\Cache\Repository</code> <a href="contracts.html">contracts</a> provide access to Laravel's cache services. The <code>Factory</code> contract provides access to all cache drivers defined for your application. The <code>Repository</code> contract is typically an implementation of the default cache driver for your application as specified by your <code>cache</code> configuration file.</p>
+<p>However, you may also use the <code>Cache</code> facade, which is what we will use throughout this documentation. The <code>Cache</code> facade provides convenient, terse access to the underlying implementations of the Laravel cache contracts.</p>
+<p>For example, let's import the <code>Cache</code> facade into a controller:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Cache;
+use Illuminate\Routing\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show a list of all users of the application.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $value = Cache::get('key');
+
+        //
+    }
+}</code></pre>
+<p><a name="cache-usage"></a></p>
+<h2>Cache Usage</h2>
+<h4>Storing An Item In The Cache</h4>
+<p>When you place an item in the cache, you will need to specify the number of minutes for which the value should be cached:</p>
+<pre><code>Cache::put('key', 'value', $minutes);</code></pre>
+<h4>Using DateTime Objects To Set Expire Time</h4>
+<p>You may also pass a PHP <code>DateTime</code> instance representing the expiration time of the cache item:</p>
+<pre><code>$expiresAt = Carbon::now()-&gt;addMinutes(10);
+
+Cache::put('key', 'value', $expiresAt);</code></pre>
+<h4>Storing An Item In The Cache If It Doesn't Exist</h4>
+<p>The <code>add</code> method will return <code>true</code> if the item is actually <strong>added</strong> to the cache. Otherwise, the method will return <code>false</code>.</p>
+<pre><code>Cache::add('key', 'value', $minutes);</code></pre>
+<h4>Checking For Item Existence</h4>
+<pre><code>if (Cache::has('key')) {
+    //
+}</code></pre>
+<h4>Retrieving An Item From The Cache</h4>
+<pre><code>$value = Cache::get('key');</code></pre>
+<h4>Retrieving An Item Or Returning A Default Value</h4>
+<p>The second argument passed to the <code>get</code> method will be returned if the specified item does not exist in the cache:</p>
+<pre><code>$value = Cache::get('key', 'default');</code></pre>
+<p>You may even pass a <code>Closure</code> as the default value. The result of the <code>Closure</code> will be returned if the specified item does not exist in the cache:</p>
+<pre><code>$value = Cache::get('key', function() {
+    return 'default';
+});</code></pre>
+<h4>Incrementing / Decrementing Values</h4>
+<blockquote>
+<p><strong>Note:</strong> All cache drivers except the <code>database</code> driver support the increment and decrement operations:</p>
+</blockquote>
+<pre><code>Cache::increment('key');
+
+Cache::increment('key', $amount);
+
+Cache::decrement('key');
+
+Cache::decrement('key', $amount);</code></pre>
+<h4>Storing An Item In The Cache Permanently</h4>
+<pre><code>Cache::forever('key', 'value');</code></pre>
+<h4>Retrieve An Item &amp; Update Value If Missing</h4>
+<p>Sometimes you may wish to retrieve an item from the cache, but also store a default value if the requested item doesn't exist. You may do this using the <code>Cache::remember</code> method:</p>
+<pre><code>$value = Cache::remember('users', $minutes, function() {
+    return DB::table('users')-&gt;get();
+});</code></pre>
+<p>You may also combine the <code>remember</code> and <code>forever</code> methods:</p>
+<pre><code>$value = Cache::rememberForever('users', function() {
+    return DB::table('users')-&gt;get();
+});</code></pre>
+<blockquote>
+<p><strong>Note:</strong> All items stored in the cache are serialized, so you are free to store any type of data.</p>
+</blockquote>
+<h4>Pulling An Item From The Cache</h4>
+<p>If you need to retrieve an item from the cache and then delete it, you may use the <code>pull</code> method:</p>
+<pre><code>$value = Cache::pull('key');</code></pre>
+<h4>Removing An Item From The Cache</h4>
+<pre><code>Cache::forget('key');</code></pre>
+<p><a name="accessing-multiple-cache-stores"></a></p>
+<h2>Accessing Multiple Cache Stores</h2>
+<p>Using the <code>Cache</code> facade, you may access various cache stores via the <code>store</code> method. The key passed to the <code>store</code> method should correspond to one of the stores listed in the <code>stores</code> configuration array in your <code>cache</code> configuration file:</p>
+<pre><code>$value = Cache::store('file')-&gt;get('foo');
+
+Cache::store('redis')-&gt;put('bar', 'baz', 10);</code></pre>
+<p><a name="adding-custom-cache-drivers"></a></p>
+<h2>Adding Custom Cache Drivers</h2>
+<p>To extend the Laravel cache with a custom driver, we will use the <code>extend</code> method on the <code>CacheManager</code>, which is used to bind a custom driver resolver to the manager, and is common across all manager classes. Typically, this is done within a <a href="providers.html">service provider</a>.</p>
+<p>For example, to register a new cache driver named &quot;mongo&quot;:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use Cache;
+use App\Extensions\MongoStore;
+use Illuminate\Support\ServiceProvider;
+
+class CacheServiceProvider extends ServiceProvider
+{
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Cache::extend('mongo', function($app) {
+            return Cache::repository(new MongoStore);
+        });
+    }
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+<p>The first argument passed to the <code>extend</code> method is the name of the driver. This will correspond to your <code>driver</code> option in the <code>config/cache.php</code> configuration file. The second argument is a Closure that should return an <code>Illuminate\Cache\Repository</code> instance. The Closure will be passed an <code>$app</code> instance, which is an instance of the <code>Illuminate\Foundation\Application</code> <a href="container.html">service container</a>.</p>
+<p>The call to <code>Cache::extend</code> could be done in the <code>boot</code> method of the default <code>App\Providers\AppServiceProvider</code> that ships with fresh Laravel applications, or you may create your own service provider to house the extension - just don't forget to register the provider in the <code>config/app.php</code> provider array.</p>
+<p>To create our custom cache driver, we first need to implement the <code>Illuminate\Contracts\Cache\Store</code> <a href="contracts.html">contract</a>. So, our MongoDB cache implementation would look something like this:</p>
+<pre><code>class MongoStore implements Illuminate\Contracts\Cache\Store
+{
+    public function get($key) {}
+    public function put($key, $value, $minutes) {}
+    public function increment($key, $value = 1) {}
+    public function decrement($key, $value = 1) {}
+    public function forever($key, $value) {}
+    public function forget($key) {}
+    public function flush() {}
+}</code></pre>
+<p>We just need to implement each of these methods using a MongoDB connection. Once our implementation is complete, we can finish our custom driver registration:</p>
+<pre><code>Cache::extend('mongo', function($app) {
+    return Cache::repository(new MongoStore);
+});</code></pre>
+<p>If you're wondering where to put your custom cache driver code, consider making it available on Packagist! Or, you could create an <code>Extensions</code> namespace within your <code>app</code> directory. However, keep in mind that Laravel does not have a rigid application structure and you are free to organize your application according to your preferences.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/cache by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+</html>

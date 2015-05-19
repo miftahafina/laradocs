@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/requests by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Requests &amp; Input - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/requests.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/requests.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="requests.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/requests.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/requests.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Requests &amp; Input</h1>
+<ul>
+<li><a href="#basic-input">Basic Input</a></li>
+<li><a href="#cookies">Cookies</a></li>
+<li><a href="#old-input">Old Input</a></li>
+<li><a href="#files">Files</a></li>
+<li><a href="#request-information">Request Information</a></li>
+</ul>
+<p><a name="basic-input"></a></p>
+<h2>Basic Input</h2>
+<p>You may access all user input with a few simple methods. You do not need to worry about the HTTP verb used for the request, as input is accessed in the same way for all verbs.</p>
+<h4>Retrieving An Input Value</h4>
+<pre><code>$name = Input::get('name');</code></pre>
+<h4>Retrieving A Default Value If The Input Value Is Absent</h4>
+<pre><code>$name = Input::get('name', 'Sally');</code></pre>
+<h4>Determining If An Input Value Is Present</h4>
+<pre><code>if (Input::has('name'))
+{
+    //
+}</code></pre>
+<h4>Getting All Input For The Request</h4>
+<pre><code>$input = Input::all();</code></pre>
+<h4>Getting Only Some Of The Request Input</h4>
+<pre><code>$input = Input::only('username', 'password');
+
+$input = Input::except('credit_card');</code></pre>
+<p>When working on forms with &quot;array&quot; inputs, you may use dot notation to access the arrays:</p>
+<pre><code>$input = Input::get('products.0.name');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Some JavaScript libraries such as Backbone may send input to the application as JSON. You may access this data via <code>Input::get</code> like normal.</p>
+</blockquote>
+<p><a name="cookies"></a></p>
+<h2>Cookies</h2>
+<p>All cookies created by the Laravel framework are encrypted and signed with an authentication code, meaning they will be considered invalid if they have been changed by the client.</p>
+<h4>Retrieving A Cookie Value</h4>
+<pre><code>$value = Cookie::get('name');</code></pre>
+<h4>Attaching A New Cookie To A Response</h4>
+<pre><code>$response = Response::make('Hello World');
+
+$response-&gt;withCookie(Cookie::make('name', 'value', $minutes));</code></pre>
+<h4>Queueing A Cookie For The Next Response</h4>
+<p>If you would like to set a cookie before a response has been created, use the <code>Cookie::queue()</code> method. The cookie will automatically be attached to the final response from your application.</p>
+<pre><code>Cookie::queue($name, $value, $minutes);</code></pre>
+<h4>Creating A Cookie That Lasts Forever</h4>
+<pre><code>$cookie = Cookie::forever('name', 'value');</code></pre>
+<p><a name="old-input"></a></p>
+<h2>Old Input</h2>
+<p>You may need to keep input from one request until the next request. For example, you may need to re-populate a form after checking it for validation errors.</p>
+<h4>Flashing Input To The Session</h4>
+<pre><code>Input::flash();</code></pre>
+<h4>Flashing Only Some Input To The Session</h4>
+<pre><code>Input::flashOnly('username', 'email');
+
+Input::flashExcept('password');</code></pre>
+<p>Since you often will want to flash input in association with a redirect to the previous page, you may easily chain input flashing onto a redirect.</p>
+<pre><code>return Redirect::to('form')-&gt;withInput();
+
+return Redirect::to('form')-&gt;withInput(Input::except('password'));</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You may flash other data across requests using the <a href="session.html">Session</a> class.</p>
+</blockquote>
+<h4>Retrieving Old Data</h4>
+<pre><code>Input::old('username');</code></pre>
+<p><a name="files"></a></p>
+<h2>Files</h2>
+<h4>Retrieving An Uploaded File</h4>
+<pre><code>$file = Input::file('photo');</code></pre>
+<h4>Determining If A File Was Uploaded</h4>
+<pre><code>if (Input::hasFile('photo'))
+{
+    //
+}</code></pre>
+<p>The object returned by the <code>file</code> method is an instance of the <code>Symfony\Component\HttpFoundation\File\UploadedFile</code> class, which extends the PHP <code>SplFileInfo</code> class and provides a variety of methods for interacting with the file.</p>
+<h4>Determining If An Uploaded File Is Valid</h4>
+<pre><code>if (Input::file('photo')-&gt;isValid())
+{
+    //
+}</code></pre>
+<h4>Moving An Uploaded File</h4>
+<pre><code>Input::file('photo')-&gt;move($destinationPath);
+
+Input::file('photo')-&gt;move($destinationPath, $fileName);</code></pre>
+<h4>Retrieving The Path To An Uploaded File</h4>
+<pre><code>$path = Input::file('photo')-&gt;getRealPath();</code></pre>
+<h4>Retrieving The Original Name Of An Uploaded File</h4>
+<pre><code>$name = Input::file('photo')-&gt;getClientOriginalName();</code></pre>
+<h4>Retrieving The Extension Of An Uploaded File</h4>
+<pre><code>$extension = Input::file('photo')-&gt;getClientOriginalExtension();</code></pre>
+<h4>Retrieving The Size Of An Uploaded File</h4>
+<pre><code>$size = Input::file('photo')-&gt;getSize();</code></pre>
+<h4>Retrieving The MIME Type Of An Uploaded File</h4>
+<pre><code>$mime = Input::file('photo')-&gt;getMimeType();</code></pre>
+<p><a name="request-information"></a></p>
+<h2>Request Information</h2>
+<p>The <code>Request</code> class provides many methods for examining the HTTP request for your application and extends the <code>Symfony\Component\HttpFoundation\Request</code> class. Here are some of the highlights.</p>
+<h4>Retrieving The Request URI</h4>
+<pre><code>$uri = Request::path();</code></pre>
+<h4>Retrieving The Request Method</h4>
+<pre><code>$method = Request::method();
+
+if (Request::isMethod('post'))
+{
+    //
+}</code></pre>
+<h4>Determining If The Request Path Matches A Pattern</h4>
+<pre><code>if (Request::is('admin/*'))
+{
+    //
+}</code></pre>
+<h4>Get The Request URL</h4>
+<pre><code>$url = Request::url();</code></pre>
+<h4>Retrieve A Request URI Segment</h4>
+<pre><code>$segment = Request::segment(1);</code></pre>
+<h4>Retrieving A Request Header</h4>
+<pre><code>$value = Request::header('Content-Type');</code></pre>
+<h4>Retrieving Values From $_SERVER</h4>
+<pre><code>$value = Request::server('PATH_INFO');</code></pre>
+<h4>Determining If The Request Is Over HTTPS</h4>
+<pre><code>if (Request::secure())
+{
+    //
+}</code></pre>
+<h4>Determine If The Request Is Using AJAX</h4>
+<pre><code>if (Request::ajax())
+{
+    //
+}</code></pre>
+<h4>Determine If The Request Has JSON Content Type</h4>
+<pre><code>if (Request::isJson())
+{
+    //
+}</code></pre>
+<h4>Determine If The Request Is Asking For JSON</h4>
+<pre><code>if (Request::wantsJson())
+{
+    //
+}</code></pre>
+<h4>Checking The Requested Response Format</h4>
+<p>The <code>Request::format</code> method will return the requested response format based on the HTTP Accept header:</p>
+<pre><code>if (Request::format() == 'json')
+{
+    //
+}</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/requests by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+</html>

@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.1/responses by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Views &amp; Responses - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.1
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/responses.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/responses.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/responses.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="responses.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/responses.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Views &amp; Responses</h1>
+<ul>
+<li><a href="#basic-responses">Basic Responses</a></li>
+<li><a href="#redirects">Redirects</a></li>
+<li><a href="#views">Views</a></li>
+<li><a href="#view-composers">View Composers</a></li>
+<li><a href="#special-responses">Special Responses</a></li>
+<li><a href="#response-macros">Response Macros</a></li>
+</ul>
+<p><a name="basic-responses"></a></p>
+<h2>Basic Responses</h2>
+<h4>Returning Strings From Routes</h4>
+<pre><code>Route::get('/', function()
+{
+    return 'Hello World';
+});</code></pre>
+<h4>Creating Custom Responses</h4>
+<p>A <code>Response</code> instance inherits from the <code>Symfony\Component\HttpFoundation\Response</code> class, providing a variety of methods for building HTTP responses.</p>
+<pre><code>$response = Response::make($contents, $statusCode);
+
+$response-&gt;header('Content-Type', $value);
+
+return $response;</code></pre>
+<p>If you need access to the <code>Response</code> class methods, but want to return a view as the response content, you may use the <code>Response::view</code> method for convenience:</p>
+<pre><code>return Response::view('hello')-&gt;header('Content-Type', $type);</code></pre>
+<h4>Attaching Cookies To Responses</h4>
+<pre><code>$cookie = Cookie::make('name', 'value');
+
+return Response::make($content)-&gt;withCookie($cookie);</code></pre>
+<p><a name="redirects"></a></p>
+<h2>Redirects</h2>
+<h4>Returning A Redirect</h4>
+<pre><code>return Redirect::to('user/login');</code></pre>
+<h4>Returning A Redirect With Flash Data</h4>
+<pre><code>return Redirect::to('user/login')-&gt;with('message', 'Login Failed');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Since the <code>with</code> method flashes data to the session, you may retrieve the data using the typical <code>Session::get</code> method.</p>
+</blockquote>
+<h4>Returning A Redirect To A Named Route</h4>
+<pre><code>return Redirect::route('login');</code></pre>
+<h4>Returning A Redirect To A Named Route With Parameters</h4>
+<pre><code>return Redirect::route('profile', array(1));</code></pre>
+<h4>Returning A Redirect To A Named Route Using Named Parameters</h4>
+<pre><code>return Redirect::route('profile', array('user' =&gt; 1));</code></pre>
+<h4>Returning A Redirect To A Controller Action</h4>
+<pre><code>return Redirect::action('HomeController@index');</code></pre>
+<h4>Returning A Redirect To A Controller Action With Parameters</h4>
+<pre><code>return Redirect::action('UserController@profile', array(1));</code></pre>
+<h4>Returning A Redirect To A Controller Action Using Named Parameters</h4>
+<pre><code>return Redirect::action('UserController@profile', array('user' =&gt; 1));</code></pre>
+<p><a name="views"></a></p>
+<h2>Views</h2>
+<p>Views typically contain the HTML of your application and provide a convenient way of separating your controller and domain logic from your presentation logic. Views are stored in the <code>app/views</code> directory.</p>
+<p>A simple view could look something like this:</p>
+<pre><code>&lt;!-- View stored in app/views/greeting.php --&gt;
+
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>This view may be returned to the browser like so:</p>
+<pre><code>Route::get('/', function()
+{
+    return View::make('greeting', array('name' =&gt; 'Taylor'));
+});</code></pre>
+<p>The second argument passed to <code>View::make</code> is an array of data that should be made available to the view.</p>
+<h4>Passing Data To Views</h4>
+<pre><code>// Using conventional approach
+$view = View::make('greeting')-&gt;with('name', 'Steve');
+
+// Using Magic Methods
+$view = View::make('greeting')-&gt;withName('steve');</code></pre>
+<p>In the example above the variable <code>$name</code> would be accessible from the view, and would contain <code>Steve</code>.</p>
+<p>If you wish, you may pass an array of data as the second parameter given to the <code>make</code> method:</p>
+<pre><code>$view = View::make('greetings', $data);</code></pre>
+<p>You may also share a piece of data across all views:</p>
+<pre><code>View::share('name', 'Steve');</code></pre>
+<h4>Passing A Sub-View To A View</h4>
+<p>Sometimes you may wish to pass a view into another view. For example, given a sub-view stored at <code>app/views/child/view.php</code>, we could pass it to another view like so:</p>
+<pre><code>$view = View::make('greeting')-&gt;nest('child', 'child.view');
+
+$view = View::make('greeting')-&gt;nest('child', 'child.view', $data);</code></pre>
+<p>The sub-view can then be rendered from the parent view:</p>
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello!&lt;/h1&gt;
+        &lt;?php echo $child; ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><a name="view-composers"></a></p>
+<h2>View Composers</h2>
+<p>View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want bound to a given view each time that view is rendered throughout your application, a view composer can organize that code into a single location. Therefore, view composers may function like &quot;view models&quot; or &quot;presenters&quot;.</p>
+<h4>Defining A View Composer</h4>
+<pre><code>View::composer('profile', function($view)
+{
+    $view-&gt;with('count', User::count());
+});</code></pre>
+<p>Now each time the <code>profile</code> view is rendered, the <code>count</code> data will be bound to the view.</p>
+<p>You may also attach a view composer to multiple views at once:</p>
+<pre><code>View::composer(array('profile','dashboard'), function($view)
+{
+    $view-&gt;with('count', User::count());
+});</code></pre>
+<p>If you would rather use a class based composer, which will provide the benefits of being resolved through the application <a href="ioc.html">IoC Container</a>, you may do so:</p>
+<pre><code>View::composer('profile', 'ProfileComposer');</code></pre>
+<p>A view composer class should be defined like so:</p>
+<pre><code>class ProfileComposer {
+
+    public function compose($view)
+    {
+        $view-&gt;with('count', User::count());
+    }
+
+}</code></pre>
+<h4>Defining Multiple Composers</h4>
+<p>You may use the <code>composers</code> method to register a group of composers at the same time:</p>
+<pre><code>View::composers(array(
+    'AdminComposer' =&gt; array('admin.index', 'admin.profile'),
+    'UserComposer' =&gt; 'user',
+));</code></pre>
+<blockquote>
+<p><strong>Note:</strong> There is no convention on where composer classes may be stored. You are free to store them anywhere as long as they can be autoloaded using the directives in your <code>composer.json</code> file.</p>
+</blockquote>
+<h3>View Creators</h3>
+<p>View <strong>creators</strong> work almost exactly like view composers; however, they are fired immediately when the view is instantiated. To register a view creator, simply use the <code>creator</code> method:</p>
+<pre><code>View::creator('profile', function($view)
+{
+    $view-&gt;with('count', User::count());
+});</code></pre>
+<p><a name="special-responses"></a></p>
+<h2>Special Responses</h2>
+<h4>Creating A JSON Response</h4>
+<pre><code>return Response::json(array('name' =&gt; 'Steve', 'state' =&gt; 'CA'));</code></pre>
+<h4>Creating A JSONP Response</h4>
+<pre><code>return Response::json(array('name' =&gt; 'Steve', 'state' =&gt; 'CA'))-&gt;setCallback(Input::get('callback'));</code></pre>
+<h4>Creating A File Download Response</h4>
+<pre><code>return Response::download($pathToFile);
+
+return Response::download($pathToFile, $name, $headers);</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Symfony HttpFoundation, which manages file downloads, requires the file being downloaded to have an ASCII file name.</p>
+</blockquote>
+<p><a name="response-macros"></a></p>
+<h2>Response Macros</h2>
+<p>If you would like to define a custom response that you can re-use in a variety of your routes and controllers, you may use the <code>Response::macro</code> method:</p>
+<pre><code>Response::macro('caps', function($value)
+{
+    return Response::make(strtoupper($value));
+});</code></pre>
+<p>The <code>macro</code> function accepts a name as its first argument, and a Closure as its second. The macro's Closure will be executed when calling the macro name on the <code>Response</code> class:</p>
+<pre><code>return Response::caps('foo');</code></pre>
+<p>You may define your macros in one of your <code>app/start</code> files. Alternatively, you may organize your macros into a separate file which is included from one of your <code>start</code> files.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.1/responses by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:49 GMT -->
+</html>

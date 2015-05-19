@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/events by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Events - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/events.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="events.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/events.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/events.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/events.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Events</h1>
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#queued-event-handlers">Queued Event Handlers</a></li>
+<li><a href="#event-subscribers">Event Subscribers</a></li>
+</ul>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p>The Laravel event facilities provides a simple observer implementation, allowing you to subscribe and listen for events in your application. Event classes are typically stored in the <code>app/Events</code> directory, while their handlers are stored in <code>app/Handlers/Events</code>.</p>
+<p>You can generate a new event class using the Artisan CLI tool:</p>
+<pre><code>php artisan make:event PodcastWasPurchased</code></pre>
+<h4>Subscribing To An Event</h4>
+<p>The <code>EventServiceProvider</code> included with your Laravel application provides a convenient place to register all event handlers. The <code>listen</code> property contains an array of all events (keys) and their handlers (values). Of course, you may add as many events to this array as your application requires. For example, let's add our <code>PodcastWasPurchased</code> event:</p>
+<pre><code>/**
+ * The event handler mappings for the application.
+ *
+ * @var array
+ */
+protected $listen = [
+    'App\Events\PodcastWasPurchased' =&gt; [
+        'App\Handlers\Events\EmailPurchaseConfirmation',
+    ],
+];</code></pre>
+<p>To generate a handler for an event, use the <code>handler:event</code> Artisan CLI command:</p>
+<pre><code>php artisan handler:event EmailPurchaseConfirmation --event=PodcastWasPurchased</code></pre>
+<p>Of course, manually running the <code>make:event</code> and <code>handler:event</code> commands each time you need a handler or event is cumbersome. Instead, simply add handlers and events to your <code>EventServiceProvider</code> and use the <code>event:generate</code> command. This command will generate any events or handlers that are listed in your <code>EventServiceProvider</code>:</p>
+<pre><code>php artisan event:generate</code></pre>
+<h4>Firing An Event</h4>
+<p>Now we are ready to fire our event using the <code>Event</code> facade:</p>
+<pre><code>$response = Event::fire(new PodcastWasPurchased($podcast));</code></pre>
+<p>The <code>fire</code> method returns an array of responses that you can use to control what happens next in your application.</p>
+<p>You may also use the <code>event</code> helper to fire an event:</p>
+<pre><code>event(new PodcastWasPurchased($podcast));</code></pre>
+<h4>Closure Listeners</h4>
+<p>You can even listen to events without creating a separate handler class at all. For example, in the <code>boot</code> method of your <code>EventServiceProvider</code>, you could do the following:</p>
+<pre><code>Event::listen('App\Events\PodcastWasPurchased', function($event)
+{
+    // Handle the event...
+});</code></pre>
+<h4>Stopping The Propagation Of An Event</h4>
+<p>Sometimes, you may wish to stop the propagation of an event to other listeners. You may do so using by returning <code>false</code> from your handler:</p>
+<pre><code>Event::listen('App\Events\PodcastWasPurchased', function($event)
+{
+    // Handle the event...
+
+    return false;
+});</code></pre>
+<p><a name="queued-event-handlers"></a></p>
+<h2>Queued Event Handlers</h2>
+<p>Need to <a href="queues.html">queue</a> an event handler? It couldn't be any easier. When generating the handler, simply use the <code>--queued</code> flag:</p>
+<pre><code>php artisan handler:event SendPurchaseConfirmation --event=PodcastWasPurchased --queued</code></pre>
+<p>This will generate a handler class that implements the <code>Illuminate\Contracts\Queue\ShouldBeQueued</code> interface. That's it! Now when this handler is called for an event, it will be queued automatically by the event dispatcher.</p>
+<p>If no exceptions are thrown when the handler is executed by the queue, the queued job will be deleted automatically after it has processed. If you need to access the queued job's <code>delete</code> and <code>release</code> methods manually, you may do so. The <code>Illuminate\Queue\InteractsWithQueue</code> trait, which is included by default on queued handlers, gives you access to these methods:</p>
+<pre><code>public function handle(PodcastWasPurchased $event)
+{
+    if (true)
+    {
+        $this-&gt;release(30);
+    }
+}</code></pre>
+<p>If you have an existing handler that you would like to convert to a queued handler, simply add the <code>ShouldBeQueued</code> interface to the class manually.</p>
+<p><a name="event-subscribers"></a></p>
+<h2>Event Subscribers</h2>
+<h4>Defining An Event Subscriber</h4>
+<p>Event subscribers are classes that may subscribe to multiple events from within the class itself. Subscribers should define a <code>subscribe</code> method, which will be passed an event dispatcher instance:</p>
+<pre><code>class UserEventHandler {
+
+    /**
+     * Handle user login events.
+     */
+    public function onUserLogin($event)
+    {
+        //
+    }
+
+    /**
+     * Handle user logout events.
+     */
+    public function onUserLogout($event)
+    {
+        //
+    }
+
+    /**
+     * Register the listeners for the subscriber.
+     *
+     * @param  Illuminate\Events\Dispatcher  $events
+     * @return void
+     */
+    public function subscribe($events)
+    {
+        $events-&gt;listen('App\Events\UserLoggedIn', 'UserEventHandler@onUserLogin');
+
+        $events-&gt;listen('App\Events\UserLoggedOut', 'UserEventHandler@onUserLogout');
+    }
+
+}</code></pre>
+<h4>Registering An Event Subscriber</h4>
+<p>Once the subscriber has been defined, it may be registered with the <code>Event</code> class.</p>
+<pre><code>$subscriber = new UserEventHandler;
+
+Event::subscribe($subscriber);</code></pre>
+<p>You may also use the <a href="container.html">service container</a> to resolve your subscriber. To do so, simply pass the name of your subscriber to the <code>subscribe</code> method:</p>
+<pre><code>Event::subscribe('UserEventHandler');</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/events by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:03 GMT -->
+</html>

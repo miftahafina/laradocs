@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/database by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Basic Database Usage - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/database.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="database.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/database.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/database.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/database.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Basic Database Usage</h1>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#read-write-connections">Read / Write Connections</a></li>
+<li><a href="#running-queries">Running Queries</a></li>
+<li><a href="#database-transactions">Database Transactions</a></li>
+<li><a href="#accessing-connections">Accessing Connections</a></li>
+<li><a href="#query-logging">Query Logging</a></li>
+</ul>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<p>Laravel makes connecting with databases and running queries extremely simple. The database configuration file is <code>config/database.php</code>. In this file you may define all of your database connections, as well as specify which connection should be used by default. Examples for all of the supported database systems are provided in this file.</p>
+<p>Currently Laravel supports four database systems: MySQL, Postgres, SQLite, and SQL Server.</p>
+<p><a name="read-write-connections"></a></p>
+<h2>Read / Write Connections</h2>
+<p>Sometimes you may wish to use one database connection for SELECT statements, and another for INSERT, UPDATE, and DELETE statements. Laravel makes this a breeze, and the proper connections will always be used whether you are using raw queries, the query builder, or the Eloquent ORM.</p>
+<p>To see how read / write connections should be configured, let's look at this example:</p>
+<pre><code>'mysql' =&gt; [
+    'read' =&gt; [
+        'host' =&gt; '192.168.1.1',
+    ],
+    'write' =&gt; [
+        'host' =&gt; '196.168.1.2'
+    ],
+    'driver'    =&gt; 'mysql',
+    'database'  =&gt; 'database',
+    'username'  =&gt; 'root',
+    'password'  =&gt; '',
+    'charset'   =&gt; 'utf8',
+    'collation' =&gt; 'utf8_unicode_ci',
+    'prefix'    =&gt; '',
+],</code></pre>
+<p>Note that two keys have been added to the configuration array: <code>read</code> and <code>write</code>. Both of these keys have array values containing a single key: <code>host</code>. The rest of the database options for the <code>read</code> and <code>write</code> connections will be merged from the main <code>mysql</code> array. So, we only need to place items in the <code>read</code> and <code>write</code> arrays if we wish to override the values in the main array. So, in this case, <code>192.168.1.1</code> will be used as the &quot;read&quot; connection, while <code>192.168.1.2</code> will be used as the &quot;write&quot; connection. The database credentials, prefix, character set, and all other options in the main <code>mysql</code> array will be shared across both connections.</p>
+<p><a name="running-queries"></a></p>
+<h2>Running Queries</h2>
+<p>Once you have configured your database connection, you may run queries using the <code>DB</code> facade.</p>
+<h4>Running A Select Query</h4>
+<pre><code>$results = DB::select('select * from users where id = ?', [1]);</code></pre>
+<p>The <code>select</code> method will always return an <code>array</code> of results.</p>
+<p>You may also execute a query using named bindings:</p>
+<pre><code>$results = DB::select('select * from users where id = :id', ['id' =&gt; 1]);</code></pre>
+<h4>Running An Insert Statement</h4>
+<pre><code>DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);</code></pre>
+<h4>Running An Update Statement</h4>
+<pre><code>DB::update('update users set votes = 100 where name = ?', ['John']);</code></pre>
+<h4>Running A Delete Statement</h4>
+<pre><code>DB::delete('delete from users');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>update</code> and <code>delete</code> statements return the number of rows affected by the operation.</p>
+</blockquote>
+<h4>Running A General Statement</h4>
+<pre><code>DB::statement('drop table users');</code></pre>
+<h4>Listening For Query Events</h4>
+<p>You may listen for query events using the <code>DB::listen</code> method:</p>
+<pre><code>DB::listen(function($sql, $bindings, $time)
+{
+    //
+});</code></pre>
+<p><a name="database-transactions"></a></p>
+<h2>Database Transactions</h2>
+<p>To run a set of operations within a database transaction, you may use the <code>transaction</code> method:</p>
+<pre><code>DB::transaction(function()
+{
+    DB::table('users')-&gt;update(['votes' =&gt; 1]);
+
+    DB::table('posts')-&gt;delete();
+});</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Any exception thrown within the <code>transaction</code> closure will cause the transaction to be rolled back automatically.</p>
+</blockquote>
+<p>Sometimes you may need to begin a transaction yourself:</p>
+<pre><code>DB::beginTransaction();</code></pre>
+<p>You can rollback a transaction via the <code>rollback</code> method:</p>
+<pre><code>DB::rollback();</code></pre>
+<p>Lastly, you can commit a transaction via the <code>commit</code> method:</p>
+<pre><code>DB::commit();</code></pre>
+<p><a name="accessing-connections"></a></p>
+<h2>Accessing Connections</h2>
+<p>When using multiple connections, you may access them via the <code>DB::connection</code> method:</p>
+<pre><code>$users = DB::connection('foo')-&gt;select(...);</code></pre>
+<p>You may also access the raw, underlying PDO instance:</p>
+<pre><code>$pdo = DB::connection()-&gt;getPdo();</code></pre>
+<p>Sometimes you may need to reconnect to a given database:</p>
+<pre><code>DB::reconnect('foo');</code></pre>
+<p>If you need to disconnect from the given database due to exceeding the underlying PDO instance's <code>max_connections</code> limit, use the <code>disconnect</code> method:</p>
+<pre><code>DB::disconnect('foo');</code></pre>
+<p><a name="query-logging"></a></p>
+<h2>Query Logging</h2>
+<p>Laravel can optionally log in memory all queries that have been run for the current request. Be aware that in some cases, such as when inserting a large number of rows, this can cause the application to use excess memory. To enable the log, you may use the <code>enableQueryLog</code> method:</p>
+<pre><code>DB::connection()-&gt;enableQueryLog();</code></pre>
+<p>To get an array of the executed queries, you may use the <code>getQueryLog</code> method:</p>
+<pre><code>$queries = DB::getQueryLog();</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/database by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:12 GMT -->
+</html>

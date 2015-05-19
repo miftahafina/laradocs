@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/billing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Laravel Cashier - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/billing.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/billing.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="billing.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Laravel Cashier</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#subscribing-to-a-plan">Subscribing To A Plan</a></li>
+<li><a href="#no-card-up-front">No Card Up Front</a></li>
+<li><a href="#swapping-subscriptions">Swapping Subscriptions</a></li>
+<li><a href="#subscription-quantity">Subscription Quantity</a></li>
+<li><a href="#cancelling-a-subscription">Cancelling A Subscription</a></li>
+<li><a href="#resuming-a-subscription">Resuming A Subscription</a></li>
+<li><a href="#checking-subscription-status">Checking Subscription Status</a></li>
+<li><a href="#handling-failed-payments">Handling Failed Payments</a></li>
+<li><a href="#handling-other-stripe-webhooks">Handling Other Stripe Webhooks</a></li>
+<li><a href="#invoices">Invoices</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel Cashier provides an expressive, fluent interface to <a href="https://stripe.com/">Stripe's</a> subscription billing services. It handles almost all of the boilerplate subscription billing code you are dreading writing. In addition to basic subscription management, Cashier can handle coupons, swapping subscription, subscription &quot;quantities&quot;, cancellation grace periods, and even generate invoice PDFs.</p>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<h4>Composer</h4>
+<p>First, add the Cashier package to your <code>composer.json</code> file:</p>
+<pre><code>"laravel/cashier": "~2.0"</code></pre>
+<h4>Service Provider</h4>
+<p>Next, register the <code>Laravel\Cashier\CashierServiceProvider</code> in your <code>app</code> configuration file.</p>
+<h4>Migration</h4>
+<p>Before using Cashier, we'll need to add several columns to your database. Don't worry, you can use the <code>cashier:table</code> Artisan command to create a migration to add the necessary column. For example, to add the column to the users table use <code>php artisan cashier:table users</code>. Once the migration has been created, simply run the <code>migrate</code> command.</p>
+<h4>Model Setup</h4>
+<p>Next, add the BillableTrait and appropriate date mutators to your model definition:</p>
+<pre><code>use Laravel\Cashier\BillableTrait;
+use Laravel\Cashier\BillableInterface;
+
+class User extends Eloquent implements BillableInterface {
+
+    use BillableTrait;
+
+    protected $dates = ['trial_ends_at', 'subscription_ends_at'];
+
+}</code></pre>
+<h4>Stripe Key</h4>
+<p>Finally, set your Stripe key in one of your bootstrap files:</p>
+<pre><code>User::setStripeKey('stripe-key');</code></pre>
+<p><a name="subscribing-to-a-plan"></a></p>
+<h2>Subscribing To A Plan</h2>
+<p>Once you have a model instance, you can easily subscribe that user to a given Stripe plan:</p>
+<pre><code>$user = User::find(1);
+
+$user-&gt;subscription('monthly')-&gt;create($creditCardToken);</code></pre>
+<p>If you would like to apply a coupon when creating the subscription, you may use the <code>withCoupon</code> method:</p>
+<pre><code>$user-&gt;subscription('monthly')
+     -&gt;withCoupon('code')
+     -&gt;create($creditCardToken);</code></pre>
+<p>The <code>subscription</code> method will automatically create the Stripe subscription, as well as update your database with Stripe customer ID and other relevant billing information. If your plan has a trial configured in Stripe, the trial end date will also automatically be set on the user record.</p>
+<p>If your plan has a trial period that is <strong>not</strong> configured in Stripe, you must set the trial end date manually after subscribing:</p>
+<pre><code>$user-&gt;trial_ends_at = Carbon::now()-&gt;addDays(14);
+
+$user-&gt;save();</code></pre>
+<h3>Specifying Additional User Details</h3>
+<p>If you would like to specify additional customer details, you may do so by passing them as second argument to the <code>create</code> method:</p>
+<pre><code>$user-&gt;subscription('monthly')-&gt;create($creditCardToken, [
+    'email' =&gt; $email, 'description' =&gt; 'Our First Customer'
+]);</code></pre>
+<p>To learn more about the additional fields supported by Stripe, check out Stripe's <a href="https://stripe.com/docs/api#create_customer">documentation on customer creation</a>.</p>
+<p><a name="no-card-up-front"></a></p>
+<h2>No Card Up Front</h2>
+<p>If your application offers a free-trial with no credit-card up front, set the <code>cardUpFront</code> property on your model to <code>false</code>:</p>
+<pre><code>protected $cardUpFront = false;</code></pre>
+<p>On account creation, be sure to set the trial end date on the model:</p>
+<pre><code>$user-&gt;trial_ends_at = Carbon::now()-&gt;addDays(14);
+
+$user-&gt;save();</code></pre>
+<p><a name="swapping-subscriptions"></a></p>
+<h2>Swapping Subscriptions</h2>
+<p>To swap a user to a new subscription, use the <code>swap</code> method:</p>
+<pre><code>$user-&gt;subscription('premium')-&gt;swap();</code></pre>
+<p>If the user is on trial, the trial will be maintained as normal. Also, if a &quot;quantity&quot; exists for the subscription, that quantity will also be maintained.</p>
+<p><a name="subscription-quantity"></a></p>
+<h2>Subscription Quantity</h2>
+<p>Sometimes subscriptions are affected by &quot;quantity&quot;. For example, your application might charge $10 per month per user on an account. To easily increment or decrement your subscription quantity, use the <code>increment</code> and <code>decrement</code> methods:</p>
+<pre><code>$user = User::find(1);
+
+$user-&gt;subscription()-&gt;increment();
+
+// Add five to the subscription's current quantity...
+$user-&gt;subscription()-&gt;increment(5);
+
+$user-&gt;subscription()-&gt;decrement();
+
+// Subtract five to the subscription's current quantity...
+$user-&gt;subscription()-&gt;decrement(5);</code></pre>
+<p><a name="cancelling-a-subscription"></a></p>
+<h2>Cancelling A Subscription</h2>
+<p>Cancelling a subscription is a walk in the park:</p>
+<pre><code>$user-&gt;subscription()-&gt;cancel();</code></pre>
+<p>When a subscription is cancelled, Cashier will automatically set the <code>subscription_ends_at</code> column on your database. This column is used to know when the <code>subscribed</code> method should begin returning <code>false</code>. For example, if a customer cancels a subscription on March 1st, but the subscription was not scheduled to end until March 5th, the <code>subscribed</code> method will continue to return <code>true</code> until March 5th.</p>
+<p><a name="resuming-a-subscription"></a></p>
+<h2>Resuming A Subscription</h2>
+<p>If a user has cancelled their subscription and you wish to resume it, use the <code>resume</code> method:</p>
+<pre><code>$user-&gt;subscription('monthly')-&gt;resume($creditCardToken);</code></pre>
+<p>If the user cancels a subscription and then resumes that subscription before the subscription has fully expired, they will not be billed immediately. Their subscription will simply be re-activated, and they will be billed on the original billing cycle.</p>
+<p><a name="checking-subscription-status"></a></p>
+<h2>Checking Subscription Status</h2>
+<p>To verify that a user is subscribed to your application, use the <code>subscribed</code> command:</p>
+<pre><code>if ($user-&gt;subscribed())
+{
+    //
+}</code></pre>
+<p>The <code>subscribed</code> method makes a great candidate for a route filter:</p>
+<pre><code>Route::filter('subscribed', function()
+{
+    if (Auth::user() &amp;&amp; ! Auth::user()-&gt;subscribed())
+    {
+        return Redirect::to('billing');
+    }
+});</code></pre>
+<p>You may also determine if the user is still within their trial period (if applicable) using the <code>onTrial</code> method:</p>
+<pre><code>if ($user-&gt;onTrial())
+{
+    //
+}</code></pre>
+<p>To determine if the user was once an active subscriber, but has cancelled their subscription, you may use the <code>cancelled</code> method:</p>
+<pre><code>if ($user-&gt;cancelled())
+{
+    //
+}</code></pre>
+<p>You may also determine if a user has cancelled their subscription, but are still on their &quot;grace period&quot; until the subscription fully expires. For example, if a user cancels a subscription on March 5th that was scheduled to end on March 10th, the user is on their &quot;grace period&quot; until March 10th. Note that the <code>subscribed</code> method still returns <code>true</code> during this time.</p>
+<pre><code>if ($user-&gt;onGracePeriod())
+{
+    //
+}</code></pre>
+<p>The <code>everSubscribed</code> method may be used to determine if the user has ever subscribed to a plan in your application:</p>
+<pre><code>if ($user-&gt;everSubscribed())
+{
+    //
+}</code></pre>
+<p>The <code>onPlan</code> method may be used to determine if the user is subscribed to a given plan based on its ID:</p>
+<pre><code>if ($user-&gt;onPlan('monthly'))
+{
+    //
+}</code></pre>
+<p><a name="handling-failed-payments"></a></p>
+<h2>Handling Failed Payments</h2>
+<p>What if a customer's credit card expires? No worries - Cashier includes a Webhook controller that can easily cancel the customer's subscription for you. Just point a route to the controller:</p>
+<pre><code>Route::post('stripe/webhook', 'Laravel\Cashier\WebhookController@handleWebhook');</code></pre>
+<p>That's it! Failed payments will be captured and handled by the controller. The controller will cancel the customer's subscription after three failed payment attempts. The <code>stripe/webhook</code> URI in this example is just for example. You will need to configure the URI in your Stripe settings.</p>
+<p><a name="handling-other-stripe-webhooks"></a></p>
+<h2>Handling Other Stripe Webhooks</h2>
+<p>If you have additional Stripe webhook events you would like to handle, simply extend the Webhook controller. Your method names should correspond to Cashier's expected convention, specifically, methods should be prefixed with <code>handle</code> and the name of the Stripe webhook you wish to handle. For example, if you wish to handle the <code>invoice.payment_succeeded</code> webhook, you should add a <code>handleInvoicePaymentSucceeded</code> method to the controller.</p>
+<pre><code>class WebhookController extends Laravel\Cashier\WebhookController {
+
+    public function handleInvoicePaymentSucceeded($payload)
+    {
+        // Handle The Event
+    }
+
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> In addition to updating the subscription information in your database, the Webhook controller will also cancel the subscription via the Stripe API.</p>
+</blockquote>
+<p><a name="invoices"></a></p>
+<h2>Invoices</h2>
+<p>You can easily retrieve an array of a user's invoices using the <code>invoices</code> method:</p>
+<pre><code>$invoices = $user-&gt;invoices();</code></pre>
+<p>When listing the invoices for the customer, you may use these helper methods to display the relevant invoice information:</p>
+<pre><code>{{ $invoice-&gt;id }}
+
+{{ $invoice-&gt;dateString() }}
+
+{{ $invoice-&gt;dollars() }}</code></pre>
+<p>Use the <code>downloadInvoice</code> method to generate a PDF download of the invoice. Yes, it's really this easy:</p>
+<pre><code>return $user-&gt;downloadInvoice($invoice-&gt;id, [
+    'vendor'  =&gt; 'Your Company',
+    'product' =&gt; 'Your Product',
+]);</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/billing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:43 GMT -->
+</html>

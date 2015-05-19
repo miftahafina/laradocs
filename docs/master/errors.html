@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/errors by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Errors &amp; Logging - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="errors.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/errors.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/errors.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/errors.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/errors.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Errors &amp; Logging</h1>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#handling-errors">Handling Errors</a></li>
+<li><a href="#http-exceptions">HTTP Exceptions</a></li>
+<li><a href="#logging">Logging</a></li>
+</ul>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<p>By default, Laravel's logger is configured to use a single log file; however, you may customize this behavior as needed. Since Laravel uses the popular <a href="https://github.com/Seldaek/monolog">Monolog</a> logging library, you can take advantage of the variety of handlers that Monolog offers.</p>
+<p>For example, if you wish to use daily log files instead of a single file, you can make the following change to your <code>config/app.php</code> configuration file:</p>
+<pre><code>'log' =&gt; 'daily'</code></pre>
+<p>Out of the box, Laravel supports <code>single</code>, <code>daily</code>, <code>syslog</code> and <code>errorlog</code> logging modes. However, you are free to customize the logging for your application as you wish by overriding the <code>ConfigureLogging</code> bootstrapper class.</p>
+<h3>Custom Monolog Configuration</h3>
+<p>If you would like to have complete control over how Monolog is configured for your application, you may use the application's <code>configureMonologUsing</code> method. You should place a call to this method in your <code>bootstrap/app.php</code> file right before the <code>$app</code> variable is returned by the file:</p>
+<pre><code>$app-&gt;configureMonologUsing(function($monolog) {
+    $monolog-&gt;pushHandler(...);
+});
+
+return $app;</code></pre>
+<h3>Error Detail</h3>
+<p>The amount of error detail your application displays through the browser is controlled by the <code>debug</code> configuration option in your <code>config/app.php</code> configuration file. By default, this configuration option is set to respect the <code>APP_DEBUG</code> environment variable, which is stored in your <code>.env</code> file.</p>
+<p>For local development, you should set the <code>APP_DEBUG</code> environment variable to <code>true</code>. <strong>In your production environment, this value should always be <code>false</code>.</strong></p>
+<p><a name="handling-errors"></a></p>
+<h2>Handling Errors</h2>
+<p>All exceptions are handled by the <code>App\Exceptions\Handler</code> class. This class contains two methods: <code>report</code> and <code>render</code>.</p>
+<h3>The Report Method</h3>
+<p>The <code>report</code> method is used to log exceptions or send them to an external service like <a href="https://bugsnag.com/">BugSnag</a>. By default, the <code>report</code> method simply passes the exception to the base class where the exception is logged. However, you are free to log exceptions however you wish. If you need to report different types of exceptions in different ways, you may use the PHP <code>instanceof</code> comparison operator:</p>
+<pre><code>/**
+ * Report or log an exception.
+ *
+ * This is a great spot to send exceptions to Sentry, Bugsnag, etc.
+ *
+ * @param  \Exception  $e
+ * @return void
+ */
+public function report(Exception $e)
+{
+    if ($e instanceof CustomException) {
+        //
+    }
+
+    return parent::report($e);
+}</code></pre>
+<p>The <code>dontReport</code> property of the exception handler contains an array of exception types that will not be logged. By default, exceptions resulting from 404 errors are not written to your log files. You may add other exception types to this array as needed.</p>
+<h3>The Render Method</h3>
+<p>The <code>render</code> method is responsible for converting the exception into an HTTP response that should be sent back to the browser. By default, the exception is passed to the base class which generates a response for you. However, you are free to check the exception type or return your own custom response:</p>
+<pre><code>/**
+ * Render an exception into an HTTP response.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @param  \Exception  $e
+ * @return \Illuminate\Http\Response
+ */
+public function render($request, Exception $e)
+{
+    if ($e instanceof CustomException) {
+        return response()-&gt;view('errors.custom', [], 500);
+    }
+
+    return parent::render($request, $e);
+}</code></pre>
+<p><a name="http-exceptions"></a></p>
+<h2>HTTP Exceptions</h2>
+<p>Some exceptions describe HTTP error codes from the server. For example, this may be a &quot;page not found&quot; error (404), an &quot;unauthorized error&quot; (401) or even a developer generated 500 error. In order to return such a response, use the following:</p>
+<pre><code>abort(404);</code></pre>
+<p>Optionally, you may provide the response text:</p>
+<pre><code>abort(403, 'Unauthorized action.');</code></pre>
+<p>This method may be used at any time during the request's lifecycle.</p>
+<h3>Custom HTTP Error Pages</h3>
+<p>Laravel makes it easy to return custom error pages for various HTTP status codes. For example, if you wish to customize the error page for 404 HTTP status codes, create a <code>resources/views/errors/404.blade.php</code>. This file will be served on all 404 errors generated by your application.</p>
+<p>The views within this directory should be named to match the HTTP status code they correspond to.</p>
+<p><a name="logging"></a></p>
+<h2>Logging</h2>
+<p>The Laravel logging facilities provide a simple layer on top of the powerful <a href="http://github.com/seldaek/monolog">Monolog</a> library. By default, Laravel is configured to create daily log files for your application which are stored in the <code>storage/logs</code> directory. You may write information to the logs using the <code>Log</code> <a href="facades.html">facade</a>:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Log;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        Log::info('Showing user profile for user: '.$id);
+
+        return view('user.profile', ['user' =&gt; User::findOrFail($id)]);
+    }
+}</code></pre>
+<h4>Log Levels</h4>
+<p>The logger provides the seven logging levels defined in <a href="http://tools.ietf.org/html/rfc5424">RFC 5424</a>: <strong>debug</strong>, <strong>info</strong>, <strong>notice</strong>, <strong>warning</strong>, <strong>error</strong>, <strong>critical</strong>, and <strong>alert</strong>.</p>
+<pre><code>Log::debug($error);
+Log::info($error);
+Log::notice($error);
+Log::warning($error);
+Log::error($error);
+Log::critical($error);
+Log::alert($error);</code></pre>
+<h4>Contextual Information</h4>
+<p>An array of contextual data may also be passed to the log methods. This contextual data will be formatted and displayed with the log message:</p>
+<pre><code>Log::info('User failed to login.', ['id' =&gt; $user-&gt;id]);</code></pre>
+<h4>Accessing The Underlying Monolog Instance</h4>
+<p>Monolog has a variety of additional handlers you may use for logging. If needed, you may access the underlying Monolog instance being used by Laravel:</p>
+<pre><code>$monolog = Log::getMonolog();</code></pre>
+<h4>Registering A Log Event Listener</h4>
+<p>You may also register an event to catch all messages passed to the log:</p>
+<pre><code>Log::listen(function($level, $message, $context) {
+    //
+});</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/errors by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+</html>

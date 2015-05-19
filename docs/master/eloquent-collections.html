@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/eloquent-collections by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Eloquent: Collections - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="eloquent-collections.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Eloquent: Collections</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#available-methods">Available Methods</a></li>
+<li><a href="#custom-collections">Custom Collections</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>All multi-result sets returned by Eloquent are an instance of the <code>Illuminate\Database\Eloquent\Collection</code> object, including results retrieved via the <code>get</code> method or accessed via a relationship. The Eloquent collection object extends the Laravel <a href="collections.html">base collection</a>, so it naturally inherits dozens of methods used to fluently work with the underlying array of Eloquent models.</p>
+<p>Of course, all collections also serve as iterators, allowing you to loop over them as if they were simple PHP arrays:</p>
+<pre><code>$users = App\User::where('active', 1)-&gt;get();
+
+foreach ($users as $user) {
+    echo $user-&gt;name;
+}</code></pre>
+<p>However, collections are much more powerful than arrays and expose a variety of map / reduce operations using an intuitive interface. For example, let's remove all inactive models and gather the first name for each remaining user:</p>
+<pre><code>$users = App\User::where('active', 1)-&gt;get();
+
+$names = $users-&gt;reject(function ($user) {
+    return $user-&gt;active === false;
+})
+-&gt;map(function ($user) {
+    return $user-&gt;name;
+});</code></pre>
+<p><a name="available-methods"></a></p>
+<h2>Available Methods</h2>
+<h3>The Base Collection</h3>
+<p>All Eloquent collections extend the base <a href="collections.html">Laravel collection</a> object; therefore, they inherit all of the powerful methods provided by the base collection class:</p>
+<style>
+    #collection-method-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    #collection-method-list a {
+        display: block;
+    }
+</style>
+<div id="collection-method-list">
+<p><a href="collections.html#method-all">all</a>
+<a href="collections.html#method-chunk">chunk</a>
+<a href="collections.html#method-collapse">collapse</a>
+<a href="collections.html#method-contains">contains</a>
+<a href="collections.html#method-count">count</a>
+<a href="collections.html#method-diff">diff</a>
+<a href="collections.html#method-each">each</a>
+<a href="collections.html#method-filter">filter</a>
+<a href="collections.html#method-first">first</a>
+<a href="collections.html#method-flatten">flatten</a>
+<a href="collections.html#method-flip">flip</a>
+<a href="collections.html#method-forget">forget</a>
+<a href="collections.html#method-forpage">forPage</a>
+<a href="collections.html#method-get">get</a>
+<a href="collections.html#method-groupby">groupBy</a>
+<a href="collections.html#method-has">has</a>
+<a href="collections.html#method-implode">implode</a>
+<a href="collections.html#method-intersect">intersect</a>
+<a href="collections.html#method-isempty">isEmpty</a>
+<a href="collections.html#method-keyby">keyBy</a>
+<a href="collections.html#method-keys">keys</a>
+<a href="collections.html#method-last">last</a>
+<a href="collections.html#method-map">map</a>
+<a href="collections.html#method-merge">merge</a>
+<a href="collections.html#method-pluck">pluck</a>
+<a href="collections.html#method-pop">pop</a>
+<a href="collections.html#method-prepend">prepend</a>
+<a href="collections.html#method-pull">pull</a>
+<a href="collections.html#method-push">push</a>
+<a href="collections.html#method-put">put</a>
+<a href="collections.html#method-random">random</a>
+<a href="collections.html#method-reduce">reduce</a>
+<a href="collections.html#method-reject">reject</a>
+<a href="collections.html#method-reverse">reverse</a>
+<a href="collections.html#method-search">search</a>
+<a href="collections.html#method-shift">shift</a>
+<a href="collections.html#method-shuffle">shuffle</a>
+<a href="collections.html#method-slice">slice</a>
+<a href="collections.html#method-sort">sort</a>
+<a href="collections.html#method-sortby">sortBy</a>
+<a href="collections.html#method-sortbydesc">sortByDesc</a>
+<a href="collections.html#method-splice">splice</a>
+<a href="collections.html#method-sum">sum</a>
+<a href="collections.html#method-take">take</a>
+<a href="collections.html#method-toarray">toArray</a>
+<a href="collections.html#method-tojson">toJson</a>
+<a href="collections.html#method-transform">transform</a>
+<a href="collections.html#method-unique">unique</a>
+<a href="collections.html#method-values">values</a>
+<a href="collections.html#method-where">where</a>
+<a href="collections.html#method-whereloose">whereLoose</a>
+<a href="collections.html#method-zip">zip</a></p>
+</div>
+<h4>Returning A Custom Collection Type</h4>
+<p>Sometimes, you may wish to return a custom Collection object with your own added methods. You may specify this on your Eloquent model by overriding the <code>newCollection</code> method:</p>
+<pre><code>class User extends Model {
+
+    public function newCollection(array $models = [])
+    {
+        return new CustomCollection($models);
+    }
+
+}</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/eloquent-collections by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:30 GMT -->
+</html>

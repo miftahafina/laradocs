@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/envoy by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Envoy Task Runner - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/envoy.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="envoy.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Envoy Task Runner</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#envoy-installation">Installation</a></li>
+<li><a href="#envoy-running-tasks">Running Tasks</a></li>
+<li><a href="#envoy-multiple-servers">Multiple Servers</a></li>
+<li><a href="#envoy-parallel-execution">Parallel Execution</a></li>
+<li><a href="#envoy-task-macros">Task Macros</a></li>
+<li><a href="#envoy-notifications">Notifications</a></li>
+<li><a href="#envoy-updating-envoy">Updating Envoy</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p><a href="https://github.com/laravel/envoy">Laravel Envoy</a> provides a clean, minimal syntax for defining common tasks you run on your remote servers. Using a Blade style syntax, you can easily setup tasks for deployment, Artisan commands, and more.</p>
+<blockquote>
+<p><strong>Note:</strong> Envoy requires PHP version 5.4 or greater, and only runs on Mac / Linux operating systems.</p>
+</blockquote>
+<p><a name="envoy-installation"></a></p>
+<h2>Installation</h2>
+<p>First, install Envoy using the Composer <code>global</code> command:</p>
+<pre><code>composer global require "laravel/envoy=~1.0"</code></pre>
+<p>Make sure to place the <code>~/.composer/vendor/bin</code> directory in your PATH so the <code>envoy</code> executable is found when you run the <code>envoy</code> command in your terminal.</p>
+<p>Next, create an <code>Envoy.blade.php</code> file in the root of your project. Here's an example to get you started:</p>
+<pre><code>@servers(['web' =&gt; '192.168.1.1'])
+
+@task('foo', ['on' =&gt; 'web'])
+    ls -la
+@endtask</code></pre>
+<p>As you can see, an array of <code>@servers</code> is defined at the top of the file. You can reference these servers in the <code>on</code> option of your task declarations. Within your <code>@task</code> declarations you should place the Bash code that will be run on your server when the task is executed.</p>
+<p>The <code>init</code> command may be used to easily create a stub Envoy file:</p>
+<pre><code>envoy init user@192.168.1.1</code></pre>
+<p><a name="envoy-running-tasks"></a></p>
+<h2>Running Tasks</h2>
+<p>To run a task, use the <code>run</code> command of your Envoy installation:</p>
+<pre><code>envoy run foo</code></pre>
+<p>If needed, you may pass variables into the Envoy file using command line switches:</p>
+<pre><code>envoy run deploy --branch=master</code></pre>
+<p>You may use the options via the Blade syntax you are used to:</p>
+<pre><code>@servers(['web' =&gt; '192.168.1.1'])
+
+@task('deploy', ['on' =&gt; 'web'])
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask</code></pre>
+<h4>Bootstrapping</h4>
+<p>You may use the <code>@setup</code> directive to declare variables and do general PHP work inside the Envoy file:</p>
+<pre><code>@setup
+    $now = new DateTime();
+
+    $environment = isset($env) ? $env : "testing";
+@endsetup</code></pre>
+<p>You may also use <code>@include</code> to include any PHP files:</p>
+<pre><code>@include('vendor/autoload.php');</code></pre>
+<h4>Confirming Tasks Before Running</h4>
+<p>If you would like to be prompted for confirmation before running a given task on your servers, you may use the <code>confirm</code> directive:</p>
+<pre><code>@task('deploy', ['on' =&gt; 'web', 'confirm' =&gt; true])
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask</code></pre>
+<p><a name="envoy-multiple-servers"></a></p>
+<h2>Multiple Servers</h2>
+<p>You may easily run a task across multiple servers. Simply list the servers in the task declaration:</p>
+<pre><code>@servers(['web-1' =&gt; '192.168.1.1', 'web-2' =&gt; '192.168.1.2'])
+
+@task('deploy', ['on' =&gt; ['web-1', 'web-2']])
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask</code></pre>
+<p>By default, the task will be executed on each server serially. Meaning, the task will finish running on the first server before proceeding to execute on the next server.</p>
+<p><a name="envoy-parallel-execution"></a></p>
+<h2>Parallel Execution</h2>
+<p>If you would like to run a task across multiple servers in parallel, simply add the <code>parallel</code> option to your task declaration:</p>
+<pre><code>@servers(['web-1' =&gt; '192.168.1.1', 'web-2' =&gt; '192.168.1.2'])
+
+@task('deploy', ['on' =&gt; ['web-1', 'web-2'], 'parallel' =&gt; true])
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask</code></pre>
+<p><a name="envoy-task-macros"></a></p>
+<h2>Task Macros</h2>
+<p>Macros allow you to define a set of tasks to be run in sequence using a single command. For instance:</p>
+<pre><code>@servers(['web' =&gt; '192.168.1.1'])
+
+@macro('deploy')
+    foo
+    bar
+@endmacro
+
+@task('foo')
+    echo "HELLO"
+@endtask
+
+@task('bar')
+    echo "WORLD"
+@endtask</code></pre>
+<p>The <code>deploy</code> macro can now be run via a single, simple command:</p>
+<pre><code>envoy run deploy</code></pre>
+<p><a name="envoy-notifications"></a>
+<a name="envoy-hipchat-notifications"></a></p>
+<h2>Notifications</h2>
+<h4>HipChat</h4>
+<p>After running a task, you may send a notification to your team's HipChat room using the simple <code>@hipchat</code> directive:</p>
+<pre><code>@servers(['web' =&gt; '192.168.1.1'])
+
+@task('foo', ['on' =&gt; 'web'])
+    ls -la
+@endtask
+
+@after
+    @hipchat('token', 'room', 'Envoy')
+@endafter</code></pre>
+<p>You can also specify a custom message to the hipchat room. Any variables declared in <code>@setup</code> or included with <code>@include</code> will be available for use in the message:</p>
+<pre><code>@after
+    @hipchat('token', 'room', 'Envoy', "$task ran on [$environment]")
+@endafter</code></pre>
+<p>This is an amazingly simple way to keep your team notified of the tasks being run on the server.</p>
+<h4>Slack</h4>
+<p>The following syntax may be used to send a notification to <a href="https://slack.com/">Slack</a>:</p>
+<pre><code>@after
+    @slack('hook', 'channel', 'message')
+@endafter</code></pre>
+<p>You may retrieve your webhook URL by creating an <code>Incoming WebHooks</code> integration on Slack's website. The <code>hook</code> argument should be the entire webhook URL provided by the Incoming Webhooks Slack Integration. For example:</p>
+<pre><code>https://hooks.slack.com/services/ZZZZZZZZZ/YYYYYYYYY/XXXXXXXXXXXXXXX</code></pre>
+<p>You may provide one of the following for the channel argument:</p>
+<ul>
+<li>To send the notification to a channel: <code>#channel</code></li>
+<li>To send the notification to a user: <code>@user</code></li>
+</ul>
+<p>If no <code>channel</code> argument is provided the default channel will be used.</p>
+<blockquote>
+<p>Note: Slack notifications will only be sent if all tasks complete successfully.</p>
+</blockquote>
+<p><a name="envoy-updating-envoy"></a></p>
+<h2>Updating Envoy</h2>
+<p>To update Envoy, simply use Composer:</p>
+<pre><code>composer global update</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/envoy by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:03 GMT -->
+</html>

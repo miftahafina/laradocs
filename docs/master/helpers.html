@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/helpers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Helper Functions - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="helpers.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/helpers.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/helpers.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/helpers.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/helpers.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Helper Functions</h1>
+<ul>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#paths">Paths</a></li>
+<li><a href="#routing">Routing</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#urls">URLs</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<p><a name="arrays"></a></p>
+<h2>Arrays</h2>
+<h3>array_add</h3>
+<p>The <code>array_add</code> function adds a given key / value pair to the array if the given key doesn't already exist in the array.</p>
+<pre><code>$array = ['foo' =&gt; 'bar'];
+
+$array = array_add($array, 'key', 'value');</code></pre>
+<h3>array_divide</h3>
+<p>The <code>array_divide</code> function returns two arrays, one containing the keys, and the other containing the values of the original array.</p>
+<pre><code>$array = ['foo' =&gt; 'bar'];
+
+list($keys, $values) = array_divide($array);</code></pre>
+<h3>array_dot</h3>
+<p>The <code>array_dot</code> function flattens a multi-dimensional array into a single level array that uses &quot;dot&quot; notation to indicate depth.</p>
+<pre><code>$array = ['foo' =&gt; ['bar' =&gt; 'baz']];
+
+$array = array_dot($array);
+
+// ['foo.bar' =&gt; 'baz'];</code></pre>
+<h3>array_except</h3>
+<p>The <code>array_except</code> method removes the given key / value pairs from the array.</p>
+<pre><code>$array = array_except($array, ['keys', 'to', 'remove']);</code></pre>
+<h3>array_fetch</h3>
+<p>The <code>array_fetch</code> method returns a flattened array containing the selected nested element.</p>
+<pre><code>$array = [
+    ['developer' =&gt; ['name' =&gt; 'Taylor']],
+    ['developer' =&gt; ['name' =&gt; 'Dayle']]
+];
+
+$array = array_fetch($array, 'developer.name');
+
+// ['Taylor', 'Dayle'];</code></pre>
+<h3>array_first</h3>
+<p>The <code>array_first</code> method returns the first element of an array passing a given truth test.</p>
+<pre><code>$array = [100, 200, 300];
+
+$value = array_first($array, function($key, $value)
+{
+    return $value &gt;= 150;
+});</code></pre>
+<p>A default value may also be passed as the third parameter:</p>
+<pre><code>$value = array_first($array, $callback, $default);</code></pre>
+<h3>array_last</h3>
+<p>The <code>array_last</code> method returns the last element of an array passing a given truth test.</p>
+<pre><code>$array = [350, 400, 500, 300, 200, 100];
+
+$value = array_last($array, function($key, $value)
+{
+    return $value &gt; 350;
+});
+
+// 500</code></pre>
+<p>A default value may also be passed as the third parameter:</p>
+<pre><code>$value = array_last($array, $callback, $default);</code></pre>
+<h3>array_flatten</h3>
+<p>The <code>array_flatten</code> method will flatten a multi-dimensional array into a single level.</p>
+<pre><code>$array = ['name' =&gt; 'Joe', 'languages' =&gt; ['PHP', 'Ruby']];
+
+$array = array_flatten($array);
+
+// ['Joe', 'PHP', 'Ruby'];</code></pre>
+<h3>array_forget</h3>
+<p>The <code>array_forget</code> method will remove a given key / value pair from a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = ['names' =&gt; ['joe' =&gt; ['programmer']]];
+
+array_forget($array, 'names.joe');</code></pre>
+<h3>array_get</h3>
+<p>The <code>array_get</code> method will retrieve a given value from a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = ['names' =&gt; ['joe' =&gt; ['programmer']]];
+
+$value = array_get($array, 'names.joe');
+
+$value = array_get($array, 'names.john', 'default');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Want something like <code>array_get</code> but for objects instead? Use <code>object_get</code>.</p>
+</blockquote>
+<h3>array_only</h3>
+<p>The <code>array_only</code> method will return only the specified key / value pairs from the array.</p>
+<pre><code>$array = ['name' =&gt; 'Joe', 'age' =&gt; 27, 'votes' =&gt; 1];
+
+$array = array_only($array, ['name', 'votes']);</code></pre>
+<h3>array_pluck</h3>
+<p>The <code>array_pluck</code> method will pluck a list of the given key / value pairs from the array.</p>
+<pre><code>$array = [['name' =&gt; 'Taylor'], ['name' =&gt; 'Dayle']];
+
+$array = array_pluck($array, 'name');
+
+// ['Taylor', 'Dayle'];</code></pre>
+<h3>array_pull</h3>
+<p>The <code>array_pull</code> method will return a given key / value pair from the array, as well as remove it.</p>
+<pre><code>$array = ['name' =&gt; 'Taylor', 'age' =&gt; 27];
+
+$name = array_pull($array, 'name');</code></pre>
+<h3>array_set</h3>
+<p>The <code>array_set</code> method will set a value within a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = ['names' =&gt; ['programmer' =&gt; 'Joe']];
+
+array_set($array, 'names.editor', 'Taylor');</code></pre>
+<h3>array_sort</h3>
+<p>The <code>array_sort</code> method sorts the array by the results of the given Closure.</p>
+<pre><code>$array = [
+    ['name' =&gt; 'Jill'],
+    ['name' =&gt; 'Barry']
+];
+
+$array = array_values(array_sort($array, function($value)
+{
+    return $value['name'];
+}));</code></pre>
+<h3>array_where</h3>
+<p>Filter the array using the given Closure.</p>
+<pre><code>$array = [100, '200', 300, '400', 500];
+
+$array = array_where($array, function($key, $value)
+{
+    return is_string($value);
+});
+
+// Array ( [1] =&gt; 200 [3] =&gt; 400 )</code></pre>
+<h3>head</h3>
+<p>Return the first element in the array.</p>
+<pre><code>$first = head($this-&gt;returnsArray('foo'));</code></pre>
+<h3>last</h3>
+<p>Return the last element in the array. Useful for method chaining.</p>
+<pre><code>$last = last($this-&gt;returnsArray('foo'));</code></pre>
+<p><a name="paths"></a></p>
+<h2>Paths</h2>
+<h3>app_path</h3>
+<p>Get the fully qualified path to the <code>app</code> directory.</p>
+<pre><code>$path = app_path();</code></pre>
+<h3>base_path</h3>
+<p>Get the fully qualified path to the root of the application install.</p>
+<h3>config_path</h3>
+<p>Get the fully qualified path to the <code>config</code> directory.</p>
+<h3>public_path</h3>
+<p>Get the fully qualified path to the <code>public</code> directory.</p>
+<h3>storage_path</h3>
+<p>Get the fully qualified path to the <code>storage</code> directory.</p>
+<p><a name="routing"></a></p>
+<h2>Routing</h2>
+<h3>get</h3>
+<p>Register a new GET route with the router.</p>
+<pre><code>get('/', function() { return 'Hello World'; });</code></pre>
+<h3>post</h3>
+<p>Register a new POST route with the router.</p>
+<pre><code>post('foo/bar', 'FooController@action');</code></pre>
+<h3>put</h3>
+<p>Register a new PUT route with the router.</p>
+<pre><code>put('foo/bar', 'FooController@action');</code></pre>
+<h3>patch</h3>
+<p>Register a new PATCH route with the router.</p>
+<pre><code>patch('foo/bar', 'FooController@action');</code></pre>
+<h3>delete</h3>
+<p>Register a new DELETE route with the router.</p>
+<pre><code>delete('foo/bar', 'FooController@action');</code></pre>
+<h3>resource</h3>
+<p>Register a new RESTful resource route with the router.</p>
+<pre><code>resource('foo', 'FooController');</code></pre>
+<p><a name="strings"></a></p>
+<h2>Strings</h2>
+<h3>camel_case</h3>
+<p>Convert the given string to <code>camelCase</code>.</p>
+<pre><code>$camel = camel_case('foo_bar');
+
+// fooBar</code></pre>
+<h3>class_basename</h3>
+<p>Get the class name of the given class, without any namespace names.</p>
+<pre><code>$class = class_basename('Foo\Bar\Baz');
+
+// Baz</code></pre>
+<h3>e</h3>
+<p>Run <code>htmlentities</code> over the given string, with UTF-8 support.</p>
+<pre><code>$entities = e('&lt;html&gt;foo&lt;/html&gt;');</code></pre>
+<h3>ends_with</h3>
+<p>Determine if the given haystack ends with a given needle.</p>
+<pre><code>$value = ends_with('This is my name', 'name');</code></pre>
+<h3>snake_case</h3>
+<p>Convert the given string to <code>snake_case</code>.</p>
+<pre><code>$snake = snake_case('fooBar');
+
+// foo_bar</code></pre>
+<h3>str_limit</h3>
+<p>Limit the number of characters in a string.</p>
+<pre><code>str_limit($value, $limit = 100, $end = '...')</code></pre>
+<p>Example:</p>
+<pre><code>$value = str_limit('The PHP framework for web artisans.', 7);
+
+// The PHP...</code></pre>
+<h3>starts_with</h3>
+<p>Determine if the given haystack begins with the given needle.</p>
+<pre><code>$value = starts_with('This is my name', 'This');</code></pre>
+<h3>str_contains</h3>
+<p>Determine if the given haystack contains the given needle.</p>
+<pre><code>$value = str_contains('This is my name', 'my');</code></pre>
+<h3>str_finish</h3>
+<p>Add a single instance of the given needle to the haystack. Remove any extra instances.</p>
+<pre><code>$string = str_finish('this/string', '/');
+
+// this/string/</code></pre>
+<h3>str_is</h3>
+<p>Determine if a given string matches a given pattern. Asterisks may be used to indicate wildcards.</p>
+<pre><code>$value = str_is('foo*', 'foobar');</code></pre>
+<h3>str_plural</h3>
+<p>Convert a string to its plural form (English only).</p>
+<pre><code>$plural = str_plural('car');</code></pre>
+<h3>str_random</h3>
+<p>Generate a random string of the given length.</p>
+<pre><code>$string = str_random(40);</code></pre>
+<h3>str_singular</h3>
+<p>Convert a string to its singular form (English only).</p>
+<pre><code>$singular = str_singular('cars');</code></pre>
+<h3>str_slug</h3>
+<p>Generate a URL friendly &quot;slug&quot; from a given string.</p>
+<pre><code>str_slug($title, $separator);</code></pre>
+<p>Example:</p>
+<pre><code>$title = str_slug("Laravel 5 Framework", "-");
+
+// laravel-5-framework</code></pre>
+<h3>studly_case</h3>
+<p>Convert the given string to <code>StudlyCase</code>.</p>
+<pre><code>$value = studly_case('foo_bar');
+
+// FooBar</code></pre>
+<h3>trans</h3>
+<p>Translate a given language line. Alias of <code>Lang::get</code>.</p>
+<pre><code>$value = trans('validation.required'):</code></pre>
+<h3>trans_choice</h3>
+<p>Translate a given language line with inflection. Alias of <code>Lang::choice</code>.</p>
+<pre><code>$value = trans_choice('foo.bar', $count);</code></pre>
+<p><a name="urls"></a></p>
+<h2>URLs</h2>
+<h3>action</h3>
+<p>Generate a URL for a given controller action.</p>
+<pre><code>$url = action('HomeController@getIndex', $params);</code></pre>
+<h3>route</h3>
+<p>Generate a URL for a given named route.</p>
+<pre><code>$url = route('routeName', $params);</code></pre>
+<h3>asset</h3>
+<p>Generate a URL for an asset.</p>
+<pre><code>$url = asset('img/photo.jpg');</code></pre>
+<h3>secure_asset</h3>
+<p>Generate a URL for an asset using HTTPS.</p>
+<pre><code>echo secure_asset('foo/bar.zip', $title, $attributes = []);</code></pre>
+<h3>secure_url</h3>
+<p>Generate a fully qualified URL to a given path using HTTPS.</p>
+<pre><code>echo secure_url('foo/bar', $parameters = []);</code></pre>
+<h3>url</h3>
+<p>Generate a fully qualified URL to the given path.</p>
+<pre><code>echo url('foo/bar', $parameters = [], $secure = null);</code></pre>
+<p><a name="miscellaneous"></a></p>
+<h2>Miscellaneous</h2>
+<h3>csrf_token</h3>
+<p>Get the value of the current CSRF token.</p>
+<pre><code>$token = csrf_token();</code></pre>
+<h3>dd</h3>
+<p>Dump the given variable and end execution of the script.</p>
+<pre><code>dd($value);</code></pre>
+<h3>elixir</h3>
+<p>Get the path to a versioned Elixir file.</p>
+<pre><code>elixir($file);</code></pre>
+<h3>env</h3>
+<p>Get the value of an environment variable or return a default value.</p>
+<pre><code>env('APP_ENV', 'production')</code></pre>
+<h3>event</h3>
+<p>Fire an event.</p>
+<pre><code>event('my.event');</code></pre>
+<h3>response</h3>
+<p>Create a response instance or obtain an instance of the response factory.</p>
+<pre><code>return response('Hello World', 200, $headers);
+
+return response()-&gt;json(['foo' =&gt; 'bar'], 200, $headers);</code></pre>
+<h3>value</h3>
+<p>If the given value is a <code>Closure</code>, return the value returned by the <code>Closure</code>. Otherwise, return the value.</p>
+<pre><code>$value = value(function() { return 'bar'; });</code></pre>
+<h3>view</h3>
+<p>Get a View instance for the given view path.</p>
+<pre><code>return view('auth.login');</code></pre>
+<h3>with</h3>
+<p>Return the given object.</p>
+<pre><code>$value = with(new Foo)-&gt;doWork();</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/helpers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+</html>

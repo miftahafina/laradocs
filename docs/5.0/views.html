@@ -1,0 +1,416 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/views by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Views - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/views.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="views.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Views</h1>
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#view-composers">View Composers</a></li>
+</ul>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p>Views contain the HTML served by your application, and serve as a convenient method of separating your controller and domain logic from your presentation logic. Views are stored in the <code>resources/views</code> directory.</p>
+<p>A simple view looks like this:</p>
+<pre><code>&lt;!-- View stored in resources/views/greeting.php --&gt;
+
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The view may be returned to the browser like so:</p>
+<pre><code>Route::get('/', function()
+{
+    return view('greeting', ['name' =&gt; 'James']);
+});</code></pre>
+<p>As you can see, the first argument passed to the <code>view</code> helper corresponds to the name of the view file in the <code>resources/views</code> directory. The second argument passed to helper is an array of data that should be made available to the view.</p>
+<p>Of course, views may also be nested within sub-directories of the <code>resources/views</code> directory. For example, if your view is stored at <code>resources/views/admin/profile.php</code>, it should be returned like so:</p>
+<pre><code>return view('admin.profile', $data);</code></pre>
+<h4>Passing Data To Views</h4>
+<pre><code>// Using conventional approach
+$view = view('greeting')-&gt;with('name', 'Victoria');
+
+// Using Magic Methods
+$view = view('greeting')-&gt;withName('Victoria');</code></pre>
+<p>In the example above, the variable <code>$name</code> is made accessible to the view and contains <code>Victoria</code>.</p>
+<p>If you wish, you may pass an array of data as the second parameter to the <code>view</code> helper:</p>
+<pre><code>$view = view('greetings', $data);</code></pre>
+<p>When passing information in this manner, <code>$data</code> should be an array with key/value pairs. Inside your view, you can then access each value using it's corresponding key, like <code>{{ $key }}</code> (assuming <code>$data['$key']</code> exists).</p>
+<h4>Sharing Data With All Views</h4>
+<p>Occasionally, you may need to share a piece of data with all views that are rendered by your application. You have several options: the <code>view</code> helper, the <code>Illuminate\Contracts\View\Factory</code> <a href="contracts.html">contract</a>, or a wildcard <a href="#view-composers">view composer</a>.</p>
+<p>For example, using the <code>view</code> helper:</p>
+<pre><code>view()-&gt;share('data', [1, 2, 3]);</code></pre>
+<p>You may also use the <code>View</code> facade:</p>
+<pre><code>View::share('data', [1, 2, 3]);</code></pre>
+<p>Typically, you would place calls to the <code>share</code> method within a service provider's <code>boot</code> method. You are free to add them to the <code>AppServiceProvider</code> or generate a separate service provider to house them.</p>
+<blockquote>
+<p><strong>Note:</strong> When the <code>view</code> helper is called without arguments, it returns an implementation of the <code>Illuminate\Contracts\View\Factory</code> contract.</p>
+</blockquote>
+<h4>Determining If A View Exists</h4>
+<p>If you need to determine if a view exists, you may use the <code>exists</code> method:</p>
+<pre><code>if (view()-&gt;exists('emails.customer'))
+{
+    //
+}</code></pre>
+<h4>Returning A View From A File Path</h4>
+<p>If you wish, you may generate a view from a fully-qualified file path:</p>
+<pre><code>return view()-&gt;file($pathToFile, $data);</code></pre>
+<p><a name="view-composers"></a></p>
+<h2>View Composers</h2>
+<p>View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want to be bound to a view each time that view is rendered, a view composer organizes that logic into a single location.</p>
+<h4>Defining A View Composer</h4>
+<p>Let's organize our view composers within a <a href="providers.html">service provider</a>. We'll use the <code>View</code> facade to access the underlying <code>Illuminate\Contracts\View\Factory</code> contract implementation:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use View;
+use Illuminate\Support\ServiceProvider;
+
+class ComposerServiceProvider extends ServiceProvider {
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        // Using class based composers...
+        View::composer('profile', 'App\Http\ViewComposers\ProfileComposer');
+
+        // Using Closure based composers...
+        View::composer('dashboard', function($view)
+        {
+
+        });
+    }
+
+    /**
+     * Register
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Laravel does not include a default directory for view composers. You are free to organize them however you wish. For example, you could create an <code>App\Http\ViewComposers</code> directory.</p>
+</blockquote>
+<p>Remember, you will need to add the service provider to the <code>providers</code> array in the <code>config/app.php</code> configuration file.</p>
+<p>Now that we have registered the composer, the <code>ProfileComposer@compose</code> method will be executed each time the <code>profile</code> view is being rendered. So, let's define the composer class:</p>
+<pre><code>&lt;?php namespace App\Http\ViewComposers;
+
+use Illuminate\Contracts\View\View;
+use Illuminate\Users\Repository as UserRepository;
+
+class ProfileComposer {
+
+    /**
+     * The user repository implementation.
+     *
+     * @var UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new profile composer.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        // Dependencies automatically resolved by service container...
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Bind data to the view.
+     *
+     * @param  View  $view
+     * @return void
+     */
+    public function compose(View $view)
+    {
+        $view-&gt;with('count', $this-&gt;users-&gt;count());
+    }
+
+}</code></pre>
+<p>Just before the view is rendered, the composer's <code>compose</code> method is called with the <code>Illuminate\Contracts\View\View</code> instance. You may use the <code>with</code> method to bind data to the view.</p>
+<blockquote>
+<p><strong>Note:</strong> All view composers are resolved via the <a href="container.html">service container</a>, so you may type-hint any dependencies you need within a composer's constructor.</p>
+</blockquote>
+<h4>Wildcard View Composers</h4>
+<p>The <code>composer</code> method accepts the <code>*</code> character as a wildcard, so you may attach a composer to all views like so:</p>
+<pre><code>View::composer('*', function($view)
+{
+    //
+});</code></pre>
+<h4>Attaching A Composer To Multiple Views</h4>
+<p>You may also attach a view composer to multiple views at once:</p>
+<pre><code>View::composer(['profile', 'dashboard'], 'App\Http\ViewComposers\MyViewComposer');</code></pre>
+<h4>Defining Multiple Composers</h4>
+<p>You may use the <code>composers</code> method to register a group of composers at the same time:</p>
+<pre><code>View::composers([
+    'App\Http\ViewComposers\AdminComposer' =&gt; ['admin.index', 'admin.profile'],
+    'App\Http\ViewComposers\UserComposer' =&gt; 'user',
+    'App\Http\ViewComposers\ProductComposer' =&gt; 'product'
+]);</code></pre>
+<h3>View Creators</h3>
+<p>View <strong>creators</strong> work almost exactly like view composers; however, they are fired immediately when the view is instantiated. To register a view creator, use the <code>creator</code> method:</p>
+<pre><code>View::creator('profile', 'App\Http\ViewCreators\ProfileCreator');</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/views by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:32 GMT -->
+</html>

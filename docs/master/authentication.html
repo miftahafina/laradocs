@@ -1,0 +1,668 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/authentication by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Authentication - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="authentication.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/authentication.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Authentication</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#included-authentication-controllers">Included Authentication Controllers</a></li>
+<li><a href="#authenticating-users">Manually Authenticating Users</a></li>
+<li><a href="#retrieving-the-authenticated-user">Retrieving The Authenticated User</a></li>
+<li><a href="#protecting-routes">Protecting Routes</a></li>
+<li><a href="#http-basic-authentication">HTTP Basic Authentication</a></li>
+<li><a href="#password-reminders-and-reset">Password Reminders &amp; Reset</a></li>
+<li><a href="#social-authentication">Social Authentication</a></li>
+<li><a href="#adding-custom-authentication-drivers">Adding Custom Authentication Drivers</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel makes implementing authentication very simple. In fact, almost everything is configured for you out of the box. The authentication configuration file is located at <code>config/auth.php</code>, which contains several well documented options for tweaking the behavior of the authentication services.</p>
+<p>By default, Laravel includes an <code>App\User</code> <a href="eloquent.html">Eloquent model</a> in your <code>app</code> directory. This model may be used with the default Eloquent authentication driver.</p>
+<h3>Database Considerations</h3>
+<p>When building the database schema for this model, make the password column at least 60 characters.</p>
+<p>Also, before getting started, make sure that your <code>users</code> (or equivalent) table contains a nullable, string <code>remember_token</code> column of 100 characters. This column will be used to store a token for &quot;remember me&quot; sessions being maintained by your application. This can be done by using <code>$table-&gt;rememberToken();</code> in a migration. The <code>scaffold:auth</code> command will generate these migrations for you.</p>
+<blockquote>
+<p><strong>Note:</strong> If your application is not using Eloquent, you may use the <code>database</code> authentication driver which uses the Laravel query builder.</p>
+</blockquote>
+<p><a name="included-authentication-controllers"></a></p>
+<h2>Included Authentication Controllers</h2>
+<p>Laravel ships with two authentication controllers out of the box. These controllers are located in the <code>App\Http\Controllers\Auth</code> namespace. The <code>AuthController</code> handles new user registration and authentication, while the <code>PasswordController</code> contains the logic to help existing users reset their forgotten passwords.</p>
+<p>Each of these controllers uses a trait to include their necessary methods. For many applications, you will not need to modify these controllers at all.</p>
+<p>However, you will need to provide <a href="views.html">views</a> that these controllers can render. The views should be placed in <code>resources/views/auth</code> directory. You are free to customize these views however you wish. The login view should be placed at <code>resources/auth/login.blade.php</code>, and the registration view should be placed at <code>resources/auth/register.blade.php</code>.</p>
+<h4>Sample Authentication Form</h4>
+<pre><code>&lt;!-- resources/auth/login.blade.php --&gt;
+
+&lt;form method="POST" action="/auth/login"&gt;
+    {{ csrf_field() }}
+
+    &lt;div&gt;
+        Email
+        &lt;input type="email" name="email" value="{{ old('email') }}"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        Password
+        &lt;input type="password" name="password" id="password"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;input type="checkbox" name="remember"&gt; Remember Me
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;button type="submit"&gt;Login&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h4>Sample Registration Form</h4>
+<pre><code>&lt;!-- resources/auth/register.blade.php --&gt;
+
+&lt;form method="POST" action="/auth/register"&gt;
+    {{ csrf_field() }}
+
+    &lt;div class="col-md-6"&gt;
+        Name
+        &lt;input type="text" name="name" value="{{ old('name') }}"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        Email
+        &lt;input type="email" name="email" value="{{ old('email') }}"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        Password
+        &lt;input type="password" name="password"&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-6"&gt;
+        Confirm Password
+        &lt;input type="password" name="password_confirmation"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<h3>After Authentication</h3>
+<p>If a user is successfully authenticated, they will be redirected to the <code>/home</code> URI. You will need to register a route to handle this URI.</p>
+<p>You can customize the post-authentication redirect location by defining a <code>redirectTo</code> property on the <code>AuthController</code>:</p>
+<pre><code>protected $redirectTo = '/dashboard';</code></pre>
+<h3>Customizing New User Validation</h3>
+<p>To modify the form fields that are required when a new user registers with your application, you may modify the <code>AuthController</code> class. This class is responsible for validating and creating new users of your application.</p>
+<p>The <code>validator</code> method of the <code>AuthController</code> contains the validation rules for new users of the application. You are free to modify this method as you wish.</p>
+<h3>Customizing New User Storage</h3>
+<p>The <code>create</code> method of the <code>AuthController</code> is responsible for creating new <code>User</code> records in your database. You are free to modify this method according to the needs of your database.</p>
+<p><a name="authenticating-users"></a></p>
+<h2>Manually Authenticating Users</h2>
+<p>Of course, you are not required to use the authentication controllers included with Laravel. If you choose to remove these controllers, you will need to manage user authentication using the Laravel authentication classes directly. Don't worry, it's a cinch! First, let's check out the <code>attempt</code> method.</p>
+<p>We will access Laravel's authentication services via the <code>Auth</code> <a href="facades.html">facade</a>, so we'll need to make sure to import the <code>Auth</code> facade at the top of the class.</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Auth;
+use Illuminate\Routing\Controller;
+
+class AuthController extends Controller
+{
+    /**
+     * Handle an authentication attempt.
+     *
+     * @return Response
+     */
+    public function authenticate()
+    {
+        if (Auth::attempt(['email' =&gt; $email, 'password' =&gt; $password])) {
+            // Authentication passed...
+            return redirect()-&gt;intended('dashboard');
+        }
+    }
+}</code></pre>
+<p>The <code>attempt</code> method accepts an array of key / value pairs as its first argument. The values in the array will be used to find the user in your database table. So, in the example above, the user will be retrieved by the value of the <code>email</code> column. If the user is found, the hashed password stored in the database will be compared with the hashed <code>password</code> value passed to the method via the array. If the two hashed passwords match an authenticated session will be started for the user.</p>
+<p>The <code>attempt</code> method will return <code>true</code> if authentication was successful. Otherwise, <code>false</code> will be returned.</p>
+<blockquote>
+<p><strong>Note:</strong> In this example, <code>email</code> is not a required option, it is merely used as an example. You should use whatever column name corresponds to a &quot;username&quot; in your database.</p>
+</blockquote>
+<p>The <code>intended</code> redirect function will redirect the user to the URL they were attempting to access before being caught by the authentication filter. A fallback URI may be given to this method in case the intended destination is not available.</p>
+<h4>Authenticating A User With Conditions</h4>
+<p>You also may add extra conditions to the authentication query:</p>
+<pre><code>if (Auth::attempt(['email' =&gt; $email, 'password' =&gt; $password, 'active' =&gt; 1])) {
+    // The user is active, not suspended, and exists.
+}</code></pre>
+<h4>Determining If A User Is Authenticated</h4>
+<p>To determine if the user is already logged into your application, you may use the <code>check</code> method:</p>
+<pre><code>if (Auth::check()) {
+    // The user is logged in...
+}</code></pre>
+<p>However, you may use middleware to verify that the user is authenticated before allowing the user access to certain routes / controllers. To learn more about this, check out the documentation on <a href="authentication.html#protecting-routes">protecting routes</a>.</p>
+<h4>Authenticating A User And &quot;Remembering&quot; Them</h4>
+<p>If you would like to provide &quot;remember me&quot; functionality in your application, you may pass a boolean value as the second argument to the <code>attempt</code> method, which will keep the user authenticated indefinitely, or until they manually logout. Of course, your <code>users</code> table must include the string <code>remember_token</code> column, which will be used to store the &quot;remember me&quot; token.</p>
+<pre><code>if (Auth::attempt(['email' =&gt; $email, 'password' =&gt; $password], $remember)) {
+    // The user is being remembered...
+}</code></pre>
+<p>If you are &quot;remembering&quot; users, you may use the <code>viaRemember</code> method to determine if the user was authenticated using the &quot;remember me&quot; cookie:</p>
+<pre><code>if (Auth::viaRemember()) {
+    //
+}</code></pre>
+<h4>Authenticating Users By ID</h4>
+<p>To log a user into the application by their ID, use the <code>loginUsingId</code> method:</p>
+<pre><code>Auth::loginUsingId(1);</code></pre>
+<h4>Validating User Credentials Without Login</h4>
+<p>The <code>validate</code> method allows you to validate a user's credentials without actually logging them into the application:</p>
+<pre><code>if (Auth::validate($credentials)) {
+    //
+}</code></pre>
+<h4>Logging A User In For A Single Request</h4>
+<p>You may also use the <code>once</code> method to log a user into the application for a single request. No sessions or cookies will be utilized:</p>
+<pre><code>if (Auth::once($credentials)) {
+    //
+}</code></pre>
+<p>The <code>once</code> method is primarily useful for building stateless APIs.</p>
+<h4>Manually Logging In A User</h4>
+<p>If you need to log an existing user instance into your application, you may call the <code>login</code> method with the user instance:</p>
+<pre><code>Auth::login($user);</code></pre>
+<p>This is equivalent to logging in a user via credentials using the <code>attempt</code> method.</p>
+<h4>Logging A User Out Of The Application</h4>
+<pre><code>Auth::logout();</code></pre>
+<p><a name="retrieving-the-authenticated-user"></a></p>
+<h2>Retrieving The Authenticated User</h2>
+<p>You may access the authenticated user via the <code>Auth</code> facade:</p>
+<pre><code>$user = Auth::user();</code></pre>
+<p>Alternatively, once a user is authenticated, you may access the authenticated user via an <code>Illuminate\Http\Request</code> instance:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class ProfileController extends Controller
+{
+    /**
+     * Update the user's profile.
+     *
+     * @return Response
+     */
+    public function updateProfile(Request $request)
+    {
+        if ($request-&gt;user()) {
+            // $request-&gt;user() returns an instance of the authenticated user...
+        }
+    }
+}</code></pre>
+<p><a name="protecting-routes"></a></p>
+<h2>Protecting Routes</h2>
+<p><a href="middleware.html">Route middleware</a> can be used to allow only authenticated users to access a given route. Laravel ships with the <code>auth</code> middleware, which is defined in <code>app\Http\Middleware\Authenticate.php</code>. All you need to do is attach it to a route definition:</p>
+<pre><code>// Using A Route Closure...
+
+Route::get('profile', ['middleware' =&gt; 'auth', function() {
+    // Only authenticated users may enter...
+}]);
+
+// Using A Controller...
+
+Route::get('profile', [
+    'middleware' =&gt; 'auth',
+    'uses' =&gt; 'ProfileController@show'
+]);</code></pre>
+<p><a name="http-basic-authentication"></a></p>
+<h2>HTTP Basic Authentication</h2>
+<p>HTTP Basic Authentication provides a quick way to authenticate users of your application without setting up a dedicated &quot;login&quot; page. To get started, attach the <code>auth.basic</code> middleware to your route:</p>
+<h4>Protecting A Route With HTTP Basic</h4>
+<pre><code>Route::get('profile', ['middleware' =&gt; 'auth.basic', function() {
+    // Only authenticated users may enter...
+}]);</code></pre>
+<p>By default, the <code>auth.basic</code> middleware will use the <code>email</code> column on the user record as the &quot;username&quot;.</p>
+<h4>Setting Up A Stateless HTTP Basic Filter</h4>
+<p>You may also use HTTP Basic Authentication without setting a user identifier cookie in the session, which is particularly useful for API authentication. To do so, <a href="middleware.html">define a middleware</a> that calls the <code>onceBasic</code> method:</p>
+<pre><code>public function handle($request, Closure $next)
+{
+    return Auth::onceBasic() ?: $next($request);
+}</code></pre>
+<p>Next, just <a href="middleware.html#registering-middleware">register the middleware</a> and attach it to a route.</p>
+<p>If you are using PHP FastCGI, HTTP Basic authentication may not work correctly out of the box. The following lines should be added to your <code>.htaccess</code> file:</p>
+<pre><code>RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]</code></pre>
+<p><a name="password-reminders-and-reset"></a></p>
+<h2>Password Reminders &amp; Reset</h2>
+<h3>Model &amp; Table</h3>
+<p>Most web applications provide a way for users to reset their forgotten passwords. Rather than forcing you to re-implement this on each application, Laravel provides convenient methods for sending password reminders and performing password resets.</p>
+<p>To get started, verify that your <code>User</code> model implements the <code>Illuminate\Contracts\Auth\CanResetPassword</code> contract. Of course, the <code>User</code> model included with the framework already implements this interface, and uses the <code>Illuminate\Auth\Passwords\CanResetPassword</code> trait to include the methods needed to implement the interface.</p>
+<h4>Generating The Reminder Table Migration</h4>
+<p>Next, a table must be created to store the password reset tokens. The migration for this table is included with Laravel out of the box, and resides in the <code>database/migrations</code> directory. So all you need to do is migrate:</p>
+<pre><code>php artisan migrate</code></pre>
+<h3>Password Reminder Controller</h3>
+<p>Laravel includes an <code>Auth\PasswordController</code> that contains the logic necessary to reset user passwords.</p>
+<h4>Sample Password Reset Request Form</h4>
+<p>You will simply need to provide an HTML view for the password reset request form. This view should be placed at <code>resources/views/auth/password.blade.php</code> Here is a sample form to get you started:</p>
+<pre><code>&lt;!-- resources/views/auth/password.blade.php --&gt;
+
+&lt;form method="POST" action="/password/email"&gt;
+    {{ csrf_field() }}
+
+    &lt;div&gt;
+        Email
+        &lt;input type="email" name="email" value="{{ old('email') }}"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;button type="submit"&gt;
+            Send Password Reset Link
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<p>When a user submits a request to reset their password, they will receive an e-mail with a link that points to the <code>getReset</code> method of the <code>PasswordController</code>. You will need to create a view for this e-mail at <code>resources/views/emails/password.blade.php</code>. The view will receive the <code>$token</code> variable which contains the password reset token to match the user to the password reset request. Here is an example view to get you started:</p>
+<pre><code>Click here to reset your password: {{ url('password/reset/'.$token) }}</code></pre>
+<h4>Sample Password Reset Form</h4>
+<p>When the user clicks the e-mailed link to reset their password, they will be presented with a password reset form. This view should be placed at <code>resources/views/auth/reset.blade.php</code>.</p>
+<p>Here is a sample password reset form to get you started:</p>
+<pre><code>&lt;!-- resources/views/auth/reset.blade.php --&gt;
+
+&lt;form method="POST" action="/password/reset"&gt;
+    {{ csrf_field() }}
+    &lt;input type="hidden" name="token" value="{{ $token }}"&gt;
+
+    &lt;div&gt;
+        &lt;input type="email" name="email" value="{{ old('email') }}"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;input type="password" name="password"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;input type="password" name="password_confirmation"&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+        &lt;button type="submit"&gt;
+            Reset Password
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+<p>After the password is reset, the user will automatically be logged into the application and redirected to <code>/home</code>. You can customize the post-reset redirect location by defining a <code>redirectTo</code> property on the <code>PasswordController</code>:</p>
+<pre><code>protected $redirectTo = '/dashboard';</code></pre>
+<blockquote>
+<p><strong>Note:</strong> By default, password reset tokens expire after one hour. You may change this via the <code>reminder.expire</code> option in your <code>config/auth.php</code> file.</p>
+</blockquote>
+<p><a name="social-authentication"></a></p>
+<h2>Social Authentication</h2>
+<p>In addition to typical, form based authentication, Laravel also provides a simple, convenient way to authenticate with OAuth providers using <a href="https://github.com/laravel/socialite">Laravel Socialite</a>. <strong>Socialite currently supports authentication with Facebook, Twitter, Google, GitHub and Bitbucket.</strong></p>
+<h3>Installation</h3>
+<p>To get started with Socialite, include the package in your <code>composer.json</code> file:</p>
+<pre><code>"laravel/socialite": "~2.0"</code></pre>
+<p>Next, register the <code>Laravel\Socialite\SocialiteServiceProvider</code> in your <code>config/app.php</code> configuration file. Also, add the <code>Socialite</code> facade to the <code>aliases</code> array in your <code>app</code> configuration file:</p>
+<pre><code>'Socialite' =&gt; 'Laravel\Socialite\Facades\Socialite',</code></pre>
+<p>You will need to add credentials for the OAuth services your application utilizes. These credentials should be placed in your <code>config/services.php</code> configuration file, and should use the key <code>facebook</code>, <code>twitter</code>, <code>google</code>, or <code>github</code>, depending on the providers your application requires. For example:</p>
+<pre><code>'github' =&gt; [
+    'client_id' =&gt; 'your-github-app-id',
+    'client_secret' =&gt; 'your-github-app-secret',
+    'redirect' =&gt; 'http://your-callback-url',
+],</code></pre>
+<h3>Basic Usage</h3>
+<p>Next, you are ready to authenticate users! You will need two routes: one for redirecting the user to the OAuth provider, and another for receiving the callback from the provider after authentication. We will access Socialite using the <code>Socialite</code> <a href="facades.html">facade</a>:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+
+class AuthController extends Controller
+{
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToProvider()
+    {
+        return Socialite::driver('github')-&gt;redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallback()
+    {
+        $user = Socialite::driver('github')-&gt;user();
+
+        // $user-&gt;token;
+    }
+}</code></pre>
+<p>The <code>redirect</code> method takes care of sending the user to the OAuth provider, while the <code>user</code> method will read the incoming request and retrieve the user's information from the provider. Before redirecting the user, you may also set &quot;scopes&quot; on the request:</p>
+<pre><code>return Socialite::driver('github')
+            -&gt;scopes(['scope1', 'scope2'])-&gt;redirect();</code></pre>
+<p>Once you have a user instance, you can grab a few more details about the user:</p>
+<h4>Retrieving User Details</h4>
+<pre><code>$user = $this-&gt;socialite-&gt;driver('github')-&gt;user();
+
+// OAuth Two Providers
+$token = $user-&gt;token;
+
+// OAuth One Providers
+$token = $user-&gt;token;
+$tokenSecret = $user-&gt;tokenSecret;
+
+// All Providers
+$user-&gt;getId();
+$user-&gt;getNickname();
+$user-&gt;getName();
+$user-&gt;getEmail();
+$user-&gt;getAvatar();</code></pre>
+<p><a name="adding-custom-authentication-drivers"></a></p>
+<h2>Adding Custom Authentication Drivers</h2>
+<p>Authentication may be extended the same way as the cache and session facilities. Again, we will use the <code>extend</code> method used to extend other parts of the framework. You should place this call to <code>extend</code> within a <a href="providers.html">service provider</a>:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use Auth;
+use App\Extensions\RiakUserProvider;
+use Illuminate\Support\ServiceProvider;
+
+class AuthServiceProvider extends ServiceProvider
+{
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Auth::extend('riak', function($app) {
+            // Return an instance of Illuminate\Contracts\Auth\UserProvider...
+            return new RiakUserProvider($app['riak.connection']);
+        });
+    }
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+<p>The <code>UserProvider</code> implementations are only responsible for fetching a <code>Illuminate\Contracts\Auth\Authenticatable</code> implementation out of a persistent storage system, such as MySQL, Riak, etc. These two interfaces allow the Laravel authentication mechanisms to continue functioning regardless of how the user data is stored or what type of class is used to represent it.</p>
+<p>Let's take a look at the <code>UserProvider</code> contract:</p>
+<pre><code>interface UserProvider {
+
+    public function retrieveById($identifier);
+    public function retrieveByToken($identifier, $token);
+    public function updateRememberToken(Authenticatable $user, $token);
+    public function retrieveByCredentials(array $credentials);
+    public function validateCredentials(Authenticatable $user, array $credentials);
+
+}</code></pre>
+<p>The <code>retrieveById</code> function typically receives a key representing the user, such as an auto-incrementing ID from a MySQL database. The <code>Authenticatable</code> implementation matching the ID should be retrieved and returned by the method.</p>
+<p>The <code>retrieveByToken</code> function retrieves a user by their unique <code>$identifier</code> and &quot;remember me&quot; <code>$token</code>, stored in a field <code>remember_token</code>. As with the previous method, the <code>Authenticatable</code> implementation should be returned.</p>
+<p>The <code>updateRememberToken</code> method updates the <code>$user</code> field <code>remember_token</code> with the new <code>$token</code>. The new token can be either a fresh token, assigned on successful &quot;remember me&quot; login attempt, or a null when user is logged out.</p>
+<p>The <code>retrieveByCredentials</code> method receives the array of credentials passed to the <code>Auth::attempt</code> method when attempting to sign into an application. The method should then &quot;query&quot; the underlying persistent storage for the user matching those credentials. Typically, this method will run a query with a &quot;where&quot; condition on <code>$credentials['username']</code>. The method should then return an implementation of <code>UserInterface</code>. <strong>This method should not attempt to do any password validation or authentication.</strong></p>
+<p>The <code>validateCredentials</code> method should compare the given <code>$user</code> with the <code>$credentials</code> to authenticate the user. For example, this method might compare the <code>$user-&gt;getAuthPassword()</code> string to a <code>Hash::make</code> of <code>$credentials['password']</code>. This method should only validate the user's credentials and return boolean.</p>
+<p>Now that we have explored each of the methods on the <code>UserProvider</code>, let's take a look at the <code>Authenticatable</code>. Remember, the provider should return implementations of this interface from the <code>retrieveById</code> and <code>retrieveByCredentials</code> methods:</p>
+<pre><code>interface Authenticatable {
+
+    public function getAuthIdentifier();
+    public function getAuthPassword();
+    public function getRememberToken();
+    public function setRememberToken($value);
+    public function getRememberTokenName();
+
+}</code></pre>
+<p>This interface is simple. The <code>getAuthIdentifier</code> method should return the &quot;primary key&quot; of the user. In a MySQL back-end, again, this would be the auto-incrementing primary key. The <code>getAuthPassword</code> should return the user's hashed password. This interface allows the authentication system to work with any User class, regardless of what ORM or storage abstraction layer you are using. By default, Laravel includes a <code>User</code> class in the <code>app</code> directory which implements this interface, so you may consult this class for an implementation example.</p>
+<p>Finally, once we have implemented the <code>UserProvider</code>, we are ready to register our extension with the <code>Auth</code> facade:</p>
+<pre><code>Auth::extend('riak', function($app) {
+    return new RiakUserProvider($app['riak.connection']);
+});</code></pre>
+<p>After you have registered the driver with the <code>extend</code> method, you may switch to the new driver in your <code>config/auth.php</code> configuration file.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/authentication by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+</html>

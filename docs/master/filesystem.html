@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/filesystem by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Filesystem / Cloud Storage - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="filesystem.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/filesystem.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Filesystem / Cloud Storage</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#custom-filesystems">Custom Filesystems</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel provides a powerful filesystem abstraction thanks to the wonderful <a href="https://github.com/thephpleague/flysystem">Flysystem</a> PHP package by Frank de Jonge. The Laravel Flysystem integration provides simple to use drivers for working with local filesystems, Amazon S3, and Rackspace Cloud Storage. Even better, it's amazingly simple to switch between these storage options as the API remains the same for each system.</p>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<p>The filesystem configuration file is located at <code>config/filesystems.php</code>. Within this file you may configure all of your &quot;disks&quot;. Each disk represents a particular storage driver and storage location. Example configurations for each supported driver is included in the configuration file. So, simply modify the configuration to reflect your storage preferences and credentials!</p>
+<p>Of course, you may configure as many disks as you like, and may even have multiple disks that use the same driver.</p>
+<h3>The Local Driver</h3>
+<p>When using the <code>local</code> driver, note that all file operations are relative to the <code>root</code> directory defined in your configuration file. By default, this value is set to the <code>storage/app</code> directory. Therefore, the following method would store a file in <code>storage/app/file.txt</code>:</p>
+<pre><code>Storage::disk('local')-&gt;put('file.txt', 'Contents');</code></pre>
+<h3>Other Driver Prerequisites</h3>
+<p>Before using the S3 or Rackspace drivers, you will need to install the appropriate package via Composer:</p>
+<ul>
+<li>Amazon S3: <code>league/flysystem-aws-s3-v2 ~1.0</code></li>
+<li>Rackspace: <code>league/flysystem-rackspace ~1.0</code></li>
+</ul>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p>The <code>Storage</code> facade may be used to interact with any of your configured disks. For example, to store an avatar on the default &quot;disk&quot;:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Storage;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Update the avatar for the given user.
+     *
+     * @param  Request  $request
+     * @param  int  $id
+     * @return Response
+     */
+    public function updateAvatar(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        Storage::put(
+            'avatars/'.$user-&gt;id,
+            file_get_contents($request-&gt;file('avatar')-&gt;getRealPath())
+        );
+    }
+}</code></pre>
+<h4>Retrieving A Particular Disk</h4>
+<p>When using multiple disks, you may access a particular disk using the <code>disk</code> method on the <code>Storage</code> facade:</p>
+<pre><code>$disk = Storage::disk('s3');
+
+$disk = Storage::disk('local');</code></pre>
+<h4>Determining If A File Exists</h4>
+<pre><code>$exists = Storage::disk('s3')-&gt;exists('file.jpg');</code></pre>
+<h4>Calling Methods On The Default Disk</h4>
+<p>If you call methods on the <code>Storage</code> facade without first calling the <code>disk</code> method, the method call will automatically be passed to the default disk:</p>
+<pre><code>if (Storage::exists('file.jpg')) {
+    //
+}</code></pre>
+<h4>Retrieving A File's Contents</h4>
+<pre><code>$contents = Storage::get('file.jpg');</code></pre>
+<h4>Setting A File's Contents</h4>
+<pre><code>Storage::put('file.jpg', $contents);</code></pre>
+<h4>Prepend To A File</h4>
+<pre><code>Storage::prepend('file.log', 'Prepended Text');</code></pre>
+<h4>Append To A File</h4>
+<pre><code>Storage::append('file.log', 'Appended Text');</code></pre>
+<h4>Delete A File</h4>
+<pre><code>Storage::delete('file.jpg');
+
+Storage::delete(['file1.jpg', 'file2.jpg']);</code></pre>
+<h4>Copy A File To A New Location</h4>
+<pre><code>Storage::copy('old/file1.jpg', 'new/file1.jpg');</code></pre>
+<h4>Move A File To A New Location</h4>
+<pre><code>Storage::move('old/file1.jpg', 'new/file1.jpg');</code></pre>
+<h4>Get File Size</h4>
+<pre><code>$size = Storage::size('file1.jpg');</code></pre>
+<h4>Get The Last Modification Time (UNIX)</h4>
+<pre><code>$time = Storage::lastModified('file1.jpg');</code></pre>
+<h4>Get All Files Within A Directory</h4>
+<pre><code>$files = Storage::files($directory);
+
+// Recursive...
+$files = Storage::allFiles($directory);</code></pre>
+<h4>Get All Directories Within A Directory</h4>
+<pre><code>$directories = Storage::directories($directory);
+
+// Recursive...
+$directories = Storage::allDirectories($directory);</code></pre>
+<h4>Create A Directory</h4>
+<pre><code>Storage::makeDirectory($directory);</code></pre>
+<h4>Delete A Directory</h4>
+<pre><code>Storage::deleteDirectory($directory);</code></pre>
+<p><a name="custom-filesystems"></a></p>
+<h2>Custom Filesystems</h2>
+<p>Laravel's Flysystem integration provides drivers for several &quot;drivers&quot; out of the box; however, Flysystem is not limited to these and has adapters for many other storage systems. You can create a custom driver if you want to use one of these additional adapters in your Laravel application.</p>
+<p>In order to set up the custom filesystem you will need to create a <a href="providers.html">service provider</a> such as <code>DropboxServiceProvider</code>. In the provider's <code>boot</code> method, you may use the <code>Storage</code> facade's <code>extend</code> method to define the custom driver:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use Storage;
+use League\Flysystem\Filesystem;
+use Dropbox\Client as DropboxClient;
+use Illuminate\Support\ServiceProvider;
+use League\Flysystem\Dropbox\DropboxAdapter;
+
+class DropboxServiceProvider extends ServiceProvider
+{
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Storage::extend('dropbox', function($app, $config) {
+            $client = new DropboxClient(
+                $config['accessToken'], $config['clientIdentifier']
+            );
+
+            return new Filesystem(new DropboxAdapter($client));
+        });
+    }
+
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+<p>The first argument of the <code>extend</code> method is the name of the driver and the second is a Closure that receives the <code>$app</code> and <code>$config</code> variables. The resolver Closure must return an instance of <code>League\Flysystem\Filesystem</code>. The <code>$config</code> variable contains the values defined in <code>config/filesystems.php</code> for the specified disk.</p>
+<p>Once you have created the service provider to register the extension, you may use the <code>dropbox</code> driver in your <code>config/filesystem.php</code> configuration file.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/filesystem by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:19 GMT -->
+</html>

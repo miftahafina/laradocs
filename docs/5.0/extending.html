@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/extending by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Extending The Framework - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="extending.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/extending.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/extending.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/extending.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Extending The Framework</h1>
+<ul>
+<li><a href="#managers-and-factories">Managers &amp; Factories</a></li>
+<li><a href="#cache">Cache</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#container-based-extension">Service Container Based Extension</a></li>
+</ul>
+<p><a name="managers-and-factories"></a></p>
+<h2>Managers &amp; Factories</h2>
+<p>Laravel has several <code>Manager</code> classes that manage the creation of driver-based components. These include the cache, session, authentication, and queue components. The manager class is responsible for creating a particular driver implementation based on the application's configuration. For example, the <code>CacheManager</code> class can create APC, Memcached, File, and various other implementations of cache drivers.</p>
+<p>Each of these managers includes an <code>extend</code> method which may be used to easily inject new driver resolution functionality into the manager. We'll cover each of these managers below, with examples of how to inject custom driver support into each of them.</p>
+<blockquote>
+<p><strong>Note:</strong> Take a moment to explore the various <code>Manager</code> classes that ship with Laravel, such as the <code>CacheManager</code> and <code>SessionManager</code>. Reading through these classes will give you a more thorough understanding of how Laravel works under the hood. All manager classes extend the <code>Illuminate\Support\Manager</code> base class, which provides some helpful, common functionality for each manager.</p>
+</blockquote>
+<p><a name="cache"></a></p>
+<h2>Cache</h2>
+<p>To extend the Laravel cache facility, we will use the <code>extend</code> method on the <code>CacheManager</code>, which is used to bind a custom driver resolver to the manager, and is common across all manager classes. For example, to register a new cache driver named &quot;mongo&quot;, we would do the following:</p>
+<pre><code>Cache::extend('mongo', function($app)
+{
+    return Cache::repository(new MongoStore);
+});</code></pre>
+<p>The first argument passed to the <code>extend</code> method is the name of the driver. This will correspond to your <code>driver</code> option in the <code>config/cache.php</code> configuration file. The second argument is a Closure that should return an <code>Illuminate\Cache\Repository</code> instance. The Closure will be passed an <code>$app</code> instance, which is an instance of <code>Illuminate\Foundation\Application</code> and a service container.</p>
+<p>The call to <code>Cache::extend</code> could be done in the <code>boot</code> method of the default <code>App\Providers\AppServiceProvider</code> that ships with fresh Laravel applications, or you may create your own service provider to house the extension - just don't forget to register the provider in the <code>config/app.php</code> provider array.</p>
+<p>To create our custom cache driver, we first need to implement the <code>Illuminate\Contracts\Cache\Store</code> contract. So, our MongoDB cache implementation would look something like this:</p>
+<pre><code>class MongoStore implements Illuminate\Contracts\Cache\Store {
+
+    public function get($key) {}
+    public function put($key, $value, $minutes) {}
+    public function increment($key, $value = 1) {}
+    public function decrement($key, $value = 1) {}
+    public function forever($key, $value) {}
+    public function forget($key) {}
+    public function flush() {}
+
+}</code></pre>
+<p>We just need to implement each of these methods using a MongoDB connection. Once our implementation is complete, we can finish our custom driver registration:</p>
+<pre><code>Cache::extend('mongo', function($app)
+{
+    return Cache::repository(new MongoStore);
+});</code></pre>
+<p>If you're wondering where to put your custom cache driver code, consider making it available on Packagist! Or, you could create an <code>Extensions</code> namespace within your <code>app</code> directory. However, keep in mind that Laravel does not have a rigid application structure and you are free to organize your application according to your preferences.</p>
+<p><a name="session"></a></p>
+<h2>Session</h2>
+<p>Extending Laravel with a custom session driver is just as easy as extending the cache system. Again, we will use the <code>extend</code> method to register our custom code:</p>
+<pre><code>Session::extend('mongo', function($app)
+{
+    // Return implementation of SessionHandlerInterface
+});</code></pre>
+<h3>Where To Extend The Session</h3>
+<p>You should place your session extension code in the <code>boot</code> method of your <code>AppServiceProvider</code>.</p>
+<h3>Writing The Session Extension</h3>
+<p>Note that our custom session driver should implement the <code>SessionHandlerInterface</code>. This interface contains just a few simple methods we need to implement. A stubbed MongoDB implementation would look something like this:</p>
+<pre><code>class MongoHandler implements SessionHandlerInterface {
+
+    public function open($savePath, $sessionName) {}
+    public function close() {}
+    public function read($sessionId) {}
+    public function write($sessionId, $data) {}
+    public function destroy($sessionId) {}
+    public function gc($lifetime) {}
+
+}</code></pre>
+<p>Since these methods are not as readily understandable as the cache <code>StoreInterface</code>, let's quickly cover what each of the methods do:</p>
+<ul>
+<li>The <code>open</code> method would typically be used in file based session store systems. Since Laravel ships with a <code>file</code> session driver, you will almost never need to put anything in this method. You can leave it as an empty stub. It is simply a fact of poor interface design (which we'll discuss later) that PHP requires us to implement this method.</li>
+<li>The <code>close</code> method, like the <code>open</code> method, can also usually be disregarded. For most drivers, it is not needed.</li>
+<li>The <code>read</code> method should return the string version of the session data associated with the given <code>$sessionId</code>. There is no need to do any serialization or other encoding when retrieving or storing session data in your driver, as Laravel will perform the serialization for you.</li>
+<li>The <code>write</code> method should write the given <code>$data</code> string associated with the <code>$sessionId</code> to some persistent storage system, such as MongoDB, Dynamo, etc.</li>
+<li>The <code>destroy</code> method should remove the data associated with the <code>$sessionId</code> from persistent storage.</li>
+<li>The <code>gc</code> method should destroy all session data that is older than the given <code>$lifetime</code>, which is a UNIX timestamp. For self-expiring systems like Memcached and Redis, this method may be left empty.</li>
+</ul>
+<p>Once the <code>SessionHandlerInterface</code> has been implemented, we are ready to register it with the Session manager:</p>
+<pre><code>Session::extend('mongo', function($app)
+{
+    return new MongoHandler;
+});</code></pre>
+<p>Once the session driver has been registered, we may use the <code>mongo</code> driver in our <code>config/session.php</code> configuration file.</p>
+<blockquote>
+<p><strong>Note:</strong> Remember, if you write a custom session handler, share it on Packagist!</p>
+</blockquote>
+<p><a name="authentication"></a></p>
+<h2>Authentication</h2>
+<p>Authentication may be extended the same way as the cache and session facilities. Again, we will use the <code>extend</code> method we have become familiar with:</p>
+<pre><code>Auth::extend('riak', function($app)
+{
+    // Return implementation of Illuminate\Contracts\Auth\UserProvider
+});</code></pre>
+<p>The <code>UserProvider</code> implementations are only responsible for fetching a <code>Illuminate\Contracts\Auth\Authenticatable</code> implementation out of a persistent storage system, such as MySQL, Riak, etc. These two interfaces allow the Laravel authentication mechanisms to continue functioning regardless of how the user data is stored or what type of class is used to represent it.</p>
+<p>Let's take a look at the <code>UserProvider</code> contract:</p>
+<pre><code>interface UserProvider {
+
+    public function retrieveById($identifier);
+    public function retrieveByToken($identifier, $token);
+    public function updateRememberToken(Authenticatable $user, $token);
+    public function retrieveByCredentials(array $credentials);
+    public function validateCredentials(Authenticatable $user, array $credentials);
+
+}</code></pre>
+<p>The <code>retrieveById</code> function typically receives a numeric key representing the user, such as an auto-incrementing ID from a MySQL database. The <code>Authenticatable</code> implementation matching the ID should be retrieved and returned by the method.</p>
+<p>The <code>retrieveByToken</code> function retrieves a user by their unique <code>$identifier</code> and &quot;remember me&quot; <code>$token</code>, stored in a field <code>remember_token</code>. As with the previous method, the <code>Authenticatable</code> implementation should be returned.</p>
+<p>The <code>updateRememberToken</code> method updates the <code>$user</code> field <code>remember_token</code> with the new <code>$token</code>. The new token can be either a fresh token, assigned on successful &quot;remember me&quot; login attempt, or a null when user is logged out.</p>
+<p>The <code>retrieveByCredentials</code> method receives the array of credentials passed to the <code>Auth::attempt</code> method when attempting to sign into an application. The method should then &quot;query&quot; the underlying persistent storage for the user matching those credentials. Typically, this method will run a query with a &quot;where&quot; condition on <code>$credentials['username']</code>. The method should then return an implementation of <code>UserInterface</code>. <strong>This method should not attempt to do any password validation or authentication.</strong></p>
+<p>The <code>validateCredentials</code> method should compare the given <code>$user</code> with the <code>$credentials</code> to authenticate the user. For example, this method might compare the <code>$user-&gt;getAuthPassword()</code> string to a <code>Hash::make</code> of <code>$credentials['password']</code>. This method should only validate the user's credentials and return boolean.</p>
+<p>Now that we have explored each of the methods on the <code>UserProvider</code>, let's take a look at the <code>Authenticatable</code>. Remember, the provider should return implementations of this interface from the <code>retrieveById</code> and <code>retrieveByCredentials</code> methods:</p>
+<pre><code>interface Authenticatable {
+
+    public function getAuthIdentifier();
+    public function getAuthPassword();
+    public function getRememberToken();
+    public function setRememberToken($value);
+    public function getRememberTokenName();
+
+}</code></pre>
+<p>This interface is simple. The <code>getAuthIdentifier</code> method should return the &quot;primary key&quot; of the user. In a MySQL back-end, again, this would be the auto-incrementing primary key. The <code>getAuthPassword</code> should return the user's hashed password. This interface allows the authentication system to work with any User class, regardless of what ORM or storage abstraction layer you are using. By default, Laravel includes a <code>User</code> class in the <code>app</code> directory which implements this interface, so you may consult this class for an implementation example.</p>
+<p>Finally, once we have implemented the <code>UserProvider</code>, we are ready to register our extension with the <code>Auth</code> facade:</p>
+<pre><code>Auth::extend('riak', function($app)
+{
+    return new RiakUserProvider($app['riak.connection']);
+});</code></pre>
+<p>After you have registered the driver with the <code>extend</code> method, you switch to the new driver in your <code>config/auth.php</code> configuration file.</p>
+<p><a name="container-based-extension"></a></p>
+<h2>Service Container Based Extension</h2>
+<p>Almost every service provider included with the Laravel framework binds objects into the service container. You can find a list of your application's service providers in the <code>config/app.php</code> configuration file. As you have time, you should skim through each of these provider's source code. By doing so, you will gain a much better understanding of what each provider adds to the framework, as well as what keys are used to bind various services into the service container.</p>
+<p>For example, the <code>HashServiceProvider</code> binds a <code>hash</code> key into the service container, which resolves into a <code>Illuminate\Hashing\BcryptHasher</code> instance. You can easily extend and override this class within your own application by overriding this binding. For example:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+class SnappyHashProvider extends \Illuminate\Hashing\HashServiceProvider {
+
+    public function boot()
+    {
+        parent::boot();
+
+        $this-&gt;app-&gt;bindShared('hash', function()
+        {
+            return new \Snappy\Hashing\ScryptHasher;
+        });
+    }
+
+}</code></pre>
+<p>Note that this class extends the <code>HashServiceProvider</code>, not the default <code>ServiceProvider</code> base class. Once you have extended the service provider, swap out the <code>HashServiceProvider</code> in your <code>config/app.php</code> configuration file with the name of your extended provider.</p>
+<p>This is the general method of extending any core class that is bound in the container. Essentially every core class is bound in the container in this fashion, and can be overridden. Again, reading through the included framework service providers will familiarize you with where various classes are bound into the container, and what keys they are bound by. This is a great way to learn more about how Laravel is put together.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/extending by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:55 GMT -->
+</html>

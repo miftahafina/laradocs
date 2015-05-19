@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/bus by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Command Bus - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="bus.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Command Bus</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#creating-commands">Creating Commands</a></li>
+<li><a href="#dispatching-commands">Dispatching Commands</a></li>
+<li><a href="#queued-commands">Queued Commands</a></li>
+<li><a href="#command-pipeline">Command Pipeline</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>The Laravel command bus provides a convenient method of encapsulating tasks your application needs to perform into simple, easy to understand &quot;commands&quot;. To help us understand the purpose of commands, let's pretend we are building an application that allows users to purchase podcasts.</p>
+<p>When a user purchases a podcast, there are a variety of things that need to happen. For example, we may need to charge the user's credit card, add a record to our database that represents the purchase, and send a confirmation e-mail of the purchase. Perhaps we also need to perform some kind of validation as to whether the user is allowed to purchase podcasts.</p>
+<p>We could put all of this logic inside a controller method; however, this has several disadvantages. The first disadvantage is that our controller probably handles several other incoming HTTP actions, and including complicated logic in each controller method will soon bloat our controller and make it harder to read. Secondly, it is difficult to re-use the purchase podcast logic outside of the controller context. Thirdly, it is more difficult to unit-test the command as we must also generate a stub HTTP request and make a full request to the application to test the purchase podcast logic.</p>
+<p>Instead of putting this logic in the controller, we may choose to encapsulate it within a &quot;command&quot; object, such as a <code>PurchasePodcast</code> command.</p>
+<p><a name="creating-commands"></a></p>
+<h2>Creating Commands</h2>
+<p>The Artisan CLI can generate new command classes using the <code>make:command</code> command:</p>
+<pre><code>php artisan make:command PurchasePodcast</code></pre>
+<p>The newly generated class will be placed in the <code>app/Commands</code> directory. By default, the command contains two methods: the constructor and the <code>handle</code> method. Of course, the constructor allows you to pass any relevant objects to the command, while the <code>handle</code> method executes the command. For example:</p>
+<pre><code>class PurchasePodcast extends Command implements SelfHandling {
+
+    protected $user, $podcast;
+
+    /**
+     * Create a new command instance.
+     *
+     * @return void
+     */
+    public function __construct(User $user, Podcast $podcast)
+    {
+        $this-&gt;user = $user;
+        $this-&gt;podcast = $podcast;
+    }
+
+    /**
+     * Execute the command.
+     *
+     * @return void
+     */
+    public function handle()
+    {
+        // Handle the logic to purchase the podcast...
+
+        event(new PodcastWasPurchased($this-&gt;user, $this-&gt;podcast));
+    }
+
+}</code></pre>
+<p>The <code>handle</code> method may also type-hint dependencies, and they will be automatically injected by the <a href="container.html">service container</a>. For example:</p>
+<pre><code>    /**
+     * Execute the command.
+     *
+     * @return void
+     */
+    public function handle(BillingGateway $billing)
+    {
+        // Handle the logic to purchase the podcast...
+    }</code></pre>
+<p><a name="dispatching-commands"></a></p>
+<h2>Dispatching Commands</h2>
+<p>So, once we have created a command, how do we dispatch it? Of course, we could call the <code>handle</code> method directly; however, dispatching the command through the Laravel &quot;command bus&quot; has several advantages which we will discuss later.</p>
+<p>If you glance at your application's base controller, you will see the <code>DispatchesCommands</code> trait. This trait allows us to call the <code>dispatch</code> method from any of our controllers. For example:</p>
+<pre><code>public function purchasePodcast($podcastId)
+{
+    $this-&gt;dispatch(
+        new PurchasePodcast(Auth::user(), Podcast::findOrFail($podcastId))
+    );
+}</code></pre>
+<p>The command bus will take care of executing the command and calling the IoC container to inject any needed dependencies into the <code>handle</code> method.</p>
+<p>You may add the <code>Illuminate\Foundation\Bus\DispatchesCommands</code> trait to any class you wish. If you would like to receive a command bus instance through the constructor of any of your classes, you may type-hint the <code>Illuminate\Contracts\Bus\Dispatcher</code> interface. Finally, you may also use the <code>Bus</code> facade to quickly dispatch commands:</p>
+<pre><code>    Bus::dispatch(
+        new PurchasePodcast(Auth::user(), Podcast::findOrFail($podcastId))
+    );</code></pre>
+<h3>Mapping Command Properties From Requests</h3>
+<p>It is very common to map HTTP request variables into commands. So, instead of forcing you to do this manually for each request, Laravel provides some helper methods to make it a cinch. Let's take a look at the <code>dispatchFrom</code> method available on the <code>DispatchesCommands</code> trait:</p>
+<pre><code>$this-&gt;dispatchFrom('Command\Class\Name', $request);</code></pre>
+<p>This method will examine the constructor of the command class it is given, and then extract variables from the HTTP request (or any other <code>ArrayAccess</code> object) to fill the needed constructor parameters of the command. So, if our command class accepts a <code>firstName</code> variable in its constructor, the command bus will attempt to pull the <code>firstName</code> parameter from the HTTP request.</p>
+<p>You may also pass an array as the third argument to the <code>dispatchFrom</code> method. This array will be used to fill any constructor parameters that are not available on the request:</p>
+<pre><code>$this-&gt;dispatchFrom('Command\Class\Name', $request, [
+    'firstName' =&gt; 'Taylor',
+]);</code></pre>
+<p><a name="queued-commands"></a></p>
+<h2>Queued Commands</h2>
+<p>The command bus is not just for synchronous jobs that run during the current request cycle, but also serves as the primary way to build queued jobs in Laravel. So, how do we instruct command bus to queue our job for background processing instead of running it synchronously? It's easy. Firstly, when generating a new command, just add the <code>--queued</code> flag to the command:</p>
+<pre><code>php artisan make:command PurchasePodcast --queued</code></pre>
+<p>As you will see, this adds a few more features to the command, namely the <code>Illuminate\Contracts\Queue\ShouldBeQueued</code> interface and the <code>SerializesModels</code> trait. These instruct the command bus to queue the command, as well as gracefully serialize and deserialize any Eloquent models your command stores as properties.</p>
+<p>If you would like to convert an existing command into a queued command, simply implement the <code>Illuminate\Contracts\Queue\ShouldBeQueued</code> interface on the class manually. It contains no methods, and merely serves as a &quot;marker interface&quot; for the dispatcher.</p>
+<p>Then, just write your command normally. When you dispatch it to the bus that bus will automatically queue the command for background processing. It doesn't get any easier than that.</p>
+<p>For more information on interacting with queued commands, view the full <a href="queues.html">queue documentation</a>.</p>
+<p><a name="command-pipeline"></a></p>
+<h2>Command Pipeline</h2>
+<p>Before a command is dispatched to a handler, you may pass it through other classes in a &quot;pipeline&quot;. Command pipes work just like HTTP middleware, except for your commands! For example, a command pipe could wrap the entire command operation within a database transaction, or simply log its execution.</p>
+<p>To add a pipe to your bus, call the <code>pipeThrough</code> method of the dispatcher from your <code>App\Providers\BusServiceProvider::boot</code> method:</p>
+<pre><code>$dispatcher-&gt;pipeThrough(['UseDatabaseTransactions', 'LogCommand']);</code></pre>
+<p>A command pipe is defined with a <code>handle</code> method, just like a middleware:</p>
+<pre><code>class UseDatabaseTransactions {
+
+    public function handle($command, $next)
+    {
+        return DB::transaction(function() use ($command, $next)
+        {
+            return $next($command);
+        });
+    }
+
+}</code></pre>
+<p>Command pipe classes are resolved through the <a href="container.html">IoC container</a>, so feel free to type-hint any dependencies you need within their constructors.</p>
+<p>You may even define a <code>Closure</code> as a command pipe:</p>
+<pre><code>$dispatcher-&gt;pipeThrough([function($command, $next)
+{
+    return DB::transaction(function() use ($command, $next)
+    {
+        return $next($command);
+    });
+}]);</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/bus by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:54 GMT -->
+</html>

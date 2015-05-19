@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/controllers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>HTTP Controllers - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="controllers.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/controllers.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/controllers.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/controllers.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/controllers.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>HTTP Controllers</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#basic-controllers">Basic Controllers</a></li>
+<li><a href="#controller-middleware">Controller Middleware</a></li>
+<li><a href="#restful-resource-controllers">RESTful Resource Controllers</a></li>
+<li><a href="#dependency-injection-and-controllers">Dependency Injection &amp; Controllers</a></li>
+<li><a href="#route-caching">Route Caching</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Instead of defining all of your request handling logic in a single <code>routes.php</code> file, you may wish to organize this behavior using Controller classes. Controllers can group related HTTP request handling logic into a class. Controllers are typically stored in the <code>app/Http/Controllers</code> directory.</p>
+<p><a name="basic-controllers"></a></p>
+<h2>Basic Controllers</h2>
+<p>Here is an example of a basic controller class:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        return view('user.profile', ['user' =&gt; User::findOrFail($id)]);
+    }
+}</code></pre>
+<p>We can route to the controller action like so:</p>
+<pre><code>Route::get('user/{id}', 'UserController@showProfile');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> All controllers should extend the base controller class.</p>
+</blockquote>
+<h4>Controllers &amp; Namespaces</h4>
+<p>It is very important to note that we did not need to specify the full controller namespace when defining the controller route. We only defined the portion of the class name that comes after the <code>App\Http\Controllers</code> namespace &quot;root&quot;. By default, the <code>RouteServiceProvider</code> will load the <code>routes.php</code> file within a route group containing the root controller namespace.</p>
+<p>If you choose to nest or organize your controllers using PHP namespaces deeper into the <code>App\Http\Controllers</code> directory, simply use the specific class name relative to the <code>App\Http\Controllers</code> root namespace. So, if your full controller class is <code>App\Http\Controllers\Photos\AdminController</code>, you would register a route like so:</p>
+<pre><code>Route::get('foo', 'Photos\AdminController@method');</code></pre>
+<h4>Naming Controller Routes</h4>
+<p>Like Closure routes, you may specify names on controller routes:</p>
+<pre><code>Route::get('foo', ['uses' =&gt; 'FooController@method', 'as' =&gt; 'name']);</code></pre>
+<h4>URLs To Controller Actions</h4>
+<p>To generate a URL to a controller action, use the <code>action</code> helper method:</p>
+<pre><code>$url = action('FooController@method');</code></pre>
+<p>Again notice that we did not need to specify the full controller namespace. We only specified the controller class name relative to the <code>App\Http\Controllers</code> namespace.</p>
+<p><a name="controller-middleware"></a></p>
+<h2>Controller Middleware</h2>
+<p><a href="middleware.html">Middleware</a> may be specified on controller routes like so:</p>
+<pre><code>Route::get('profile', [
+    'middleware' =&gt; 'auth',
+    'uses' =&gt; 'UserController@showProfile'
+]);</code></pre>
+<p>However, it is more convenient to specify middleware within your controller's constructor:</p>
+<pre><code>class UserController extends Controller
+{
+    /**
+     * Instantiate a new UserController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this-&gt;middleware('auth');
+
+        $this-&gt;middleware('log', ['only' =&gt; ['fooAction', 'barAction']]);
+
+        $this-&gt;middleware('subscribed', ['except' =&gt; ['fooAction', 'barAction']]);
+    }
+}</code></pre>
+<p>As you can see, you may easily restrict the middleware to only certain methods on the controller class.</p>
+<p><a name="restful-resource-controllers"></a></p>
+<h2>RESTful Resource Controllers</h2>
+<p>Resource controllers make it painless to build RESTful controllers around resources. For example, you may wish to create a controller that handles HTTP requests regarding &quot;photos&quot; stored by your application. Using the <code>make:controller</code> Artisan command, we can quickly create such a controller:</p>
+<pre><code>php artisan make:controller PhotoController</code></pre>
+<p>Next, we register a resourceful route to the controller:</p>
+<pre><code>Route::resource('photo', 'PhotoController');</code></pre>
+<p>This single route declaration creates multiple routes to handle a variety of RESTful actions on the photo resource. Likewise, the generated controller will already have methods stubbed for each of these actions, including notes informing you which URIs and verbs they handle.</p>
+<h4>Actions Handled By Resource Controller</h4>
+<table>
+<thead>
+<tr>
+<th>Verb</th>
+<th>Path</th>
+<th>Action</th>
+<th>Route Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/photo</td>
+<td>index</td>
+<td>photo.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photo/create</td>
+<td>create</td>
+<td>photo.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/photo</td>
+<td>store</td>
+<td>photo.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photo/{photo}</td>
+<td>show</td>
+<td>photo.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/photo/{photo}/edit</td>
+<td>edit</td>
+<td>photo.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td>/photo/{photo}</td>
+<td>update</td>
+<td>photo.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/photo/{photo}</td>
+<td>destroy</td>
+<td>photo.destroy</td>
+</tr>
+</tbody>
+</table>
+<h4>Customizing Resource Routes</h4>
+<p>Additionally, you may specify only a subset of actions to handle on the route:</p>
+<pre><code>Route::resource('photo', 'PhotoController',
+                ['only' =&gt; ['index', 'show']]);
+
+Route::resource('photo', 'PhotoController',
+                ['except' =&gt; ['create', 'store', 'update', 'destroy']]);</code></pre>
+<p>By default, all resource controller actions have a route name; however, you can override these names by passing a <code>names</code> array with your options:</p>
+<pre><code>Route::resource('photo', 'PhotoController',
+                ['names' =&gt; ['create' =&gt; 'photo.build']]);</code></pre>
+<h4>Handling Nested Resource Controllers</h4>
+<p>To &quot;nest&quot; resource controllers, use &quot;dot&quot; notation in your route declaration:</p>
+<pre><code>Route::resource('photos.comments', 'PhotoCommentController');</code></pre>
+<p>This route will register a &quot;nested&quot; resource that may be accessed with URLs like the following: <code>photos/{photos}/comments/{comments}</code>.</p>
+<pre><code>class PhotoCommentController extends Controller {
+
+    /**
+     * Show the specified photo comment.
+     *
+     * @param  int  $photoId
+     * @param  int  $commentId
+     * @return Response
+     */
+    public function show($photoId, $commentId)
+    {
+        //
+    }
+
+}</code></pre>
+<h4>Adding Additional Routes To Resource Controllers</h4>
+<p>If it becomes necessary to add additional routes to a resource controller beyond the default resource routes, you should define those routes before your call to <code>Route::resource</code>:</p>
+<pre><code>Route::get('photos/popular', 'PhotoController@method');
+
+Route::resource('photos', 'PhotoController');</code></pre>
+<p><a name="dependency-injection-and-controllers"></a></p>
+<h2>Dependency Injection &amp; Controllers</h2>
+<h4>Constructor Injection</h4>
+<p>The Laravel <a href="container.html">service container</a> is used to resolve all Laravel controllers. As a result, you are able to type-hint any dependencies your controller may need in its constructor:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Routing\Controller;
+use App\Repositories\UserRepository;
+
+class UserController extends Controller
+{
+    /**
+     * The user repository instance.
+     */
+    protected $users;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+}</code></pre>
+<p>Of course, you may also type-hint any <a href="contracts.html">Laravel contract</a>. If the container can resolve it, you can type-hint it.</p>
+<h4>Method Injection</h4>
+<p>In addition to constructor injection, you may also type-hint dependencies on your controller's methods. For example, let's type-hint the <code>Request</code> instance on one of our methods:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Store a new user.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $name = $request-&gt;input('name');
+
+        //
+    }
+}</code></pre>
+<p>If your controller method is also expecting input from a route parameter, simply list your route arguments after your other dependencies:</p>
+<pre><code>&lt;?php namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Store a new user.
+     *
+     * @param  Request  $request
+     * @param  int  $id
+     * @return Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+}</code></pre>
+<p><a name="route-caching"></a></p>
+<h2>Route Caching</h2>
+<p>If your application is exclusively using controller routes, you may take advantage of Laravel's route cache. Using the route cache will drastically decrease the amount of time it take to register all of your application's routes. In some cases, your route registration may even be up to 100x faster! To generate a route cache, just execute the <code>route:cache</code> Artisan command:</p>
+<pre><code>php artisan route:cache</code></pre>
+<p>That's all there is to it! Your cached routes file will now be used instead of your <code>app/Http/routes.php</code> file. Remember, if you add any new routes you will need to generate a fresh route cache. Because of this, you may wish to only run the <code>route:cache</code> command during your project's deployment.</p>
+<p>To remove the cached routes file without generating a new cache, use the <code>route:clear</code> command:</p>
+<pre><code>php artisan route:clear</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/controllers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+</html>

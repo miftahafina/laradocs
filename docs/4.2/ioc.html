@@ -1,0 +1,364 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/ioc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>IoC Container - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="ioc.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/ioc.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/ioc.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>IoC Container</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#where-to-register">Where To Register Bindings</a></li>
+<li><a href="#automatic-resolution">Automatic Resolution</a></li>
+<li><a href="#practical-usage">Practical Usage</a></li>
+<li><a href="#service-providers">Service Providers</a></li>
+<li><a href="#container-events">Container Events</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>The Laravel inversion of control container is a powerful tool for managing class dependencies. Dependency injection is a method of removing hard-coded class dependencies. Instead, the dependencies are injected at run-time, allowing for greater flexibility as dependency implementations may be swapped easily.</p>
+<p>Understanding the Laravel IoC container is essential to building a powerful, large application, as well as for contributing to the Laravel core itself.</p>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<h4>Binding A Type Into The Container</h4>
+<p>There are two ways the IoC container can resolve dependencies: via Closure callbacks or automatic resolution. First, we'll explore Closure callbacks. First, a &quot;type&quot; may be bound into the container:</p>
+<pre><code>App::bind('foo', function($app)
+{
+    return new FooBar;
+});</code></pre>
+<h4>Resolving A Type From The Container</h4>
+<pre><code>$value = App::make('foo');</code></pre>
+<p>When the <code>App::make</code> method is called, the Closure callback is executed and the result is returned.</p>
+<h4>Binding A &quot;Shared&quot; Type Into The Container</h4>
+<p>Sometimes, you may wish to bind something into the container that should only be resolved once, and the same instance should be returned on subsequent calls into the container:</p>
+<pre><code>App::singleton('foo', function()
+{
+    return new FooBar;
+});</code></pre>
+<h4>Binding An Existing Instance Into The Container</h4>
+<p>You may also bind an existing object instance into the container using the <code>instance</code> method:</p>
+<pre><code>$foo = new Foo;
+
+App::instance('foo', $foo);</code></pre>
+<p><a name="where-to-register"></a></p>
+<h2>Where To Register Bindings</h2>
+<p>IoC bindings, like event handlers or route filters, generally fall under the title of &quot;bootstrap code&quot;. In other words, they prepare your application to actually handle requests, and usually need to be executed before a route or controller is actually called. Like most other bootstrap code, the <code>start</code> files are always an option for registering IoC bindings. Alternatively, you could create an <code>app/ioc.php</code> (filename does not matter) file and require that file from your <code>start</code> file.</p>
+<p>If your application has a very large number of IoC bindings, or you simply wish to organize your IoC bindings in separate files by category, you may register your bindings in a <a href="#service-providers">service provider</a>.</p>
+<p><a name="automatic-resolution"></a></p>
+<h2>Automatic Resolution</h2>
+<h4>Resolving A Class</h4>
+<p>The IoC container is powerful enough to resolve classes without any configuration at all in many scenarios. For example:</p>
+<pre><code>class FooBar {
+
+    public function __construct(Baz $baz)
+    {
+        $this-&gt;baz = $baz;
+    }
+
+}
+
+$fooBar = App::make('FooBar');</code></pre>
+<p>Note that even though we did not register the FooBar class in the container, the container will still be able to resolve the class, even injecting the <code>Baz</code> dependency automatically!</p>
+<p>When a type is not bound in the container, it will use PHP's Reflection facilities to inspect the class and read the constructor's type-hints. Using this information, the container can automatically build an instance of the class.</p>
+<h4>Binding An Interface To An Implementation</h4>
+<p>However, in some cases, a class may depend on an interface implementation, not a &quot;concrete type&quot;. When this is the case, the <code>App::bind</code> method must be used to inform the container which interface implementation to inject:</p>
+<pre><code>App::bind('UserRepositoryInterface', 'DbUserRepository');</code></pre>
+<p>Now consider the following controller:</p>
+<pre><code>class UserController extends BaseController {
+
+    public function __construct(UserRepositoryInterface $users)
+    {
+        $this-&gt;users = $users;
+    }
+
+}</code></pre>
+<p>Since we have bound the <code>UserRepositoryInterface</code> to a concrete type, the <code>DbUserRepository</code> will automatically be injected into this controller when it is created.</p>
+<p><a name="practical-usage"></a></p>
+<h2>Practical Usage</h2>
+<p>Laravel provides several opportunities to use the IoC container to increase the flexibility and testability of your application. One primary example is when resolving controllers. All controllers are resolved through the IoC container, meaning you can type-hint dependencies in a controller constructor, and they will automatically be injected.</p>
+<h4>Type-Hinting Controller Dependencies</h4>
+<pre><code>class OrderController extends BaseController {
+
+    public function __construct(OrderRepository $orders)
+    {
+        $this-&gt;orders = $orders;
+    }
+
+    public function getIndex()
+    {
+        $all = $this-&gt;orders-&gt;all();
+
+        return View::make('orders', compact('all'));
+    }
+
+}</code></pre>
+<p>In this example, the <code>OrderRepository</code> class will automatically be injected into the controller. This means that when <a href="testing.html">unit testing</a> a &quot;mock&quot; <code>OrderRepository</code> may be bound into the container and injected into the controller, allowing for painless stubbing of database layer interaction.</p>
+<h4>Other Examples Of IoC Usage</h4>
+<p><a href="routing.html#route-filters">Filters</a>, <a href="responses.html#view-composers">composers</a>, and <a href="events.html#using-classes-as-listeners">event handlers</a> may also be resolved out of the IoC container. When registering them, simply give the name of the class that should be used:</p>
+<pre><code>Route::filter('foo', 'FooFilter');
+
+View::composer('foo', 'FooComposer');
+
+Event::listen('foo', 'FooHandler');</code></pre>
+<p><a name="service-providers"></a></p>
+<h2>Service Providers</h2>
+<p>Service providers are a great way to group related IoC registrations in a single location. Think of them as a way to bootstrap components in your application. Within a service provider, you might register a custom authentication driver, register your application's repository classes with the IoC container, or even setup a custom Artisan command.</p>
+<p>In fact, most of the core Laravel components include service providers. All of the registered service providers for your application are listed in the <code>providers</code> array of the <code>app/config/app.php</code> configuration file.</p>
+<h4>Defining A Service Provider</h4>
+<p>To create a service provider, simply extend the <code>Illuminate\Support\ServiceProvider</code> class and define a <code>register</code> method:</p>
+<pre><code>use Illuminate\Support\ServiceProvider;
+
+class FooServiceProvider extends ServiceProvider {
+
+    public function register()
+    {
+        $this-&gt;app-&gt;bind('foo', function()
+        {
+            return new Foo;
+        });
+    }
+
+}</code></pre>
+<p>Note that in the <code>register</code> method, the application IoC container is available to you via the <code>$this-&gt;app</code> property. Once you have created a provider and are ready to register it with your application, simply add it to the <code>providers</code> array in your <code>app</code> configuration file.</p>
+<h4>Registering A Service Provider At Run-Time</h4>
+<p>You may also register a service provider at run-time using the <code>App::register</code> method:</p>
+<pre><code>App::register('FooServiceProvider');</code></pre>
+<p><a name="container-events"></a></p>
+<h2>Container Events</h2>
+<h4>Registering A Resolving Listener</h4>
+<p>The container fires an event each time it resolves an object. You may listen to this event using the <code>resolving</code> method:</p>
+<pre><code>App::resolvingAny(function($object)
+{
+    //
+});
+
+App::resolving('foo', function($foo)
+{
+    //
+});</code></pre>
+<p>Note that the object that was resolved will be passed to the callback.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/ioc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:46 GMT -->
+</html>

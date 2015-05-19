@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/lifecycle by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Request Lifecycle - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/lifecycle.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/lifecycle.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="lifecycle.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/lifecycle.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/lifecycle.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Request Lifecycle</h1>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#request-lifecycle">Request Lifecycle</a></li>
+<li><a href="#start-files">Start Files</a></li>
+<li><a href="#application-events">Application Events</a></li>
+</ul>
+<p><a name="overview"></a></p>
+<h2>Overview</h2>
+<p>When using any tool in the &quot;real world&quot;, you feel more confident if you understand how that tool works. Application development is no different. When you understand how your development tools function, you feel more comfortable and confident using them. The goal of this document is to give you a good, high-level overview of how the Laravel framework &quot;works&quot;. By getting to know the overall framework better, everything feels less &quot;magical&quot; and you will be more confident building your applications. In addition to a high-level overview of the request lifecycle, we'll cover &quot;start&quot; files and application events.</p>
+<p>If you don't understand all of the terms right away, don't lose heart! Just try to get a basic grasp of what is going on, and your knowledge will grow as you explore other sections of the documentation.</p>
+<p><a name="request-lifecycle"></a></p>
+<h2>Request Lifecycle</h2>
+<p>All requests into your application are directed through the <code>public/index.php</code> script. When using Apache, the <code>.htaccess</code> file that ships with Laravel handles the passing of all requests to <code>index.php</code>. From here, Laravel begins the process of handling the requests and returning a response to the client. Getting a general idea for the Laravel bootstrap process will be useful, so we'll cover that now!</p>
+<p>By far, the most important concept to grasp when learning about Laravel's bootstrap process is <strong>Service Providers</strong>. You can find a list of service providers by opening your <code>app/config/app.php</code> configuration file and finding the <code>providers</code> array. These providers serve as the primary bootstrapping mechanism for Laravel. But, before we dig into service providers, let's go back to <code>index.php</code>. After a request enters your <code>index.php</code> file, the <code>bootstrap/start.php</code> file will be loaded. This file creates the new Laravel <code>Application</code> object, which also serves as an <a href="ioc.html">IoC container</a>.</p>
+<p>After creating the <code>Application</code> object, a few project paths will be set and <a href="configuration.html#environment-configuration">environment detection</a> will be performed. Then, an internal Laravel bootstrap script will be called. This file lives deep within the Laravel source, and sets a few more settings based on your configuration files, such as timezone, error reporting, etc. But, in addition to setting these rather trivial configuration options, it also does something very important: registers all of the service providers configured for your application.</p>
+<p>Simple service providers only have one method: <code>register</code>. This <code>register</code> method is called when the service provider is registered with the application object via the application's own <code>register</code> method. Within this method, service providers register things with the <a href="ioc.html">IoC container</a>. Essentially, each service provider binds one or more <a href="http://us3.php.net/manual/en/functions.anonymous.php">closures</a> into the container, which allows you to access those bound services within your application. So, for example, the <code>QueueServiceProvider</code> registers closures that resolve the various <a href="queues.html">Queue</a> related classes. Of course, service providers may be used for any bootstrapping task, not just registering things with the IoC container. A service provider may register event listeners, view composers, Artisan commands, and more.</p>
+<p>After all of the service providers have been registered, your <code>app/start</code> files will be loaded. Lastly, your <code>app/routes.php</code> file will be loaded. Once your <code>routes.php</code> file has been loaded, the Request object is sent to the application so that it may be dispatched to a route.</p>
+<p>So, let's summarize:</p>
+<ol>
+<li>Request enters <code>public/index.php</code> file.</li>
+<li><code>bootstrap/start.php</code> file creates Application and detects environment.</li>
+<li>Internal <code>framework/start.php</code> file configures settings and loads service providers.</li>
+<li>Application <code>app/start</code> files are loaded.</li>
+<li>Application <code>app/routes.php</code> file is loaded.</li>
+<li>Request object sent to Application, which returns Response object.</li>
+<li>Response object sent back to client.</li>
+</ol>
+<p>Now that you have a good idea of how a request to a Laravel application is handled, let's take a closer look at &quot;start&quot; files!</p>
+<p><a name="start-files"></a></p>
+<h2>Start Files</h2>
+<p>Your application's start files are stored at <code>app/start</code>. By default, three are included with your application: <code>global.php</code>, <code>local.php</code>, and <code>artisan.php</code>. For more information about <code>artisan.php</code>, refer to the documentation on the <a href="commands.html#registering-commands">Artisan command line</a>.</p>
+<p>The <code>global.php</code> start file contains a few basic items by default, such as the registration of the <a href="errors.html">Logger</a> and the inclusion of your <code>app/filters.php</code> file. However, you are free to add anything to this file that you wish. It will be automatically included on <em>every</em> request to your application, regardless of environment. The <code>local.php</code> file, on the other hand, is only called when the application is executing in the <code>local</code> environment. For more information on environments, check out the <a href="configuration.html">configuration</a> documentation.</p>
+<p>Of course, if you have other environments in addition to <code>local</code>, you may create start files for those environments as well. They will be automatically included when your application is running in that environment. So, for example, if you have a <code>development</code> environment configured in your <code>bootstrap/start.php</code> file, you may create a <code>app/start/development.php</code> file, which will be included when any requests enter the application in that environment.</p>
+<h3>What To Place In Start Files</h3>
+<p>Start files serve as a simple place to place any &quot;bootstrapping&quot; code. For example, you could register a View composer, configure your logging preferences, set some PHP settings, etc. It's totally up to you. Of course, throwing all of your bootstrapping code into your start files can get messy. For large applications, or if you feel your start files are getting messy, consider moving some bootstrapping code into <a href="ioc.html#service-providers">service providers</a>.</p>
+<p><a name="application-events"></a></p>
+<h2>Application Events</h2>
+<h4>Registering Application Events</h4>
+<p>You may also do pre and post request processing by registering <code>before</code>, <code>after</code>, <code>finish</code>, and <code>shutdown</code> application events:</p>
+<pre><code>App::before(function($request)
+{
+    //
+});
+
+App::after(function($request, $response)
+{
+    //
+});</code></pre>
+<p>Listeners to these events will be run <code>before</code> and <code>after</code> each request to your application. These events can be helpful for global filtering or global modification of responses. You may register them in one of your <code>start</code> files or in a <a href="ioc.html#service-providers">service provider</a>.</p>
+<p>You may also register a listener on the <code>matched</code> event, which is fired when an incoming request has been matched to a route but that route has not yet been executed:</p>
+<pre><code>Route::matched(function($route, $request)
+{
+    //
+});</code></pre>
+<p>The <code>finish</code> event is called after the response from your application has been sent back to the client. This is a good place to do any last minute processing your application requires. The <code>shutdown</code> event is called immediately after all of the <code>finish</code> event handlers finish processing, and is the last opportunity to do any work before the script terminates. Most likely, you will not have a need to use either of these events.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/lifecycle by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+</html>

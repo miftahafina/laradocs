@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.0/quick by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Laravel Quickstart - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/quick.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/quick.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="quick.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="contributing.html">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="contributing.html">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Laravel Quickstart</h1>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#routing">Routing</a></li>
+<li><a href="#creating-a-view">Creating A View</a></li>
+<li><a href="#creating-a-migration">Creating A Migration</a></li>
+<li><a href="#eloquent-orm">Eloquent ORM</a></li>
+<li><a href="#displaying-data">Displaying Data</a></li>
+</ul>
+<p><a name="installation"></a></p>
+<h2>Installation</h2>
+<p>The Laravel framework utilizes <a href="http://getcomposer.org/">Composer</a> for installation and dependency management. If you haven't already, start by <a href="http://getcomposer.org/doc/00-intro.md">installing Composer</a>.</p>
+<p>Now you can install Laravel by issuing the following command from your terminal:</p>
+<pre><code>composer create-project laravel/laravel=4.0.* your-project-name --prefer-dist</code></pre>
+<p>This command will download and install a fresh copy of Laravel in a new <code>your-project-name</code> folder within your current directory.</p>
+<p>If you prefer, you can alternatively download a copy of the <a href="https://github.com/laravel/laravel/archive/master.zip">Laravel repository from Github</a> manually. Next run the <code>composer install</code> command in the root of your manually created project directory. This command will download and install the framework's dependencies.</p>
+<p><a name="permissions"></a></p>
+<h3>Permissions</h3>
+<p>After installing Laravel, you may need to grant the web server write permissions to the <code>app/storage</code> directories. See the <a href="../5.0/installation.html">Installation</a> documentation for more details on configuration.</p>
+<p><a name="directories"></a></p>
+<h3>Directory Structure</h3>
+<p>After installing the framework, take a glance around the project to familiarize yourself with the directory structure. The <code>app</code> directory contains folders such as <code>views</code>, <code>controllers</code>, and <code>models</code>. Most of your application's code will reside somewhere in this directory. You may also wish to explore the <code>app/config</code> directory and the configuration options that are available to you.</p>
+<p><a name="routing"></a></p>
+<h2>Routing</h2>
+<p>To get started, let's create our first route. In Laravel, the simplest route is a route to a Closure. Pop open the <code>app/routes.php</code> file and add the following route to the bottom of the file:</p>
+<pre><code>Route::get('users', function()
+{
+    return 'Users!';
+});</code></pre>
+<p>Now, if you hit the <code>/users</code> route in your web browser, you should see <code>Users!</code> displayed as the response. Great! You've just created your first route.</p>
+<p>Routes can also be attached to controller classes. For example:</p>
+<pre><code>Route::get('users', 'UserController@getIndex');</code></pre>
+<p>This route informs the framework that requests to the <code>/users</code> route should call the <code>getIndex</code> method on the <code>UserController</code> class. For more information on controller routing, check out the <a href="../5.0/controllers.html">controller documentation</a>.</p>
+<p><a name="creating-a-view"></a></p>
+<h2>Creating A View</h2>
+<p>Next, we'll create a simple view to display our user data. Views live in the <code>app/views</code> directory and contain the HTML of your application. We're going to place two new views in this directory: <code>layout.blade.php</code> and <code>users.blade.php</code>. First, let's create our <code>layout.blade.php</code> file:</p>
+<pre><code>&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Laravel Quickstart&lt;/h1&gt;
+
+        @yield('content')
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Next, we'll create our <code>users.blade.php</code> view:</p>
+<pre><code>@extends('layout')
+
+@section('content')
+    Users!
+@stop</code></pre>
+<p>Some of this syntax probably looks quite strange to you. That's because we're using Laravel's templating system: Blade. Blade is very fast, because it is simply a handful of regular expressions that are run against your templates to compile them to pure PHP. Blade provides powerful functionality like template inheritance, as well as some syntax sugar on typical PHP control structures such as <code>if</code> and <code>for</code>. Check out the <a href="../5.0/templates.html">Blade documentation</a> for more details.</p>
+<p>Now that we have our views, let's return it from our <code>/users</code> route. Instead of returning <code>Users!</code> from the route, return the view instead:</p>
+<pre><code>Route::get('users', function()
+{
+    return View::make('users');
+});</code></pre>
+<p>Wonderful! Now you have setup a simple view that extends a layout. Next, let's start working on our database layer.</p>
+<p><a name="creating-a-migration"></a></p>
+<h2>Creating A Migration</h2>
+<p>To create a table to hold our data, we'll use the Laravel migration system. Migrations let you expressively define modifications to your database, and easily share them with the rest of your team.</p>
+<p>First, let's configure a database connection. You may configure all of your database connections from the <code>app/config/database.php</code> file. By default, Laravel is configured to use MySQL, and you will need to supply connection credentials within the database configuration file. If you wish, you may change the <code>driver</code> option to <code>sqlite</code> and it will use the SQLite database included in the <code>app/database</code> directory.</p>
+<p>Next, to create the migration, we'll use the <a href="../5.0/artisan.html">Artisan CLI</a>. From the root of your project, run the following from your terminal:</p>
+<pre><code>php artisan migrate:make create_users_table</code></pre>
+<p>Next, find the generated migration file in the <code>app/database/migrations</code> folder. This file contains a class with two methods: <code>up</code> and <code>down</code>. In the <code>up</code> method, you should make the desired changes to your database tables, and in the <code>down</code> method you simply reverse them.</p>
+<p>Let's define a migration that looks like this:</p>
+<pre><code>public function up()
+{
+    Schema::create('users', function($table)
+    {
+        $table-&gt;increments('id');
+        $table-&gt;string('email')-&gt;unique();
+        $table-&gt;string('name');
+        $table-&gt;timestamps();
+    });
+}
+
+public function down()
+{
+    Schema::drop('users');
+}</code></pre>
+<p>Next, we can run our migrations from our terminal using the <code>migrate</code> command. Simply execute this command from the root of your project:</p>
+<pre><code>php artisan migrate</code></pre>
+<p>If you wish to rollback a migration, you may issue the <code>migrate:rollback</code> command. Now that we have a database table, let's start pulling some data!</p>
+<p><a name="eloquent-orm"></a></p>
+<h2>Eloquent ORM</h2>
+<p>Laravel ships with a superb ORM: Eloquent. If you have used the Ruby on Rails framework, you will find Eloquent familiar, as it follows the ActiveRecord ORM style of database interaction.</p>
+<p>First, let's define a model. An Eloquent model can be used to query an associated database table, as well as represent a given row within that table. Don't worry, it will all make sense soon! Models are typically stored in the <code>app/models</code> directory. Let's define a <code>User.php</code> model in that directory like so:</p>
+<pre><code>class User extends Eloquent {}</code></pre>
+<p>Note that we do not have to tell Eloquent which table to use. Eloquent has a variety of conventions, one of which is to use the plural form of the model name as the model's database table. Convenient!</p>
+<p>Using your preferred database administration tool, insert a few rows into your <code>users</code> table, and we'll use Eloquent to retrieve them and pass them to our view.</p>
+<p>Now let's modify our <code>/users</code> route to look like this:</p>
+<pre><code>Route::get('users', function()
+{
+    $users = User::all();
+
+    return View::make('users')-&gt;with('users', $users);
+});</code></pre>
+<p>Let's walk through this route. First, the <code>all</code> method on the <code>User</code> model will retrieve all of the rows in the <code>users</code> table. Next, we're passing these records to the view via the <code>with</code> method. The <code>with</code> method accepts a key and a value, and is used to make a piece of data available to a view.</p>
+<p>Awesome. Now we're ready to display the users in our view!</p>
+<p><a name="displaying-data"></a></p>
+<h2>Displaying Data</h2>
+<p>Now that we have made the <code>users</code> available to our view. We can display them like so:</p>
+<pre><code>@extends('layout')
+
+@section('content')
+    @foreach($users as $user)
+        &lt;p&gt;{{ $user-&gt;name }}&lt;/p&gt;
+    @endforeach
+@stop</code></pre>
+<p>You may be wondering where to find our <code>echo</code> statements. When using Blade, you may echo data by surrounding it with double curly braces. It's a cinch. Now, you should be able to hit the <code>/users</code> route and see the names of your users displayed in the response.</p>
+<p>This is just the beginning. In this tutorial, you've seen the very basics of Laravel, but there are so many more exciting things to learn. Keep reading through the documentation and dig deeper into the powerful features available to you in <a href="../5.0/eloquent.html">Eloquent</a> and <a href="../5.0/templates.html">Blade</a>. Or, maybe you're more interested in <a href="../5.0/queues.html">Queues</a> and <a href="../5.0/testing.html">Unit Testing</a>. Then again, maybe you want to flex your architecture muscles with the <a href="../5.html">IoC Container</a>. The choice is yours!</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.0/quick by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:57 GMT -->
+</html>

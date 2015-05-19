@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/upgrade by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Upgrade Guide - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/upgrade.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/upgrade.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="upgrade.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/upgrade.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Upgrade Guide</h1>
+<ul>
+<li><a href="#upgrade-4.2">Upgrading To 4.2 From 4.1</a></li>
+<li><a href="#upgrade-4.1.29">Upgrading To 4.1.29 From &lt;= 4.1.x</a></li>
+<li><a href="#upgrade-4.1.26">Upgrading To 4.1.26 From &lt;= 4.1.25</a></li>
+<li><a href="#upgrade-4.1">Upgrading To 4.1 From 4.0</a></li>
+</ul>
+<p><a name="upgrade-4.2"></a></p>
+<h2>Upgrading To 4.2 From 4.1</h2>
+<h3>PHP 5.4+</h3>
+<p>Laravel 4.2 requires PHP 5.4.0 or greater.</p>
+<h3>Encryption Defaults</h3>
+<p>Add a new <code>cipher</code> option in your <code>app/config/app.php</code> configuration file. The value of this option should be <code>MCRYPT_RIJNDAEL_256</code>.</p>
+<pre><code>'cipher' =&gt; MCRYPT_RIJNDAEL_256</code></pre>
+<p>This setting may be used to control the default cipher used by the Laravel encryption facilities.</p>
+<blockquote>
+<p><strong>Note:</strong> In Laravel 4.2, the default cipher is <code>MCRYPT_RIJNDAEL_128</code> (AES), which is considered to be the most secure cipher. Changing the cipher back to <code>MCRYPT_RIJNDAEL_256</code> is required to decrypt cookies/values that were encrypted in Laravel &lt;= 4.1</p>
+</blockquote>
+<h3>Soft Deleting Models Now Use Traits</h3>
+<p>If you are using soft deleting models, the <code>softDeletes</code> property has been removed. You must now use the <code>SoftDeletingTrait</code> like so:</p>
+<pre><code>use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
+class User extends Eloquent {
+    use SoftDeletingTrait;
+}</code></pre>
+<p>You must also manually add the <code>deleted_at</code> column to your <code>dates</code> property:</p>
+<pre><code>class User extends Eloquent {
+    use SoftDeletingTrait;
+
+    protected $dates = ['deleted_at'];
+}</code></pre>
+<p>The API for all soft delete operations remains the same.</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>SoftDeletingTrait</code> can not be applied on a base model. It must be used on an actual model class.</p>
+</blockquote>
+<h3>View / Pagination Environment Renamed</h3>
+<p>If you are directly referencing the <code>Illuminate\View\Environment</code> class or <code>Illuminate\Pagination\Environment</code> class, update your code to reference <code>Illuminate\View\Factory</code> and <code>Illuminate\Pagination\Factory</code> instead. These two classes have been renamed to better reflect their function.</p>
+<h3>Additional Parameter On Pagination Presenter</h3>
+<p>If you are extending the <code>Illuminate\Pagination\Presenter</code> class, the abstract method <code>getPageLinkWrapper</code> signature has changed to add the <code>rel</code> argument:</p>
+<pre><code>abstract public function getPageLinkWrapper($url, $page, $rel = null);</code></pre>
+<h3>Iron.Io Queue Encryption</h3>
+<p>If you are using the Iron.io queue driver, you will need to add a new <code>encrypt</code> option to your queue configuration file:</p>
+<pre><code>'encrypt' =&gt; true</code></pre>
+<p><a name="upgrade-4.1.29"></a></p>
+<h2>Upgrading To 4.1.29 From &lt;= 4.1.x</h2>
+<p>Laravel 4.1.29 improves the column quoting for all database drivers. This protects your application from some mass assignment vulnerabilities when <strong>not</strong> using the <code>fillable</code> property on models. If you are using the <code>fillable</code> property on your models to protect against mass assignment, your application is not vulnerable. However, if you are using <code>guarded</code> and are passing a user controlled array into an &quot;update&quot; or &quot;save&quot; type function, you should upgrade to <code>4.1.29</code> immediately as your application may be at risk of mass assignment.</p>
+<p>To upgrade to Laravel 4.1.29, simply <code>composer update</code>. No breaking changes are introduced in this release.</p>
+<p><a name="upgrade-4.1.26"></a></p>
+<h2>Upgrading To 4.1.26 From &lt;= 4.1.25</h2>
+<p>Laravel 4.1.26 introduces security improvements for &quot;remember me&quot; cookies. Before this update, if a remember cookie was hijacked by another malicious user, the cookie would remain valid for a long period of time, even after the true owner of the account reset their password, logged out, etc.</p>
+<p>This change requires the addition of a new <code>remember_token</code> column to your <code>users</code> (or equivalent) database table. After this change, a fresh token will be assigned to the user each time they login to your application. The token will also be refreshed when the user logs out of the application. The implications of this change are: if a &quot;remember me&quot; cookie is hijacked, simply logging out of the application will invalidate the cookie.</p>
+<h3>Upgrade Path</h3>
+<p>First, add a new, nullable <code>remember_token</code> of VARCHAR(100), TEXT, or equivalent to your <code>users</code> table.</p>
+<p>Next, if you are using the Eloquent authentication driver, update your <code>User</code> class with the following three methods:</p>
+<pre><code>public function getRememberToken()
+{
+    return $this-&gt;remember_token;
+}
+
+public function setRememberToken($value)
+{
+    $this-&gt;remember_token = $value;
+}
+
+public function getRememberTokenName()
+{
+    return 'remember_token';
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> All existing &quot;remember me&quot; sessions will be invalidated by this change, so all users will be forced to re-authenticate with your application.</p>
+</blockquote>
+<h3>Package Maintainers</h3>
+<p>Two new methods were added to the <code>Illuminate\Auth\UserProviderInterface</code> interface. Sample implementations may be found in the default drivers:</p>
+<pre><code>public function retrieveByToken($identifier, $token);
+
+public function updateRememberToken(UserInterface $user, $token);</code></pre>
+<p>The <code>Illuminate\Auth\UserInterface</code> also received the three new methods described in the &quot;Upgrade Path&quot;.</p>
+<p><a name="upgrade-4.1"></a></p>
+<h2>Upgrading To 4.1 From 4.0</h2>
+<h3>Upgrading Your Composer Dependency</h3>
+<p>To upgrade your application to Laravel 4.1, change your <code>laravel/framework</code> version to <code>4.1.*</code> in your <code>composer.json</code> file.</p>
+<h3>Replacing Files</h3>
+<p>Replace your <code>public/index.php</code> file with <a href="https://github.com/laravel/laravel/blob/master/public/index.php">this fresh copy from the repository</a>.</p>
+<p>Replace your <code>artisan</code> file with <a href="https://github.com/laravel/laravel/blob/master/artisan">this fresh copy from the repository</a>.</p>
+<h3>Adding Configuration Files &amp; Options</h3>
+<p>Update your <code>aliases</code> and <code>providers</code> arrays in your <code>app/config/app.php</code> configuration file. The updated values for these arrays can be found <a href="https://github.com/laravel/laravel/blob/master/app/config/app.php">in this file</a>. Be sure to add your custom and package service providers / aliases back to the arrays.</p>
+<p>Add the new <code>app/config/remote.php</code> file <a href="https://github.com/laravel/laravel/blob/master/app/config/remote.php">from the repository</a>.</p>
+<p>Add the new <code>expire_on_close</code> configuration option to your <code>app/config/session.php</code> file. The default value should be <code>false</code>.</p>
+<p>Add the new <code>failed</code> configuration section to your <code>app/config/queue.php</code> file. Here are the default values for the section:</p>
+<pre><code>'failed' =&gt; array(
+    'database' =&gt; 'mysql', 'table' =&gt; 'failed_jobs',
+),</code></pre>
+<p><strong>(Optional)</strong> Update the <code>pagination</code> configuration option in your <code>app/config/view.php</code> file to <code>pagination::slider-3</code>.</p>
+<h3>Controller Updates</h3>
+<p>If <code>app/controllers/BaseController.php</code> has a <code>use</code> statement at the top, change <code>use Illuminate\Routing\Controllers\Controller;</code> to <code>use Illuminate\Routing\Controller;</code>.</p>
+<h3>Password Reminders Updates</h3>
+<p>Password reminders have been overhauled for greater flexibility. You may examine the new stub controller by running the <code>php artisan auth:reminders-controller</code> Artisan command. You may also browse the <a href="security.html#password-reminders-and-reset">updated documentation</a> and update your application accordingly.</p>
+<p>Update your <code>app/lang/en/reminders.php</code> language file to match <a href="https://github.com/laravel/laravel/blob/master/app/lang/en/reminders.php">this updated file</a>.</p>
+<h3>Environment Detection Updates</h3>
+<p>For security reasons, URL domains may no longer be used to detect your application environment. These values are easily spoofable and allow attackers to modify the environment for a request. You should convert your environment detection to use machine host names (<code>hostname</code> command on Mac, Linux, and Windows).</p>
+<h3>Simpler Log Files</h3>
+<p>Laravel now generates a single log file: <code>app/storage/logs/laravel.log</code>. However, you may still configure this behavior in your <code>app/start/global.php</code> file.</p>
+<h3>Removing Redirect Trailing Slash</h3>
+<p>In your <code>bootstrap/start.php</code> file, remove the call to <code>$app-&gt;redirectIfTrailingSlash()</code>. This method is no longer needed as this functionality is now handled by the <code>.htaccess</code> file included with the framework.</p>
+<p>Next, replace your Apache <code>.htaccess</code> file with <a href="https://github.com/laravel/laravel/blob/master/public/.htaccess">this new one</a> that handles trailing slashes.</p>
+<h3>Current Route Access</h3>
+<p>The current route is now accessed via <code>Route::current()</code> instead of <code>Route::getCurrentRoute()</code>.</p>
+<h3>Composer Update</h3>
+<p>Once you have completed the changes above, you can run the <code>composer update</code> function to update your core application files! If you receive class load errors, try running the <code>update</code> command with the <code>--no-scripts</code> option enabled like so: <code>composer update --no-scripts</code>.</p>
+<h3>Wildcard Event Listeners</h3>
+<p>The wildcard event listeners no longer append the event to your handler functions parameters. If you require finding the event that was fired you should use <code>Event::firing()</code>.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/upgrade by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+</html>

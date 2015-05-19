@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/upgrade by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Upgrade Guide - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="upgrade.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/upgrade.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/upgrade.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/upgrade.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Upgrade Guide</h1>
+<ul>
+<li><a href="#upgrade-5.1.0">Upgrading To 5.1.0</a></li>
+<li><a href="#upgrade-5.0.16">Upgrading To 5.0.16</a></li>
+<li><a href="#upgrade-5.0">Upgrading To 5.0 From 4.2</a></li>
+<li><a href="#upgrade-4.2">Upgrading To 4.2 From 4.1</a></li>
+<li><a href="#upgrade-4.1.29">Upgrading To 4.1.29 From &lt;= 4.1.x</a></li>
+<li><a href="#upgrade-4.1.26">Upgrading To 4.1.26 From &lt;= 4.1.25</a></li>
+<li><a href="#upgrade-4.1">Upgrading To 4.1 From 4.0</a></li>
+</ul>
+<p><a name="upgrade-5.1.0"></a></p>
+<h2>Upgrading To 5.1.0</h2>
+<h3>Update <code>bootstrap/autoload.php</code></h3>
+<p>Update the <code>$compiledPath</code> variable in <code>bootstrap/autoload.php</code> to the following:</p>
+<pre><code>$compiledPath = __DIR__.'/cache/compiled.php';</code></pre>
+<h3>Create <code>bootstrap/cache</code> Directory</h3>
+<p>Within your <code>bootstrap</code> directory, create a <code>cache</code> directory (<code>bootstrap/cache</code>). Place a <code>.gitignore</code> file in this directory with the following contents:</p>
+<pre><code>*
+!.gitignore</code></pre>
+<p>This directory should be writable, and will be used by the framework to store temporary optimization files like <code>compiled.php</code>, <code>routes.php</code>, <code>config.php</code>, and <code>services.json</code>.</p>
+<h3>Authentication</h3>
+<p>If you are using the provided <code>AuthController</code> which uses the <code>AuthenticatesAndRegistersUsers</code> trait, you will need to make a few changes to how new users are validated and created.</p>
+<p>First, you no longer need to pass the <code>Guard</code> and <code>Registrar</code> instances to the base constructor. You can remove these dependencies entirely from your controller's constructor.</p>
+<p>Secondly, the <code>App\Services\Registrar</code> class used in Laravel 5.0 is no longer needed. You can simply copy and paste your <code>validator</code> and <code>create</code> method from this class directly into your <code>AuthController</code>. No other changes should need to be made to these methods; however, you should be sure to import the <code>Validator</code> facade and your <code>User</code> model at the top of your <code>AuthController</code>.</p>
+<h3>Eloquent</h3>
+<h4>Create Method Signature</h4>
+<p>Eloquent's <code>create</code> method can now be called without any parameters. If you are overriding the <code>create</code> method in your own models, set the default value of the <code>$attributes</code> parameter to an array:</p>
+<pre><code>public static function create(array $attributes = [])
+{
+    // Your custom implementation
+}</code></pre>
+<h4>Date Formatting</h4>
+<p>Previously, the storage format for Eloquent date fields could be modified by overriding the <code>getDateFormat</code> method on your model. This is still possible; however, for convenience you may simply specify a <code>$dateFormat</code> property on the model instead of overriding the method.</p>
+<p>The date format is also now applied when serializing a model to an <code>array</code> or JSON. This may change the format of your JSON serialized date fields when migrating from Laravel 5.0 to 5.1. To set a specific date format for serialized models, you may override the <code>serializeDate(DateTime $date)</code> method on your model. This method allows you to have granular control over the formatting of serialized Eloquent date fields without changing their storage format.</p>
+<h3>The Collection Class</h3>
+<h4>The <code>groupBy</code> Method</h4>
+<p>The <code>groupBy</code> method now returns <code>Collection</code> instances for each item in the parent <code>Collection</code>. If you would like to convert all of the items back to plain arrays, you may <code>map</code> over them:</p>
+<pre><code>$collection-&gt;groupBy('type')-&gt;map(function($item)
+{
+    return $item-&gt;all();
+});</code></pre>
+<h4>The <code>lists</code> Method</h4>
+<p>The <code>lists</code> method now returns a <code>Collection</code> instance. If you would like to convert the <code>Collection</code> into a plain array, use the <code>all</code> method:</p>
+<pre><code>$collection-&gt;lists('id')-&gt;all();</code></pre>
+<p><a name="upgrade-5.0.16"></a></p>
+<h2>Upgrading To 5.0.16</h2>
+<p>In your <code>bootstrap/autoload.php</code> file, update the <code>$compiledPath</code> variable to:</p>
+<pre><code>$compiledPath = __DIR__.'/../vendor/compiled.php';</code></pre>
+<p><a name="upgrade-5.0"></a></p>
+<h2>Upgrading To 5.0 From 4.2</h2>
+<h3>Fresh Install, Then Migrate</h3>
+<p>The recommended method of upgrading is to create a new Laravel <code>5.0</code> install and then to copy your <code>4.2</code> site's unique application files into the new application. This would include controllers, routes, Eloquent models, Artisan commands, assets, and other code specific to your application.</p>
+<p>To start, <a href="installation.html">install a new Laravel 5 application</a> into a fresh directory in your local environment. We'll discuss each piece of the migration process in further detail below.</p>
+<h3>Composer Dependencies &amp; Packages</h3>
+<p>Don't forget to copy any additional Composer dependencies into your 5.0 application. This includes third-party code such as SDKs.</p>
+<p>Some Laravel-specific packages may not be compatible with Laravel 5 on initial release. Check with your package's maintainer to determine the proper version of the package for Laravel 5. Once you have added any additional Composer dependencies your application needs, run <code>composer update</code>.</p>
+<h3>Namespacing</h3>
+<p>By default, Laravel 4 applications did not utilize namespacing within your application code. So, for example, all Eloquent models and controllers simply lived in the &quot;global&quot; namespace. For a quicker migration, you can simply leave these classes in the global namespace in Laravel 5 as well.</p>
+<h3>Configuration</h3>
+<h4>Migrating Environment Variables</h4>
+<p>Copy the new <code>.env.example</code> file to <code>.env</code>, which is the <code>5.0</code> equivalent of the old <code>.env.php</code> file. Set any appropriate values there, like your <code>APP_ENV</code> and <code>APP_KEY</code> (your encryption key), your database credentials, and your cache and session drivers.</p>
+<p>Additionally, copy any custom values you had in your old <code>.env.php</code> file and place them in both <code>.env</code> (the real value for your local environment) and <code>.env.example</code> (a sample instructional value for other team members).</p>
+<p>For more information on environment configuration, view the <a href="configuration.html#environment-configuration">full documentation</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> You will need to place the appropriate <code>.env</code> file and values on your production server before deploying your Laravel 5 application.</p>
+</blockquote>
+<h4>Configuration Files</h4>
+<p>Laravel 5.0 no longer uses <code>app/config/{environmentName}/</code> directories to provide specific configuration files for a given environment. Instead, move any configuration values that vary by environment into <code>.env</code>, and then access them in your configuration files using <code>env('key', 'default value')</code>. You will see examples of this in the <code>config/database.php</code> configuration file.</p>
+<p>Set the config files in the <code>config/</code> directory to represent either the values that are consistent across all of your environments, or set them to use <code>env()</code> to load values that vary by environment.</p>
+<p>Remember, if you add more keys to <code>.env</code> file, add sample values to the <code>.env.example</code> file as well. This will help your other team members create their own <code>.env</code> files.</p>
+<h3>Routes</h3>
+<p>Copy and paste your old <code>routes.php</code> file into your new <code>app/Http/routes.php</code>.</p>
+<h3>Controllers</h3>
+<p>Next, move all of your controllers into the <code>app/Http/Controllers</code> directory. Since we are not going to migrate to full namespacing in this guide, add the <code>app/Http/Controllers</code> directory to the <code>classmap</code> directive of your <code>composer.json</code> file. Next, you can remove the namespace from the abstract <code>app/Http/Controllers/Controller.php</code> base class. Verify that your migrated controllers are extending this base class.</p>
+<p>In your <code>app/Providers/RouteServiceProvider.php</code> file, set the <code>namespace</code> property to <code>null</code>.</p>
+<h3>Route Filters</h3>
+<p>Copy your filter bindings from <code>app/filters.php</code> and place them into the <code>boot()</code> method of <code>app/Providers/RouteServiceProvider.php</code>. Add <code>use Illuminate\Support\Facades\Route;</code> in the <code>app/Providers/RouteServiceProvider.php</code> in order to continue using the <code>Route</code> Facade.</p>
+<p>You do not need to move over any of the default Laravel 4.0 filters such as <code>auth</code> and <code>csrf</code>; they're all here, but as middleware. Edit any routes or controllers that reference the old default filters (e.g. <code>['before' =&gt; 'auth']</code>) and change them to reference the new middleware (e.g. <code>['middleware' =&gt; 'auth'].</code>)</p>
+<p>Filters are not removed in Laravel 5. You can still bind and use your own custom filters using <code>before</code> and <code>after</code>.</p>
+<h3>Global CSRF</h3>
+<p>By default, <a href="routing.html#csrf-protection">CSRF protection</a> is enabled on all routes. If you'd like to disable this, or only manually enable it on certain routes, remove this line from <code>App\Http\Kernel</code>'s <code>middleware</code> array:</p>
+<pre><code>'App\Http\Middleware\VerifyCsrfToken',</code></pre>
+<p>If you want to use it elsewhere, add this line to <code>$routeMiddleware</code>:</p>
+<pre><code>'csrf' =&gt; 'App\Http\Middleware\VerifyCsrfToken',</code></pre>
+<p>Now you can add the middleware to individual routes / controllers using <code>['middleware' =&gt; 'csrf']</code> on the route. For more information on middleware, consult the <a href="middleware.html">full documentation</a>.</p>
+<h3>Eloquent Models</h3>
+<p>Feel free to create a new <code>app/Models</code> directory to house your Eloquent models. Again, add this directory to the <code>classmap</code> directive of your <code>composer.json</code> file.</p>
+<p>Update any models using <code>SoftDeletingTrait</code> to use <code>Illuminate\Database\Eloquent\SoftDeletes</code>.</p>
+<h4>Eloquent Caching</h4>
+<p>Eloquent no longer provides the <code>remember</code> method for caching queries. You now are responsible for caching your queries manually using the <code>Cache::remember</code> function. For more information on caching, consult the <a href="cache.html">full documentation</a>.</p>
+<h3>User Authentication Model</h3>
+<p>To upgrade your <code>User</code> model for Laravel 5's authentication system, follow these instructions:</p>
+<p><strong>Delete the following from your <code>use</code> block:</strong></p>
+<pre><code class="language-php">use Illuminate\Auth\UserInterface;
+use Illuminate\Auth\Reminders\RemindableInterface;</code></pre>
+<p><strong>Add the following to your <code>use</code> block:</strong></p>
+<pre><code class="language-php">use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;</code></pre>
+<p><strong>Remove the UserInterface and RemindableInterface interfaces.</strong></p>
+<p><strong>Mark the class as implementing the following interfaces:</strong></p>
+<pre><code class="language-php">implements AuthenticatableContract, CanResetPasswordContract</code></pre>
+<p><strong>Include the following traits within the class declaration:</strong></p>
+<pre><code class="language-php">use Authenticatable, CanResetPassword;</code></pre>
+<p><strong>If you used them, remove <code>Illuminate\Auth\Reminders\RemindableTrait</code>  and <code>Illuminate\Auth\UserTrait</code> from your use block and your class declaration.</strong></p>
+<h3>Cashier User Changes</h3>
+<p>The name of the trait and interface used by <a href="billing.html">Laravel Cashier</a> has changed. Instead of using <code>BillableTrait</code>, use the <code>Laravel\Cashier\Billable</code> trait. And, instead of <code>Laravel\Cashier\BillableInterface</code> implement the <code>Laravel\Cashier\Contracts\Billable</code> interface instead. No other method changes are required.</p>
+<h3>Artisan Commands</h3>
+<p>Move all of your command classes from your old <code>app/commands</code> directory to the new <code>app/Console/Commands</code> directory. Next, add the <code>app/Console/Commands</code> directory to the <code>classmap</code> directive of your <code>composer.json</code> file.</p>
+<p>Then, copy your list of Artisan commands from <code>start/artisan.php</code> into the <code>command</code> array of the <code>app/Console/Kernel.php</code> file.</p>
+<h3>Database Migrations &amp; Seeds</h3>
+<p>Delete the two migrations included with Laravel 5.0, since you should already have the users table in your database.</p>
+<p>Move all of your migration classes from the old <code>app/database/migrations</code> directory to the new <code>database/migrations</code>. All of your seeds should be moved from <code>app/database/seeds</code> to <code>database/seeds</code>.</p>
+<h3>Global IoC Bindings</h3>
+<p>If you have any <a href="container.html">service container</a> bindings in <code>start/global.php</code>, move them all to the <code>register</code> method of the <code>app/Providers/AppServiceProvider.php</code> file. You may need to import the <code>App</code> facade.</p>
+<p>Optionally, you may break these bindings up into separate service providers by category.</p>
+<h3>Views</h3>
+<p>Move your views from <code>app/views</code> to the new <code>resources/views</code> directory.</p>
+<h3>Blade Tag Changes</h3>
+<p>For better security by default, Laravel 5.0 escapes all output from both the <code>{{ }}</code> and <code>{{{ }}}</code> Blade directives. A new <code>{!! !!}</code> directive has been introduced to display raw, unescaped output. The most secure option when upgrading your application is to only use the new <code>{!! !!}</code> directive when you are <strong>certain</strong> that it is safe to display raw output.</p>
+<p>However, if you <strong>must</strong> use the old Blade syntax, add the following lines at the bottom of <code>AppServiceProvider@register</code>:</p>
+<pre><code class="language-php">\Blade::setRawTags('{{', '}}');
+\Blade::setContentTags('{{{', '}}}');
+\Blade::setEscapedContentTags('{{{', '}}}');</code></pre>
+<p>This should not be done lightly, and may make your application more vulnerable to XSS exploits. Also, comments with <code>{{--</code> will no longer work.</p>
+<h3>Translation Files</h3>
+<p>Move your language files from <code>app/lang</code> to the new <code>resources/lang</code> directory.</p>
+<h3>Public Directory</h3>
+<p>Copy your application's public assets from your <code>4.2</code> application's <code>public</code> directory to your new application's <code>public</code> directory. Be sure to keep the <code>5.0</code> version of <code>index.php</code>.</p>
+<h3>Tests</h3>
+<p>Move your tests from <code>app/tests</code> to the new <code>tests</code> directory.</p>
+<h3>Misc. Files</h3>
+<p>Copy in any other files in your project. For example, <code>.scrutinizer.yml</code>, <code>bower.json</code> and other similar tooling configuration files.</p>
+<p>You may move your Sass, Less, or CoffeeScript to any location you wish. The <code>resources/assets</code> directory could be a good default location.</p>
+<h3>Form &amp; HTML Helpers</h3>
+<p>If you're using Form or HTML helpers, you will see an error stating <code>class 'Form' not found</code> or <code>class 'Html' not found</code>. The Form and HTML helpers have been deprecated in Laravel 5.0; however, there are community-driven replacements such as those maintained by the <a href="http://laravelcollective.com/docs/master/html">Laravel Collective</a>.</p>
+<p>For example, you may add <code>"laravelcollective/html": "~5.0"</code> to your <code>composer.json</code> file's <code>require</code> section.</p>
+<p>You'll also need to add the Form and HTML facades and service provider. Edit <code>config/app.php</code> and add this line to the 'providers' array:</p>
+<pre><code>'Collective\Html\HtmlServiceProvider',</code></pre>
+<p>Next, add these lines to the 'aliases' array:</p>
+<pre><code>'Form' =&gt; 'Collective\Html\FormFacade',
+'Html' =&gt; 'Collective\Html\HtmlFacade',</code></pre>
+<h3>CacheManager</h3>
+<p>If your application code was injecting <code>Illuminate\Cache\CacheManager</code> to get a non-Facade version of Laravel's cache, inject <code>Illuminate\Contracts\Cache\Repository</code> instead.</p>
+<h3>Pagination</h3>
+<p>Replace any calls to <code>$paginator-&gt;links()</code> with <code>$paginator-&gt;render()</code>.</p>
+<p>Replace any calls to <code>$paginator-&gt;getFrom()</code> and <code>$paginator-&gt;getTo()</code> with <code>$paginator-&gt;firstItem()</code> and <code>$paginator-&gt;lastItem()</code> respectively.</p>
+<p>Remove the &quot;get&quot; prefix from calls to <code>$paginator-&gt;getPerPage()</code>, <code>$paginator-&gt;getCurrentPage()</code>, <code>$paginator-&gt;getLastPage()</code> and <code>$paginator-&gt;getTotal()</code> (e.g. <code>$paginator-&gt;perPage()</code>).</p>
+<h3>Beanstalk Queuing</h3>
+<p>Laravel 5.0 now requires <code>"pda/pheanstalk": "~3.0"</code> instead of <code>"pda/pheanstalk": "~2.1"</code>.</p>
+<h3>Remote</h3>
+<p>The Remote component has been deprecated.</p>
+<h3>Workbench</h3>
+<p>The Workbench component has been deprecated.</p>
+<p><a name="upgrade-4.2"></a></p>
+<h2>Upgrading To 4.2 From 4.1</h2>
+<h3>PHP 5.4+</h3>
+<p>Laravel 4.2 requires PHP 5.4.0 or greater.</p>
+<h3>Encryption Defaults</h3>
+<p>Add a new <code>cipher</code> option in your <code>app/config/app.php</code> configuration file. The value of this option should be <code>MCRYPT_RIJNDAEL_256</code>.</p>
+<pre><code>'cipher' =&gt; MCRYPT_RIJNDAEL_256</code></pre>
+<p>This setting may be used to control the default cipher used by the Laravel encryption facilities.</p>
+<blockquote>
+<p><strong>Note:</strong> In Laravel 4.2, the default cipher is <code>MCRYPT_RIJNDAEL_128</code> (AES), which is considered to be the most secure cipher. Changing the cipher back to <code>MCRYPT_RIJNDAEL_256</code> is required to decrypt cookies/values that were encrypted in Laravel &lt;= 4.1</p>
+</blockquote>
+<h3>Soft Deleting Models Now Use Traits</h3>
+<p>If you are using soft deleting models, the <code>softDeletes</code> property has been removed. You must now use the <code>SoftDeletingTrait</code> like so:</p>
+<pre><code>use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
+class User extends Eloquent {
+    use SoftDeletingTrait;
+}</code></pre>
+<p>You must also manually add the <code>deleted_at</code> column to your <code>dates</code> property:</p>
+<pre><code>class User extends Eloquent {
+    use SoftDeletingTrait;
+
+    protected $dates = ['deleted_at'];
+}</code></pre>
+<p>The API for all soft delete operations remains the same.</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>SoftDeletingTrait</code> can not be applied on a base model. It must be used on an actual model class.</p>
+</blockquote>
+<h3>View / Pagination Environment Renamed</h3>
+<p>If you are directly referencing the <code>Illuminate\View\Environment</code> class or <code>Illuminate\Pagination\Environment</code> class, update your code to reference <code>Illuminate\View\Factory</code> and <code>Illuminate\Pagination\Factory</code> instead. These two classes have been renamed to better reflect their function.</p>
+<h3>Additional Parameter On Pagination Presenter</h3>
+<p>If you are extending the <code>Illuminate\Pagination\Presenter</code> class, the abstract method <code>getPageLinkWrapper</code> signature has changed to add the <code>rel</code> argument:</p>
+<pre><code>abstract public function getPageLinkWrapper($url, $page, $rel = null);</code></pre>
+<h3>Iron.Io Queue Encryption</h3>
+<p>If you are using the Iron.io queue driver, you will need to add a new <code>encrypt</code> option to your queue configuration file:</p>
+<pre><code>'encrypt' =&gt; true</code></pre>
+<p><a name="upgrade-4.1.29"></a></p>
+<h2>Upgrading To 4.1.29 From &lt;= 4.1.x</h2>
+<p>Laravel 4.1.29 improves the column quoting for all database drivers. This protects your application from some mass assignment vulnerabilities when <strong>not</strong> using the <code>fillable</code> property on models. If you are using the <code>fillable</code> property on your models to protect against mass assignment, your application is not vulnerable. However, if you are using <code>guarded</code> and are passing a user controlled array into an &quot;update&quot; or &quot;save&quot; type function, you should upgrade to <code>4.1.29</code> immediately as your application may be at risk of mass assignment.</p>
+<p>To upgrade to Laravel 4.1.29, simply <code>composer update</code>. No breaking changes are introduced in this release.</p>
+<p><a name="upgrade-4.1.26"></a></p>
+<h2>Upgrading To 4.1.26 From &lt;= 4.1.25</h2>
+<p>Laravel 4.1.26 introduces security improvements for &quot;remember me&quot; cookies. Before this update, if a remember cookie was hijacked by another malicious user, the cookie would remain valid for a long period of time, even after the true owner of the account reset their password, logged out, etc.</p>
+<p>This change requires the addition of a new <code>remember_token</code> column to your <code>users</code> (or equivalent) database table. After this change, a fresh token will be assigned to the user each time they login to your application. The token will also be refreshed when the user logs out of the application. The implications of this change are: if a &quot;remember me&quot; cookie is hijacked, simply logging out of the application will invalidate the cookie.</p>
+<h3>Upgrade Path</h3>
+<p>First, add a new, nullable <code>remember_token</code> of VARCHAR(100), TEXT, or equivalent to your <code>users</code> table.</p>
+<p>Next, if you are using the Eloquent authentication driver, update your <code>User</code> class with the following three methods:</p>
+<pre><code>public function getRememberToken()
+{
+    return $this-&gt;remember_token;
+}
+
+public function setRememberToken($value)
+{
+    $this-&gt;remember_token = $value;
+}
+
+public function getRememberTokenName()
+{
+    return 'remember_token';
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> All existing &quot;remember me&quot; sessions will be invalidated by this change, so all users will be forced to re-authenticate with your application.</p>
+</blockquote>
+<h3>Package Maintainers</h3>
+<p>Two new methods were added to the <code>Illuminate\Auth\UserProviderInterface</code> interface. Sample implementations may be found in the default drivers:</p>
+<pre><code>public function retrieveByToken($identifier, $token);
+
+public function updateRememberToken(UserInterface $user, $token);</code></pre>
+<p>The <code>Illuminate\Auth\UserInterface</code> also received the three new methods described in the &quot;Upgrade Path&quot;.</p>
+<p><a name="upgrade-4.1"></a></p>
+<h2>Upgrading To 4.1 From 4.0</h2>
+<h3>Upgrading Your Composer Dependency</h3>
+<p>To upgrade your application to Laravel 4.1, change your <code>laravel/framework</code> version to <code>4.1.*</code> in your <code>composer.json</code> file.</p>
+<h3>Replacing Files</h3>
+<p>Replace your <code>public/index.php</code> file with <a href="https://github.com/laravel/laravel/blob/v4.1.0/public/index.php">this fresh copy from the repository</a>.</p>
+<p>Replace your <code>artisan</code> file with <a href="https://github.com/laravel/laravel/blob/v4.1.0/artisan">this fresh copy from the repository</a>.</p>
+<h3>Adding Configuration Files &amp; Options</h3>
+<p>Update your <code>aliases</code> and <code>providers</code> arrays in your <code>app/config/app.php</code> configuration file. The updated values for these arrays can be found <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/app.php">in this file</a>. Be sure to add your custom and package service providers / aliases back to the arrays.</p>
+<p>Add the new <code>app/config/remote.php</code> file <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/config/remote.php">from the repository</a>.</p>
+<p>Add the new <code>expire_on_close</code> configuration option to your <code>app/config/session.php</code> file. The default value should be <code>false</code>.</p>
+<p>Add the new <code>failed</code> configuration section to your <code>app/config/queue.php</code> file. Here are the default values for the section:</p>
+<pre><code>'failed' =&gt; [
+    'database' =&gt; 'mysql', 'table' =&gt; 'failed_jobs',
+],</code></pre>
+<p><strong>(Optional)</strong> Update the <code>pagination</code> configuration option in your <code>app/config/view.php</code> file to <code>pagination::slider-3</code>.</p>
+<h3>Controller Updates</h3>
+<p>If <code>app/controllers/BaseController.php</code> has a <code>use</code> statement at the top, change <code>use Illuminate\Routing\Controllers\Controller;</code> to <code>use Illuminate\Routing\Controller;</code>.</p>
+<h3>Password Reminders Updates</h3>
+<p>Password reminders have been overhauled for greater flexibility. You may examine the new stub controller by running the <code>php artisan auth:reminders-controller</code> Artisan command. You may also browse the <a href="../5.html#password-reminders-and-reset">updated documentation</a> and update your application accordingly.</p>
+<p>Update your <code>app/lang/en/reminders.php</code> language file to match <a href="https://github.com/laravel/laravel/blob/v4.1.0/app/lang/en/reminders.php">this updated file</a>.</p>
+<h3>Environment Detection Updates</h3>
+<p>For security reasons, URL domains may no longer be used to detect your application environment. These values are easily spoofable and allow attackers to modify the environment for a request. You should convert your environment detection to use machine host names (<code>hostname</code> command on Mac, Linux, and Windows).</p>
+<h3>Simpler Log Files</h3>
+<p>Laravel now generates a single log file: <code>app/storage/logs/laravel.log</code>. However, you may still configure this behavior in your <code>app/start/global.php</code> file.</p>
+<h3>Removing Redirect Trailing Slash</h3>
+<p>In your <code>bootstrap/start.php</code> file, remove the call to <code>$app-&gt;redirectIfTrailingSlash()</code>. This method is no longer needed as this functionality is now handled by the <code>.htaccess</code> file included with the framework.</p>
+<p>Next, replace your Apache <code>.htaccess</code> file with <a href="https://github.com/laravel/laravel/blob/v4.1.0/public/.htaccess">this new one</a> that handles trailing slashes.</p>
+<h3>Current Route Access</h3>
+<p>The current route is now accessed via <code>Route::current()</code> instead of <code>Route::getCurrentRoute()</code>.</p>
+<h3>Composer Update</h3>
+<p>Once you have completed the changes above, you can run the <code>composer update</code> function to update your core application files! If you receive class load errors, try running the <code>update</code> command with the <code>--no-scripts</code> option enabled like so: <code>composer update --no-scripts</code>.</p>
+<h3>Wildcard Event Listeners</h3>
+<p>The wildcard event listeners no longer append the event to your handler functions parameters. If you require finding the event that was fired you should use <code>Event::firing()</code>.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/upgrade by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+</html>

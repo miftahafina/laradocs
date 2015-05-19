@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/pagination by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Pagination - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/pagination.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="pagination.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/pagination.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/pagination.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/pagination.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Pagination</h1>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#appending-to-pagination-links">Appending To Pagination Links</a></li>
+<li><a href="#converting-to-json">Converting To JSON</a></li>
+</ul>
+<p><a name="configuration"></a></p>
+<h2>Configuration</h2>
+<p>In other frameworks, pagination can be very painful. Laravel makes it a breeze. Laravel can generate an intelligent &quot;range&quot; of links based on the current page. The generated HTML is compatible with the Bootstrap CSS framework.</p>
+<p><a name="usage"></a></p>
+<h2>Usage</h2>
+<p>There are several ways to paginate items. The simplest is by using the <code>paginate</code> method on the query builder or an Eloquent model.</p>
+<h4>Paginating Database Results</h4>
+<pre><code>$users = DB::table('users')-&gt;paginate(15);</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Currently, pagination operations that use a <code>groupBy</code> statement cannot be executed efficiently by Laravel. If you need to use a <code>groupBy</code> with a paginated result set, it is recommended that you query the database and create a paginator manually.</p>
+</blockquote>
+<h4>Creating A Paginator Manually</h4>
+<p>Sometimes you may wish to create a pagination instance manually, passing it an array of items. You may do so by creating either an <code>Illuminate\Pagination\Paginator</code> or <code>Illuminate\Pagination\LengthAwarePaginator</code> instance, depending on your needs.</p>
+<h4>Paginating An Eloquent Model</h4>
+<p>You may also paginate <a href="eloquent.html">Eloquent</a> models:</p>
+<pre><code>$allUsers = User::paginate(15);
+
+$someUsers = User::where('votes', '&gt;', 100)-&gt;paginate(15);</code></pre>
+<p>The argument passed to the <code>paginate</code> method is the number of items you wish to display per page. Once you have retrieved the results, you may display them on your view, and create the pagination links using the <code>render</code> method:</p>
+<pre><code>&lt;div class="container"&gt;
+    &lt;?php foreach ($users as $user): ?&gt;
+        &lt;?php echo $user-&gt;name; ?&gt;
+    &lt;?php endforeach; ?&gt;
+&lt;/div&gt;
+
+&lt;?php echo $users-&gt;render(); ?&gt;</code></pre>
+<p>This is all it takes to create a pagination system! Note that we did not have to inform the framework of the current page. Laravel will determine this for you automatically.</p>
+<p>You may also access additional pagination information via the following methods:</p>
+<ul>
+<li><code>currentPage</code></li>
+<li><code>lastPage</code></li>
+<li><code>perPage</code></li>
+<li><code>hasMorePages</code></li>
+<li><code>url</code></li>
+<li><code>nextPageUrl</code></li>
+<li><code>firstItem</code></li>
+<li><code>lastItem</code></li>
+<li><code>total</code></li>
+<li><code>count</code></li>
+</ul>
+<h4>&quot;Simple Pagination&quot;</h4>
+<p>If you are only showing &quot;Next&quot; and &quot;Previous&quot; links in your pagination view, you have the option of using the <code>simplePaginate</code> method to perform a more efficient query. This is useful for larger datasets when you do not require the display of exact page numbers on your view:</p>
+<pre><code>$someUsers = User::where('votes', '&gt;', 100)-&gt;simplePaginate(15);</code></pre>
+<h4>Customizing The Paginator URI</h4>
+<p>You may also customize the URI used by the paginator via the <code>setPath</code> method:</p>
+<pre><code>$users = User::paginate();
+
+$users-&gt;setPath('custom/url');</code></pre>
+<p>The example above will create URLs like the following: <a href="http://example.com/custom/url?page=2">http://example.com/custom/url?page=2</a></p>
+<p><a name="appending-to-pagination-links"></a></p>
+<h2>Appending To Pagination Links</h2>
+<p>You can add to the query string of pagination links using the <code>appends</code> method on the Paginator:</p>
+<pre><code>&lt;?php echo $users-&gt;appends(['sort' =&gt; 'votes'])-&gt;render(); ?&gt;</code></pre>
+<p>This will generate URLs that look something like this:</p>
+<pre><code>http://example.com/something?page=2&amp;sort=votes</code></pre>
+<p>If you wish to append a &quot;hash fragment&quot; to the paginator's URLs, you may use the <code>fragment</code> method:</p>
+<pre><code>&lt;?php echo $users-&gt;fragment('foo')-&gt;render(); ?&gt;</code></pre>
+<p>This method call will generate URLs that look something like this:</p>
+<pre><code>http://example.com/something?page=2#foo</code></pre>
+<p><a name="converting-to-json"></a></p>
+<h2>Converting To JSON</h2>
+<p>The <code>Paginator</code> class implements the <code>Illuminate\Contracts\Support\JsonableInterface</code> contract and exposes the <code>toJson</code> method. You may also convert a <code>Paginator</code> instance to JSON by returning it from a route. The JSON'd form of the instance will include some &quot;meta&quot; information such as <code>total</code>, <code>current_page</code>, and <code>last_page</code>. The instance's data will be available via the <code>data</code> key in the JSON array.</p>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/pagination by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:10 GMT -->
+</html>

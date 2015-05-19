@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/5.0/responses by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>HTTP Responses - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			5.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/responses.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="responses.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/responses.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/responses.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.0/responses.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="bus.html">Command Bus</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>HTTP Responses</h1>
+<ul>
+<li><a href="#basic-responses">Basic Responses</a></li>
+<li><a href="#redirects">Redirects</a></li>
+<li><a href="#other-responses">Other Responses</a></li>
+<li><a href="#response-macros">Response Macros</a></li>
+</ul>
+<p><a name="basic-responses"></a></p>
+<h2>Basic Responses</h2>
+<h4>Returning Strings From Routes</h4>
+<p>The most basic response from a Laravel route is a string:</p>
+<pre><code>Route::get('/', function()
+{
+    return 'Hello World';
+});</code></pre>
+<h4>Creating Custom Responses</h4>
+<p>However, for most routes and controller actions, you will be returning a full <code>Illuminate\Http\Response</code> instance or a <a href="views.html">view</a>. Returning a full <code>Response</code> instance allows you to customize the response's HTTP status code and headers. A <code>Response</code> instance inherits from the <code>Symfony\Component\HttpFoundation\Response</code> class, providing a variety of methods for building HTTP responses:</p>
+<pre><code>use Illuminate\Http\Response;
+
+return (new Response($content, $status))
+              -&gt;header('Content-Type', $value);</code></pre>
+<p>For convenience, you may also use the <code>response</code> helper:</p>
+<pre><code>return response($content, $status)
+              -&gt;header('Content-Type', $value);</code></pre>
+<blockquote>
+<p><strong>Note:</strong> For a full list of available <code>Response</code> methods, check out its <a href="http://laravel.com/api/5.0/Illuminate/Http/Response.html">API documentation</a> and the <a href="http://api.symfony.com/2.5/Symfony/Component/HttpFoundation/Response.html">Symfony API documentation</a>.</p>
+</blockquote>
+<h4>Sending A View In A Response</h4>
+<p>If you need access to the <code>Response</code> class methods, but want to return a view as the response content, you may use the <code>view</code> method for convenience:</p>
+<pre><code>return response()-&gt;view('hello')-&gt;header('Content-Type', $type);</code></pre>
+<h4>Attaching Cookies To Responses</h4>
+<pre><code>return response($content)-&gt;withCookie(cookie('name', 'value'));</code></pre>
+<h4>Method Chaining</h4>
+<p>Keep in mind that most <code>Response</code> methods are chainable, allowing for the fluent building of responses:</p>
+<pre><code>return response()-&gt;view('hello')-&gt;header('Content-Type', $type)
+                 -&gt;withCookie(cookie('name', 'value'));</code></pre>
+<p><a name="redirects"></a></p>
+<h2>Redirects</h2>
+<p>Redirect responses are typically instances of the <code>Illuminate\Http\RedirectResponse</code> class, and contain the proper headers needed to redirect the user to another URL.</p>
+<h4>Returning A Redirect</h4>
+<p>There are several ways to generate a <code>RedirectResponse</code> instance. The simplest method is to use the <code>redirect</code> helper method. When testing, it is not common to mock the creation of a redirect response, so using the helper method is almost always acceptable:</p>
+<pre><code>return redirect('user/login');</code></pre>
+<h4>Returning A Redirect With Flash Data</h4>
+<p>Redirecting to a new URL and <a href="session.html">flashing data to the session</a> are typically done at the same time. So, for convenience, you may create a <code>RedirectResponse</code> instance <strong>and</strong> flash data to the session in a single method chain:</p>
+<pre><code>return redirect('user/login')-&gt;with('message', 'Login Failed');</code></pre>
+<h4>Redirecting To The Previous URL</h4>
+<p>You may wish to redirect the user to their previous location, for example, after a form submission. You can do so by using the <code>back</code> method:</p>
+<pre><code>return redirect()-&gt;back();
+
+return redirect()-&gt;back()-&gt;withInput();</code></pre>
+<h4>Returning A Redirect To A Named Route</h4>
+<p>When you call the <code>redirect</code> helper with no parameters, an instance of <code>Illuminate\Routing\Redirector</code> is returned, allowing you to call any method on the <code>Redirector</code> instance. For example, to generate a <code>RedirectResponse</code> to a named route, you may use the <code>route</code> method:</p>
+<pre><code>return redirect()-&gt;route('login');</code></pre>
+<h4>Returning A Redirect To A Named Route With Parameters</h4>
+<p>If your route has parameters, you may pass them as the second argument to the <code>route</code> method.</p>
+<pre><code>// For a route with the following URI: profile/{id}
+
+return redirect()-&gt;route('profile', [1]);</code></pre>
+<p>If you are redirecting to a route with an &quot;ID&quot; parameter that is being populated from an Eloquent model, you may simply pass the model itself. The ID will be extracted automatically:</p>
+<pre><code>return redirect()-&gt;route('profile', [$user]);</code></pre>
+<h4>Returning A Redirect To A Named Route Using Named Parameters</h4>
+<pre><code>// For a route with the following URI: profile/{user}
+
+return redirect()-&gt;route('profile', ['user' =&gt; 1]);</code></pre>
+<h4>Returning A Redirect To A Controller Action</h4>
+<p>Similarly to generating <code>RedirectResponse</code> instances to named routes, you may also generate redirects to <a href="controllers.html">controller actions</a>:</p>
+<pre><code>return redirect()-&gt;action('App\Http\Controllers\HomeController@index');</code></pre>
+<blockquote>
+<p><strong>Note:</strong> You do not need to specify the full namespace to the controller if you have registered a root controller namespace via <code>URL::setRootControllerNamespace</code>.</p>
+</blockquote>
+<h4>Returning A Redirect To A Controller Action With Parameters</h4>
+<pre><code>return redirect()-&gt;action('App\Http\Controllers\UserController@profile', [1]);</code></pre>
+<h4>Returning A Redirect To A Controller Action Using Named Parameters</h4>
+<pre><code>return redirect()-&gt;action('App\Http\Controllers\UserController@profile', ['user' =&gt; 1]);</code></pre>
+<p><a name="other-responses"></a></p>
+<h2>Other Responses</h2>
+<p>The <code>response</code> helper may be used to conveniently generate other types of response instances. When the <code>response</code> helper is called without arguments, an implementation of the <code>Illuminate\Contracts\Routing\ResponseFactory</code> <a href="contracts.html">contract</a> is returned. This contract provides several helpful methods for generating responses.</p>
+<h4>Creating A JSON Response</h4>
+<p>The <code>json</code> method will automatically set the <code>Content-Type</code> header to <code>application/json</code>:</p>
+<pre><code>return response()-&gt;json(['name' =&gt; 'Abigail', 'state' =&gt; 'CA']);</code></pre>
+<h4>Creating A JSONP Response</h4>
+<pre><code>return response()-&gt;json(['name' =&gt; 'Abigail', 'state' =&gt; 'CA'])
+                 -&gt;setCallback($request-&gt;input('callback'));</code></pre>
+<h4>Creating A File Download Response</h4>
+<pre><code>return response()-&gt;download($pathToFile);
+
+return response()-&gt;download($pathToFile, $name, $headers);
+
+return response()-&gt;download($pathToFile)-&gt;deleteFileAfterSend(true);</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Symfony HttpFoundation, which manages file downloads, requires the file being downloaded to have an ASCII file name.</p>
+</blockquote>
+<p><a name="response-macros"></a></p>
+<h2>Response Macros</h2>
+<p>If you would like to define a custom response that you can re-use in a variety of your routes and controllers, you may use the <code>macro</code> method on an implementation of <code>Illuminate\Contracts\Routing\ResponseFactory</code>.</p>
+<p>For example, from a <a href="providers.html">service provider's</a> <code>boot</code> method:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use Response;
+use Illuminate\Support\ServiceProvider;
+
+class ResponseMacroServiceProvider extends ServiceProvider {
+
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Response::macro('caps', function($value)
+        {
+            return Response::make(strtoupper($value));
+        });
+    }
+
+}</code></pre>
+<p>The <code>macro</code> function accepts a name as its first argument, and a Closure as its second. The macro's Closure will be executed when calling the macro name from a <code>ResponseFactory</code> implementation or the <code>response</code> helper:</p>
+<pre><code>return response()-&gt;caps('foo');</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/5.0/responses by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:11:30 GMT -->
+</html>

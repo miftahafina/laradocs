@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.2/contributions by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Contribution Guide - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.2
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/contributions.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/contributions.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="contributions.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/contributions.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="security.html">Authentication</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="ssh.html">SSH</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Contribution Guide</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#core-development-discussion">Core Development Discussion</a></li>
+<li><a href="#new-features">New Features</a></li>
+<li><a href="#bugs">Bugs</a></li>
+<li><a href="#creating-liferaft-applications">Creating Liferaft Applications</a></li>
+<li><a href="#grabbing-liferaft-applications">Grabbing Liferaft Applications</a></li>
+<li><a href="#which-branch">Which Branch?</a></li>
+<li><a href="#security-vulnerabilities">Security Vulnerabilities</a></li>
+<li><a href="#coding-style">Coding Style</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2>Introduction</h2>
+<p>Laravel is an open-source project and anyone may contribute to Laravel for its improvement. We welcome contributors, regardless of skill level, gender, race, religion, or nationality. Having a diverse, vibrant community is one of the core values of the framework!</p>
+<p>To encourage active collaboration, Laravel currently only accepts pull requests, not bug reports. &quot;Bug reports&quot; may be sent in the form of a pull request containing a failing unit test. Alternatively, a demonstration of the bug within a sandbox Laravel application may be sent as a pull request to the <a href="https://github.com/laravel/laravel">main Laravel repository</a>. A failing unit test or sandbox application provides the development team &quot;proof&quot; that the bug exists, and, after the development team addresses the bug, serves as a reliable indicator that the bug remains fixed.</p>
+<p>The Laravel source code is managed on Github, and there are repositories for each of the Laravel projects:</p>
+<ul>
+<li><a href="https://github.com/laravel/framework">Laravel Framework</a></li>
+<li><a href="https://github.com/laravel/laravel">Laravel Application</a></li>
+<li><a href="https://github.com/laravel/docs">Laravel Documentation</a></li>
+<li><a href="https://github.com/laravel/cashier">Laravel Cashier</a></li>
+<li><a href="https://github.com/laravel/envoy">Laravel Envoy</a></li>
+<li><a href="https://github.com/laravel/homestead">Laravel Homestead</a></li>
+<li><a href="https://github.com/laravel/settler">Laravel Homestead Build Scripts</a></li>
+<li><a href="https://github.com/laravel/laravel.com">Laravel Website</a></li>
+<li><a href="https://github.com/laravel/art">Laravel Art</a></li>
+</ul>
+<p><a name="core-development-discussion"></a></p>
+<h2>Core Development Discussion</h2>
+<p>Discussion regarding bugs, new features, and implementation of existing features takes place in the <code>#laravel-dev</code> IRC channel (Freenode). Taylor Otwell, the maintainer of Laravel, is typically present in the channel on weekdays from 8am-5pm (UTC-06:00 or America/Chicago), and sporadically present in the channel at other times.</p>
+<p>The <code>#laravel-dev</code> IRC channel is open to all. All are welcome to join the channel either to participate or simply observe the discussions!</p>
+<p><a name="new-features"></a></p>
+<h2>New Features</h2>
+<p>Before sending pull requests for new features, please contact Taylor Otwell via the <code>#laravel-dev</code> IRC channel (Freenode). If the feature is found to be a good fit for the framework, you are free to make a pull request. If the feature is rejected, don't give up! You are still free to turn your feature into a package which can be released to the world via <a href="https://packagist.org/">Packagist</a>.</p>
+<p>When adding new features, don't forget to add unit tests! Unit tests help ensure the stability and reliability of the framework as new features are added.</p>
+<p><a name="bugs"></a></p>
+<h2>Bugs</h2>
+<h3>Via Unit Test</h3>
+<p>Pull requests for bugs may be sent without prior discussion with the Laravel development team. When submitting a bug fix, try to include a unit test that ensures the bug never appears again!</p>
+<p>If you believe you have found a bug in the framework, but are unsure how to fix it, please send a pull request containing a failing unit test. A failing unit test provides the development team &quot;proof&quot; that the bug exists, and, after the development team addresses the bug, serves as a reliable indicator that the bug remains fixed.</p>
+<p>If are unsure how to write a failing unit test for a bug, review the other unit tests included with the framework. If you're still lost, you may ask for help in the <code>#laravel</code> IRC channel (Freenode).</p>
+<p><a name="which-branch"></a></p>
+<h2>Which Branch?</h2>
+<blockquote>
+<p><strong>Note:</strong> This section primarly applies to those sending pull requests to the <a href="https://github.com/laravel/framework">laravel/framework</a> repository, not Liferaft applications.</p>
+</blockquote>
+<p><strong>All</strong> bug fixes should be sent to the latest stable branch. Bug fixes should <strong>never</strong> be sent to the <code>master</code> branch unless they fix features that exist only in the upcoming release.</p>
+<p><strong>Minor</strong> features that are <strong>fully backwards compatible</strong> with the current Laravel release may be sent to the latest stable branch.</p>
+<p><strong>Major</strong> new features should always be sent to the <code>master</code> branch, which contains the upcoming Laravel release.</p>
+<p>If you are unsure if your feature qualifies as a major or minor, please ask Taylor Otwell in the <code>#laravel-dev</code> IRC channel (Freenode).</p>
+<p><a name="security-vulnerabilities"></a></p>
+<h2>Security Vulnerabilities</h2>
+<p>If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at <a href="mailto:taylorotwell@gmail.com">taylorotwell@gmail.com</a>. All security vulnerabilities will be promptly addressed.</p>
+<p><a name="coding-style"></a></p>
+<h2>Coding Style</h2>
+<p>Laravel follows the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">PSR-0</a> and <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md">PSR-1</a> coding standards. In addition to these standards, the following coding standards should be followed:</p>
+<ul>
+<li>The class namespace declaration must be on the same line as <code>&lt;?php</code>.</li>
+<li>A class' opening <code>{</code> must be on the same line as the class name.</li>
+<li>Functions and control structures must use Allman style braces.</li>
+<li>Indent with tabs, align with spaces.</li>
+</ul>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.2/contributions by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:42 GMT -->
+</html>

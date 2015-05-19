@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/master/views by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Views - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			Master
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="views.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/views.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-2.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4-3.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Prologue
+<ul>
+<li><a href="releases.html">Release Notes</a></li>
+<li><a href="upgrade.html">Upgrade Guide</a></li>
+<li><a href="contributions.html">Contribution Guide</a></li>
+</ul></li>
+<li>Setup
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="homestead.html">Homestead</a></li>
+</ul></li>
+<li>The Basics
+<ul>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="middleware.html">Middleware</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="requests.html">Requests</a></li>
+<li><a href="responses.html">Responses</a></li>
+<li><a href="views.html">Views / Blade Templating</a></li>
+</ul></li>
+<li>Architecture Foundations
+<ul>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="structure.html">Application Structure</a></li>
+<li><a href="providers.html">Service Providers</a></li>
+<li><a href="container.html">Service Container</a></li>
+<li><a href="contracts.html">Contracts</a></li>
+<li><a href="facades.html">Facades</a></li>
+</ul></li>
+<li>Services
+<ul>
+<li><a href="authentication.html">Authentication</a></li>
+<li><a href="artisan.html">Artisan Console</a></li>
+<li><a href="billing.html">Billing</a></li>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="elixir.html">Elixir</a></li>
+<li><a href="encryption.html">Encryption</a></li>
+<li><a href="envoy.html">Envoy</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="filesystem.html">Filesystem / Cloud Storage</a></li>
+<li><a href="hashing.html">Hashing</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="redis.html">Redis</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="scheduling.html">Task Scheduling</a></li>
+<li><a href="testing.html">Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Getting Started</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="../master.html">Migrations</a></li>
+<li><a href="../master.html">Seeding</a></li>
+</ul></li>
+<li>Eloquent ORM
+<ul>
+<li><a href="eloquent.html">Getting Started</a></li>
+<li><a href="eloquent-relationships.html">Relationships</a></li>
+<li><a href="eloquent-collections.html">Collections</a></li>
+<li><a href="eloquent-mutators.html">Mutators</a></li>
+<li><a href="eloquent-serialization.html">JSON Serialization</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Views</h1>
+<ul>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#view-composers">View Composers</a></li>
+<li><a href="#blade-templating">Blade Templating</a></li>
+<li><a href="#other-blade-control-structures">Other Blade Control Structures</a></li>
+<li><a href="#blade-service-injection">Blade Service Injection</a></li>
+<li><a href="#extending-blade">Extending Blade</a></li>
+</ul>
+<p><a name="basic-usage"></a></p>
+<h2>Basic Usage</h2>
+<p>Views contain the HTML served by your application, and serve as a convenient method of separating your controller and domain logic from your presentation logic. Views are stored in the <code>resources/views</code> directory.</p>
+<p>A simple view looks like this:</p>
+<pre><code>&lt;!-- View stored in resources/views/greeting.php --&gt;
+
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, &lt;?php echo $name; ?&gt;&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>The view may be returned to the browser like so:</p>
+<pre><code>Route::get('/', function () {
+    return view('greeting', ['name' =&gt; 'James']);
+});</code></pre>
+<p>As you can see, the first argument passed to the <code>view</code> helper corresponds to the name of the view file in the <code>resources/views</code> directory. The second argument passed to helper is an array of data that should be made available to the view.</p>
+<p>Of course, views may also be nested within sub-directories of the <code>resources/views</code> directory. For example, if your view is stored at <code>resources/views/admin/profile.php</code>, it should be returned like so:</p>
+<pre><code>return view('admin.profile', $data);</code></pre>
+<h4>Passing Data To Views</h4>
+<pre><code>// Using conventional approach
+$view = view('greeting')-&gt;with('name', 'Victoria');
+
+// Using Magic Methods
+$view = view('greeting')-&gt;withName('Victoria');</code></pre>
+<p>In the example above, the variable <code>$name</code> is made accessible to the view and contains <code>Victoria</code>.</p>
+<p>If you wish, you may pass an array of data as the second parameter to the <code>view</code> helper:</p>
+<pre><code>$view = view('greetings', $data);</code></pre>
+<p>When passing information in this manner, <code>$data</code> should be an array with key/value pairs. Inside your view, you can then access each value using it's corresponding key, like <code>{{ $key }}</code> (assuming <code>$data['key']</code> exists).</p>
+<h4>Sharing Data With All Views</h4>
+<p>Occasionally, you may need to share a piece of data with all views that are rendered by your application. You may do so using the <code>share</code> method:</p>
+<pre><code>view()-&gt;share('data', [1, 2, 3]);</code></pre>
+<p>Typically, you would place calls to the <code>share</code> method within a service provider's <code>boot</code> method. You are free to add them to the <code>AppServiceProvider</code> or generate a separate service provider to house them.</p>
+<p>For example, here is what it looks like to call the <code>share</code> method from a service provider:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        view()-&gt;share('key', 'value');
+    }
+
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> When the <code>view</code> helper is called without arguments, it returns an implementation of the <code>Illuminate\Contracts\View\Factory</code> contract.</p>
+</blockquote>
+<h4>Determining If A View Exists</h4>
+<p>If you need to determine if a view exists, you may use the <code>exists</code> method:</p>
+<pre><code>if (view()-&gt;exists('emails.customer')) {
+    //
+}</code></pre>
+<h4>Returning A View From A File Path</h4>
+<p>If you wish, you may generate a view from a fully-qualified file path:</p>
+<pre><code>return view()-&gt;file($pathToFile, $data);</code></pre>
+<p><a name="view-composers"></a></p>
+<h2>View Composers</h2>
+<p>View composers are callbacks or class methods that are called when a view is rendered. If you have data that you want to be bound to a view each time that view is rendered, a view composer organizes that logic into a single location.</p>
+<h4>Defining A View Composer</h4>
+<p>Let's organize our view composers within a <a href="providers.html">service provider</a>. We'll use the <code>view</code> helper to access the underlying <code>Illuminate\Contracts\View\Factory</code> contract implementation:</p>
+<pre><code>&lt;?php namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class ComposerServiceProvider extends ServiceProvider
+{
+    /**
+     * Register bindings in the container.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        // Using class based composers...
+        view()-&gt;composer('profile', 'App\Http\ViewComposers\ProfileComposer');
+
+        // Using Closure based composers...
+        view()-&gt;composer('dashboard', function ($view) {
+
+        });
+    }
+
+    /**
+     * Register
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Laravel does not include a default directory for view composers. You are free to organize them however you wish. For example, you could create an <code>App\Http\ViewComposers</code> directory.</p>
+</blockquote>
+<p>Remember, you will need to add the service provider to the <code>providers</code> array in the <code>config/app.php</code> configuration file.</p>
+<p>Now that we have registered the composer, the <code>ProfileComposer@compose</code> method will be executed each time the <code>profile</code> view is being rendered. So, let's define the composer class:</p>
+<pre><code>&lt;?php namespace App\Http\ViewComposers;
+
+use Illuminate\Contracts\View\View;
+use Illuminate\Users\Repository as UserRepository;
+
+class ProfileComposer
+{
+    /**
+     * The user repository implementation.
+     *
+     * @var UserRepository
+     */
+    protected $users;
+
+    /**
+     * Create a new profile composer.
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        // Dependencies automatically resolved by service container...
+        $this-&gt;users = $users;
+    }
+
+    /**
+     * Bind data to the view.
+     *
+     * @param  View  $view
+     * @return void
+     */
+    public function compose(View $view)
+    {
+        $view-&gt;with('count', $this-&gt;users-&gt;count());
+    }
+
+}</code></pre>
+<p>Just before the view is rendered, the composer's <code>compose</code> method is called with the <code>Illuminate\Contracts\View\View</code> instance. You may use the <code>with</code> method to bind data to the view.</p>
+<blockquote>
+<p><strong>Note:</strong> All view composers are resolved via the <a href="container.html">service container</a>, so you may type-hint any dependencies you need within a composer's constructor.</p>
+</blockquote>
+<h4>Wildcard View Composers</h4>
+<p>The <code>composer</code> method accepts the <code>*</code> character as a wildcard, so you may attach a composer to all views like so:</p>
+<pre><code>view()-&gt;composer('*', function ($view) {
+    //
+});</code></pre>
+<h4>Attaching A Composer To Multiple Views</h4>
+<p>You may also attach a view composer to multiple views at once:</p>
+<pre><code>view()-&gt;composer(
+    ['profile', 'dashboard'],
+    'App\Http\ViewComposers\MyViewComposer'
+);</code></pre>
+<h4>Defining Multiple Composers</h4>
+<p>You may use the <code>composers</code> method to register a group of composers at the same time:</p>
+<pre><code>view()-&gt;composers([
+    'App\Http\ViewComposers\AdminComposer' =&gt; ['admin.index', 'admin.profile'],
+    'App\Http\ViewComposers\UserComposer' =&gt; 'user',
+    'App\Http\ViewComposers\ProductComposer' =&gt; 'product'
+]);</code></pre>
+<h3>View Creators</h3>
+<p>View <strong>creators</strong> work almost exactly like view composers; however, they are fired immediately when the view is instantiated. To register a view creator, use the <code>creator</code> method:</p>
+<pre><code>view()-&gt;creator('profile', 'App\Http\ViewCreators\ProfileCreator');</code></pre>
+<p><a name="blade-templating"></a></p>
+<h2>Blade Templating</h2>
+<p>Blade is a simple, yet powerful templating engine provided with Laravel. The core benefits of Blade are <em>template inheritance</em> and <em>sections</em>. All Blade template files should use the <code>.blade.php</code> extension, and are typically stored in <code>resources/views</code>.</p>
+<h4>Defining A Blade Layout</h4>
+<p>Let's take a look at a simple Blade templating example. First, we will examine a &quot;master&quot; template. Since most web applications maintain the same general layout across various pages, it's convenient to define this layout as a single Blade view.</p>
+<pre><code>&lt;!-- Stored in resources/views/layouts/master.blade.php --&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;App Name - @yield('title')&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        @section('sidebar')
+            This is the master sidebar.
+        @show
+
+        &lt;div class="container"&gt;
+            @yield('content')
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<h4>Using A Blade Layout</h4>
+<p>Once we have defined our template, we can use the Blade <code>@extends</code> directive to inject content into this template from a &quot;child&quot; page of our application.</p>
+<pre><code>@extends('layouts.master')
+
+@section('title', 'Page Title')
+
+@section('sidebar')
+    @parent
+
+    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;
+@stop
+
+@section('content')
+    &lt;p&gt;This is my body content.&lt;/p&gt;
+@stop</code></pre>
+<p>Note that views which <code>extend</code> a Blade layout simply override sections from the layout. Content of the layout can be included in a child view using the <code>@parent</code> directive in a section, allowing you to append to the contents of a layout section such as a sidebar or footer.</p>
+<h4>Default Yield Content</h4>
+<p>Sometimes, such as when you are not sure if a section has been defined, you may wish to pass a default value to the <code>@yield</code> directive. You may pass the default value as the second argument:</p>
+<pre><code>@yield('section', 'Default Content')</code></pre>
+<p><a name="other-blade-control-structures"></a></p>
+<h2>Other Blade Control Structures</h2>
+<h4>Echoing Data</h4>
+<pre><code>Hello, {{ $name }}.
+
+The current UNIX timestamp is {{ time() }}.</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Blade <code>{{ }}</code> statements are automatically send through PHP's <code>htmlentities</code> function to prevent XSS attacks.</p>
+</blockquote>
+<h4>Echoing Data After Checking For Existence</h4>
+<p>Sometimes you may wish to echo a variable, but you aren't sure if the variable has been set. Basically, you want to do this:</p>
+<pre><code>{{ isset($name) ? $name : 'Default' }}</code></pre>
+<p>However, instead of writing a ternary statement, Blade allows you to use the following convenient short-cut:</p>
+<pre><code>{{ $name or 'Default' }}</code></pre>
+<h4>Displaying Raw Text With Curly Braces</h4>
+<p>If you need to display a string that is wrapped in curly braces, you may escape the Blade behavior by prefixing your text with an <code>@</code> symbol:</p>
+<pre><code>@{{ This will not be processed by Blade }}</code></pre>
+<p>If you don't want the data to be escaped, you may use the following syntax:</p>
+<pre><code>Hello, {!! $name !!}.</code></pre>
+<blockquote>
+<p><strong>Note:</strong> Be very careful when echoing content that is supplied by users of your application. Always use the double curly brace syntax to escape any HTML entities in the content.</p>
+</blockquote>
+<h4>If Statements</h4>
+<pre><code>@if (count($records) === 1)
+    I have one record!
+@elseif (count($records) &gt; 1)
+    I have multiple records!
+@else
+    I don't have any records!
+@endif
+
+@unless (Auth::check())
+    You are not signed in.
+@endunless</code></pre>
+<h4>Loops</h4>
+<pre><code>@for ($i = 0; $i &lt; 10; $i++)
+    The current value is {{ $i }}
+@endfor
+
+@foreach ($users as $user)
+    &lt;p&gt;This is user {{ $user-&gt;id }}&lt;/p&gt;
+@endforeach
+
+@forelse ($users as $user)
+    &lt;li&gt;{{ $user-&gt;name }}&lt;/li&gt;
+@empty
+    &lt;p&gt;No users&lt;/p&gt;
+@endforelse
+
+@while (true)
+    &lt;p&gt;I'm looping forever.&lt;/p&gt;
+@endwhile</code></pre>
+<h4>Including Sub-Views</h4>
+<pre><code>@include('view.name')</code></pre>
+<p>You may also pass an array of data to the included view:</p>
+<pre><code>@include('view.name', ['some' =&gt; 'data'])</code></pre>
+<h4>Overwriting Sections</h4>
+<p>To overwrite a section entirely, you may use the <code>overwrite</code> statement:</p>
+<pre><code>@extends('list.item.container')
+
+@section('list.item.content')
+    &lt;p&gt;This is an item of type {{ $item-&gt;type }}&lt;/p&gt;
+@overwrite</code></pre>
+<h4>Displaying Language Lines</h4>
+<pre><code>@lang('language.line')
+
+@choice('language.line', 1)</code></pre>
+<h4>Comments</h4>
+<pre><code>{{-- This comment will not be in the rendered HTML --}}</code></pre>
+<p><a name="blade-service-injection"></a></p>
+<h2>Blade Service Injection</h2>
+<p>The <code>@inject</code> directive may be used to retrieve a service from the Laravel <a href="container.html">service container</a>. The first argument passed to <code>@inject</code> is the name of the variable the service will be placed into, while the second argument is the class / interface name of the service you wish to resolve:</p>
+<pre><code>@inject('metrics', 'App\Services\MetricsService')
+
+&lt;div&gt;
+    Monthly Revenue: {{ $metrics-&gt;monthlyRevenue() }}.
+&lt;/div&gt;</code></pre>
+<p><a name="extending-blade"></a></p>
+<h2>Extending Blade</h2>
+<p>Blade even allows you to define your own custom directives. You can use the <code>directive</code> method to register a directive. When the Blade compiler encounters the directive, it calls the provided callback with its parameter. This allows you to replace your directives with any logic as complex as you want.</p>
+<p>The following example creates a <code>@datetime($var)</code> directive which formats a given <code>$var</code>:</p>
+<pre><code>Blade::directive('datetime', function($expression) {
+    return "&lt;?php echo with{$expression}-&gt;format('m/d/Y H:i'); ?&gt;";
+});</code></pre>
+<p>The final PHP executed by this directive will be:</p>
+<pre><code>&lt;?php echo with($var)-&gt;format('m/d/Y H:i'); ?&gt;</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/master/views by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:12:16 GMT -->
+</html>

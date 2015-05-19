@@ -1,0 +1,438 @@
+<!doctype html>
+<html>
+
+<!-- Mirrored from laravel.com/docs/4.0/helpers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:13:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8">
+	<title>Helper Functions - Laravel - The PHP Framework For Web Artisans</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="author" content="Taylor Otwell">
+	<meta name="description" content="Laravel - The PHP framework for web artisans.">
+	<meta name="keywords" content="laravel, php, framework, web, artisans, taylor otwell">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if lte IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="../../assets/css/laravel.css">
+</head>
+<body class="docs language-php">
+
+	<span class="overlay"></span>
+
+	<nav class="main">
+		<div class="container">
+			<a href="#" class="brand">
+				<img src="../../assets/img/laravel-logo.png" height="30" alt="Laravel logo">
+				Laravel
+			</a>
+
+			<div class="responsive-sidebar-nav">
+				<a href="#" class="toggle-slide menu-link btn">&#9776;</a>
+			</div>
+
+							<div class="switcher">
+	<div class="dropdown">
+		<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+			4.0
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../master/helpers.html">Master</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../5.0/helpers.html">5.0</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.2/helpers.html">4.2</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="../4.1/helpers.html">4.1</a>
+				</li>
+							<li role="presentation">
+					<a role="menuitem" tabindex="-1" href="helpers.html">4.0</a>
+				</li>
+					</ul>
+	</div>
+</div>
+			
+			<ul class="main-nav">
+				<li class="nav-docs"><a href="#">Documentation</a></li>
+
+			</ul>
+		</div>
+	</nav>
+
+	<nav id="slide-menu" class="slide-menu" role="navigation">
+	
+	<div class="brand">
+		<a href="#">
+			<img src="../../assets/img/laravel-logo-white.png" height="50">
+		</a>
+	</div>
+
+	<ul class="slide-main-nav">
+		<li><a href="#">Home</a></li>
+		<li class="nav-docs"><a href="#">Documentation</a></li>
+
+	</ul>
+
+	<div class="slide-docs-nav">
+		<h2>Documentation</h2>
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="contributing.html">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</div>
+
+</nav>
+
+<div class="docs-wrapper container">
+
+	<section class="sidebar">
+		<ul>
+<li>Preface
+<ul>
+<li><a href="introduction.html">Introduction</a></li>
+<li><a href="quick.html">Quickstart</a></li>
+<li><a href="contributing.html">Contributing</a></li>
+</ul></li>
+<li>Getting Started
+<ul>
+<li><a href="installation.html">Installation</a></li>
+<li><a href="configuration.html">Configuration</a></li>
+<li><a href="lifecycle.html">Request Lifecycle</a></li>
+<li><a href="routing.html">Routing</a></li>
+<li><a href="requests.html">Requests &amp; Input</a></li>
+<li><a href="responses.html">Views &amp; Responses</a></li>
+<li><a href="controllers.html">Controllers</a></li>
+<li><a href="errors.html">Errors &amp; Logging</a></li>
+</ul></li>
+<li>Learning More
+<ul>
+<li><a href="cache.html">Cache</a></li>
+<li><a href="extending.html">Core Extension</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="facades.html">Facades</a></li>
+<li><a href="html.html">Forms &amp; HTML</a></li>
+<li><a href="helpers.html">Helpers</a></li>
+<li><a href="ioc.html">IoC Container</a></li>
+<li><a href="localization.html">Localization</a></li>
+<li><a href="mail.html">Mail</a></li>
+<li><a href="packages.html">Package Development</a></li>
+<li><a href="pagination.html">Pagination</a></li>
+<li><a href="queues.html">Queues</a></li>
+<li><a href="security.html">Security</a></li>
+<li><a href="session.html">Session</a></li>
+<li><a href="templates.html">Templates</a></li>
+<li><a href="testing.html">Unit Testing</a></li>
+<li><a href="validation.html">Validation</a></li>
+</ul></li>
+<li>Database
+<ul>
+<li><a href="database.html">Basic Usage</a></li>
+<li><a href="queries.html">Query Builder</a></li>
+<li><a href="eloquent.html">Eloquent ORM</a></li>
+<li><a href="schema.html">Schema Builder</a></li>
+<li><a href="migrations.html">Migrations &amp; Seeding</a></li>
+<li><a href="redis.html">Redis</a></li>
+</ul></li>
+<li>Artisan CLI
+<ul>
+<li><a href="artisan.html">Overview</a></li>
+<li><a href="commands.html">Development</a></li>
+</ul></li>
+</ul>
+	</section>
+
+	<article>
+		<h1>Helper Functions</h1>
+<ul>
+<li><a href="#arrays">Arrays</a></li>
+<li><a href="#paths">Paths</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#urls">URLs</a></li>
+<li><a href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+<p><a name="arrays"></a></p>
+<h2>Arrays</h2>
+<h3>array_add</h3>
+<p>The <code>array_add</code> function adds a given key / value pair to the array if the given key doesn't already exist in the array.</p>
+<pre><code>$array = array('foo' =&gt; 'bar');
+
+$array = array_add($array, 'key', 'value');</code></pre>
+<h3>array_divide</h3>
+<p>The <code>array_divide</code> function returns two arrays, one containing the keys, and the other containing the values of the original array.</p>
+<pre><code>$array = array('foo' =&gt; 'bar');
+
+list($keys, $values) = array_divide($array);</code></pre>
+<h3>array_dot</h3>
+<p>The <code>array_dot</code> function flattens a multi-dimensional array into a single level array that uses &quot;dot&quot; notation to indicate depth.</p>
+<pre><code>$array = array('foo' =&gt; array('bar' =&gt; 'baz'));
+
+$array = array_dot($array);
+
+// array('foo.bar' =&gt; 'baz');</code></pre>
+<h3>array_except</h3>
+<p>The <code>array_except</code> method removes the given key / value pairs from the array.</p>
+<pre><code>$array = array_except($array, array('keys', 'to', 'remove'));</code></pre>
+<h3>array_fetch</h3>
+<p>The <code>array_fetch</code> method returns a flattened array containing the selected nested element.</p>
+<pre><code>$array = array(
+    array('developer' =&gt; array('name' =&gt; 'Taylor')),
+    array('developer' =&gt; array('name' =&gt; 'Dayle')),
+);
+
+$array = array_fetch($array, 'developer.name');
+
+// array('Taylor', 'Dayle');</code></pre>
+<h3>array_first</h3>
+<p>The <code>array_first</code> method returns the first element of an array passing a given truth test.</p>
+<pre><code>$array = array(100, 200, 300);
+
+$value = array_first($array, function($key, $value)
+{
+    return $value &gt;= 150;
+});</code></pre>
+<p>A default value may also be passed as the third parameter:</p>
+<pre><code>$value = array_first($array, $callback, $default);</code></pre>
+<h3>array_flatten</h3>
+<p>The <code>array_flatten</code> method will flatten a multi-dimensional array into a single level.</p>
+<pre><code>$array = array('name' =&gt; 'Joe', 'languages' =&gt; array('PHP', 'Ruby'));
+
+$array = array_flatten($array);
+
+// array('Joe', 'PHP', 'Ruby');</code></pre>
+<h3>array_forget</h3>
+<p>The <code>array_forget</code> method will remove a given key / value pair from a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = array('names' =&gt; array('joe' =&gt; array('programmer')));
+
+$array = array_forget($array, 'names.joe');</code></pre>
+<h3>array_get</h3>
+<p>The <code>array_get</code> method will retrieve a given value from a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = array('names' =&gt; array('joe' =&gt; array('programmer')));
+
+$value = array_get($array, 'names.joe');</code></pre>
+<h3>array_only</h3>
+<p>The <code>array_only</code> method will return only the specified key / value pairs from the array.</p>
+<pre><code>$array = array('name' =&gt; 'Joe', 'age' =&gt; 27, 'votes' =&gt; 1);
+
+$array = array_only($array, array('name', 'votes'));</code></pre>
+<h3>array_pluck</h3>
+<p>The <code>array_pluck</code> method will pluck a list of the given key / value pairs from the array.</p>
+<pre><code>$array = array(array('name' =&gt; 'Taylor'), array('name' =&gt; 'Dayle'));
+
+$array = array_pluck($array, 'name');
+
+// array('Taylor', 'Dayle');</code></pre>
+<h3>array_pull</h3>
+<p>The <code>array_pull</code> method will return a given key / value pair from the array, as well as remove it.</p>
+<pre><code>$array = array('name' =&gt; 'Taylor', 'age' =&gt; 27);
+
+$name = array_pull($array, 'name');</code></pre>
+<h3>array_set</h3>
+<p>The <code>array_set</code> method will set a value within a deeply nested array using &quot;dot&quot; notation.</p>
+<pre><code>$array = array('names' =&gt; array('programmer' =&gt; 'Joe'));
+
+array_set($array, 'names.editor', 'Taylor');</code></pre>
+<h3>array_sort</h3>
+<p>The <code>array_sort</code> method sorts the array by the results of the given Closure.</p>
+<pre><code>$array = array(
+    array('name' =&gt; 'Jill'),
+    array('name' =&gt; 'Barry'),
+);
+
+$array = array_values(array_sort($array, function($value)
+{
+    return $value['name'];
+}));</code></pre>
+<h3>head</h3>
+<p>Return the first element in the array. Useful for method chaining in PHP 5.3.x.</p>
+<pre><code>$first = head($this-&gt;returnsArray('foo'));</code></pre>
+<h3>last</h3>
+<p>Return the last element in the array. Useful for method chaining.</p>
+<pre><code>$last = last($this-&gt;returnsArray('foo'));</code></pre>
+<p><a name="paths"></a></p>
+<h2>Paths</h2>
+<h3>app_path</h3>
+<p>Get the fully qualified path to the <code>app</code> directory.</p>
+<h3>base_path</h3>
+<p>Get the fully qualified path to the root of the application install.</p>
+<h3>public_path</h3>
+<p>Get the fully qualified path to the <code>public</code> directory.</p>
+<h3>storage_path</h3>
+<p>Get the fully qualified path to the <code>app/storage</code> directory.</p>
+<p><a name="strings"></a></p>
+<h2>Strings</h2>
+<h3>camel_case</h3>
+<p>Convert the given string to <code>camelCase</code>.</p>
+<pre><code>$camel = camel_case('foo_bar');
+
+// fooBar</code></pre>
+<h3>class_basename</h3>
+<p>Get the class name of the given class, without any namespace names.</p>
+<pre><code>$class = class_basename('Foo\Bar\Baz');
+
+// Baz</code></pre>
+<h3>e</h3>
+<p>Run <code>htmlentities</code> over the given string, with UTF-8 support.</p>
+<pre><code>$entities = e('&lt;html&gt;foo&lt;/html&gt;');</code></pre>
+<h3>ends_with</h3>
+<p>Determine if the given haystack ends with a given needle.</p>
+<pre><code>$value = ends_with('This is my name', 'name');</code></pre>
+<h3>snake_case</h3>
+<p>Convert the given string to <code>snake_case</code>.</p>
+<pre><code>$snake = snake_case('fooBar');
+
+// foo_bar</code></pre>
+<h3>starts_with</h3>
+<p>Determine if the given haystack begins with the given needle.</p>
+<pre><code>$value = starts_with('This is my name', 'This');</code></pre>
+<h3>str_contains</h3>
+<p>Determine if the given haystack contains the given needle.</p>
+<pre><code>$value = str_contains('This is my name', 'my');</code></pre>
+<h3>str_finish</h3>
+<p>Add a single instance of the given needle to the haystack. Remove any extra instances.</p>
+<pre><code>$string = str_finish('this/string', '/');
+
+// this/string/</code></pre>
+<h3>str_is</h3>
+<p>Determine if a given string matches a given pattern. Asterisks may be used to indicate wildcards.</p>
+<pre><code>$value = str_is('foo*', 'foobar');</code></pre>
+<h3>str_plural</h3>
+<p>Convert a string to its plural form (English only).</p>
+<pre><code>$plural = str_plural('car');</code></pre>
+<h3>str_random</h3>
+<p>Generate a random string of the given length.</p>
+<pre><code>$string = str_random(40);</code></pre>
+<h3>str_singular</h3>
+<p>Convert a string to its singular form (English only).</p>
+<pre><code>$singular = str_singular('cars');</code></pre>
+<h3>studly_case</h3>
+<p>Convert the given string to <code>StudlyCase</code>.</p>
+<pre><code>$value = studly_case('foo_bar');
+
+// FooBar</code></pre>
+<h3>trans</h3>
+<p>Translate a given language line. Alias of <code>Lang::get</code>.</p>
+<pre><code>$value = trans('validation.required'):</code></pre>
+<h3>trans_choice</h3>
+<p>Tranlate a given language line with inflection. Alias of <code>Lang::choice</code>.</p>
+<pre><code>$value = trans_choice('foo.bar', $count);</code></pre>
+<p><a name="urls"></a></p>
+<h2>URLs</h2>
+<h3>action</h3>
+<p>Generate a URL for a given controller action.</p>
+<pre><code>$url = action('HomeController@getIndex', $params);</code></pre>
+<h3>route</h3>
+<p>Generate a URL for a given named route.</p>
+<pre><code>$url = route('routeName', $params);</code></pre>
+<h3>asset</h3>
+<p>Generate a URL for an asset.</p>
+<pre><code>$url = asset('img/photo.jpg');</code></pre>
+<h3>link_to</h3>
+<p>Generate a HTML link to the given URL.</p>
+<pre><code>echo link_to('foo/bar', $title, $attributes = array(), $secure = null);</code></pre>
+<h3>link_to_asset</h3>
+<p>Generate a HTML link to the given asset.</p>
+<pre><code>echo link_to_asset('foo/bar.zip', $title, $attributes = array(), $secure = null);</code></pre>
+<h3>link_to_route</h3>
+<p>Generate a HTML link to the given route.</p>
+<pre><code>echo link_to_route('route.name', $title, $parameters = array(), $attributes = array());</code></pre>
+<h3>link_to_action</h3>
+<p>Generate a HTML link to the given controller action.</p>
+<pre><code>echo link_to_action('HomeController@getIndex', $title, $parameters = array(), $attributes = array());</code></pre>
+<h3>secure_asset</h3>
+<p>Generate a HTML link to the given asset using HTTPS.</p>
+<pre><code>echo secure_asset('foo/bar.zip', $title, $attributes = array());</code></pre>
+<h3>secure_url</h3>
+<p>Generate a fully qualified URL to a given path using HTTPS.</p>
+<pre><code>echo secure_url('foo/bar', $parameters = array());</code></pre>
+<h3>url</h3>
+<p>Generate a fully qualified URL to the given path.</p>
+<pre><code>echo url('foo/bar', $parameters = array(), $secure = null);</code></pre>
+<p><a name="miscellaneous"></a></p>
+<h2>Miscellaneous</h2>
+<h3>csrf_token</h3>
+<p>Get the value of the current CSRF token.</p>
+<pre><code>$token = csrf_token();</code></pre>
+<h3>dd</h3>
+<p>Dump the given variable and end execution of the script.</p>
+<pre><code>dd($value);</code></pre>
+<h3>value</h3>
+<p>If the given value is a <code>Closure</code>, return the value returned by the <code>Closure</code>. Otherwise, return the value.</p>
+<pre><code>$value = value(function() { return 'bar'; });</code></pre>
+<h3>with</h3>
+<p>Return the given object. Useful for method chaining constructors in PHP 5.3.x.</p>
+<pre><code>$value = with(new Foo)-&gt;doWork();</code></pre>
+	</article>
+</div>
+
+	<footer class="main">
+		<ul>
+			<li class="nav-docs"><a href="#">Documentation</a></li>
+
+		</ul>
+		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p class="less-significant"><a href="http://jackmcdade.com/">Design by Jack McDade</a></p>
+	</footer>
+	<script src="../../assets/js/laravel.js"></script>
+	<script src="../../assets/js/viewport-units-buggyfill.js"></script>
+	<script>window.viewportUnitsBuggyfill.init();</script>
+    <script>
+
+    </script>
+</body>
+
+<!-- Mirrored from laravel.com/docs/4.0/helpers by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 May 2015 06:13:07 GMT -->
+</html>
